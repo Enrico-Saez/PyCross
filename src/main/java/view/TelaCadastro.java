@@ -18,7 +18,9 @@ public class TelaCadastro extends javax.swing.JFrame {
      * Creates new form TelaCadastro
      */
     public TelaCadastro() {
+        super ("PyCross Cadastro de Usuário");
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -45,6 +47,11 @@ public class TelaCadastro extends javax.swing.JFrame {
         });
 
         botaoVoltarTelaCadastro.setText("Voltar");
+        botaoVoltarTelaCadastro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoVoltarTelaCadastroActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -85,6 +92,12 @@ public class TelaCadastro extends javax.swing.JFrame {
         u.setSenha(String.valueOf(campoSenhaTelaCadastro.getPassword()));
         dao.create(u);
     }//GEN-LAST:event_botaoCadastrarTelaCadastroActionPerformed
+
+    private void botaoVoltarTelaCadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoVoltarTelaCadastroActionPerformed
+        TelaLogin tl = new TelaLogin();
+        tl.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_botaoVoltarTelaCadastroActionPerformed
 
     /**
      * @param args the command line arguments

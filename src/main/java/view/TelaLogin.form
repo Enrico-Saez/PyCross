@@ -25,14 +25,18 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="181" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="campoSenhaTelaLogin" pref="288" max="32767" attributes="0"/>
-                  <Group type="102" alignment="1" attributes="0">
-                      <Component id="botaoCadastroTelaLogin" min="-2" pref="100" max="-2" attributes="0"/>
-                      <EmptySpace pref="88" max="32767" attributes="0"/>
-                      <Component id="botaoLoginTelaLogin" min="-2" pref="100" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="senhaLabel" min="-2" pref="37" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="campoSenha" pref="288" max="32767" attributes="0"/>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="botaoCadastro" min="-2" pref="100" max="-2" attributes="0"/>
+                          <EmptySpace pref="88" max="32767" attributes="0"/>
+                          <Component id="botaoLogin" min="-2" pref="100" max="-2" attributes="0"/>
+                      </Group>
+                      <Component id="campoUsuario" alignment="0" max="32767" attributes="0"/>
                   </Group>
-                  <Component id="campoUsuarioTelaLogin" alignment="0" max="32767" attributes="0"/>
+                  <Component id="usernameLabel" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="181" max="32767" attributes="0"/>
           </Group>
@@ -41,14 +45,18 @@
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="158" max="-2" attributes="0"/>
-              <Component id="campoUsuarioTelaLogin" min="-2" pref="35" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-              <Component id="campoSenhaTelaLogin" min="-2" pref="35" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="136" max="-2" attributes="0"/>
+              <Component id="usernameLabel" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="campoUsuario" min="-2" pref="35" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+              <Component id="senhaLabel" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="campoSenha" min="-2" pref="35" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="botaoLoginTelaLogin" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                  <Component id="botaoCadastroTelaLogin" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                  <Component id="botaoLogin" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                  <Component id="botaoCadastro" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="75" max="32767" attributes="0"/>
           </Group>
@@ -56,22 +64,35 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JTextField" name="campoUsuarioTelaLogin">
+    <Component class="javax.swing.JTextField" name="campoUsuario">
     </Component>
-    <Component class="javax.swing.JButton" name="botaoLoginTelaLogin">
+    <Component class="javax.swing.JButton" name="botaoLogin">
       <Properties>
         <Property name="text" type="java.lang.String" value="Login"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botaoLoginTelaLoginActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botaoLoginActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="botaoCadastroTelaLogin">
+    <Component class="javax.swing.JButton" name="botaoCadastro">
       <Properties>
         <Property name="text" type="java.lang.String" value="Cadastre-se"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botaoCadastroActionPerformed"/>
+      </Events>
     </Component>
-    <Component class="javax.swing.JPasswordField" name="campoSenhaTelaLogin">
+    <Component class="javax.swing.JPasswordField" name="campoSenha">
+    </Component>
+    <Component class="javax.swing.JLabel" name="usernameLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Username"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="senhaLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Senha"/>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>

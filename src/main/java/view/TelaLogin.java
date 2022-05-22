@@ -1,5 +1,7 @@
 package view;
 
+import model.dao.UsuarioDAO;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -15,7 +17,9 @@ public class TelaLogin extends javax.swing.JFrame {
      * Creates new form TelaLogin
      */
     public TelaLogin() {
+        super ("PyCross Login");
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -27,21 +31,32 @@ public class TelaLogin extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        campoUsuarioTelaLogin = new javax.swing.JTextField();
-        botaoLoginTelaLogin = new javax.swing.JButton();
-        botaoCadastroTelaLogin = new javax.swing.JButton();
-        campoSenhaTelaLogin = new javax.swing.JPasswordField();
+        campoUsuario = new javax.swing.JTextField();
+        botaoLogin = new javax.swing.JButton();
+        botaoCadastro = new javax.swing.JButton();
+        campoSenha = new javax.swing.JPasswordField();
+        usernameLabel = new javax.swing.JLabel();
+        senhaLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        botaoLoginTelaLogin.setText("Login");
-        botaoLoginTelaLogin.addActionListener(new java.awt.event.ActionListener() {
+        botaoLogin.setText("Login");
+        botaoLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botaoLoginTelaLoginActionPerformed(evt);
+                botaoLoginActionPerformed(evt);
             }
         });
 
-        botaoCadastroTelaLogin.setText("Cadastre-se");
+        botaoCadastro.setText("Cadastre-se");
+        botaoCadastro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoCadastroActionPerformed(evt);
+            }
+        });
+
+        usernameLabel.setText("Username");
+
+        senhaLabel.setText("Senha");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -49,35 +64,58 @@ public class TelaLogin extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(181, 181, 181)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(campoSenhaTelaLogin, javax.swing.GroupLayout.DEFAULT_SIZE, 288, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(botaoCadastroTelaLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 88, Short.MAX_VALUE)
-                        .addComponent(botaoLoginTelaLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(campoUsuarioTelaLogin))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(senhaLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(campoSenha, javax.swing.GroupLayout.DEFAULT_SIZE, 288, Short.MAX_VALUE)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                            .addComponent(botaoCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 88, Short.MAX_VALUE)
+                            .addComponent(botaoLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(campoUsuario))
+                    .addComponent(usernameLabel))
                 .addContainerGap(181, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(158, 158, 158)
-                .addComponent(campoUsuarioTelaLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26)
-                .addComponent(campoSenhaTelaLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(136, 136, 136)
+                .addComponent(usernameLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(campoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(4, 4, 4)
+                .addComponent(senhaLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(campoSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(36, 36, 36)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(botaoLoginTelaLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(botaoCadastroTelaLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(botaoLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botaoCadastro, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(75, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void botaoLoginTelaLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoLoginTelaLoginActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_botaoLoginTelaLoginActionPerformed
+    private void botaoLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoLoginActionPerformed
+        UsuarioDAO dao = new UsuarioDAO();        
+        if(dao.adminLoginCheck(campoUsuario.getText(), new String(this.campoSenha.getPassword()))) {
+            TelaAdmin tl = new TelaAdmin();
+            tl.setVisible(true);
+            this.dispose();
+        }
+        else if (dao.loginCheck(campoUsuario.getText(), new String(this.campoSenha.getPassword()))) {
+            MenuInicial mi = new MenuInicial();
+            mi.setVisible(true);
+            this.dispose();
+        }
+    }//GEN-LAST:event_botaoLoginActionPerformed
+
+    private void botaoCadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoCadastroActionPerformed
+        TelaCadastro tc = new TelaCadastro();
+        tc.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_botaoCadastroActionPerformed
 
     /**
      * @param args the command line arguments
@@ -115,9 +153,11 @@ public class TelaLogin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton botaoCadastroTelaLogin;
-    private javax.swing.JButton botaoLoginTelaLogin;
-    private javax.swing.JPasswordField campoSenhaTelaLogin;
-    private javax.swing.JTextField campoUsuarioTelaLogin;
+    private javax.swing.JButton botaoCadastro;
+    private javax.swing.JButton botaoLogin;
+    private javax.swing.JPasswordField campoSenha;
+    private javax.swing.JTextField campoUsuario;
+    private javax.swing.JLabel senhaLabel;
+    private javax.swing.JLabel usernameLabel;
     // End of variables declaration//GEN-END:variables
 }

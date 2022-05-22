@@ -9,6 +9,8 @@ package model.bean;
  * @author Enrico
  */
 public class Usuario {
+
+    private int id;
     private String nome;
     private String senha;
     private int pontuacao;
@@ -44,5 +46,18 @@ public class Usuario {
 
     public void setPontuacao(int pontuacao) {
         this.pontuacao = pontuacao;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    @Override
+    public String toString() {
+        return getNome();
     }
 }
