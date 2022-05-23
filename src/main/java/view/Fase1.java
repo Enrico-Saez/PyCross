@@ -11,7 +11,7 @@ package view;
 public class Fase1 extends javax.swing.JFrame {
 
     /**
-     * Creates new form Fase1
+     * Creates new form Fase2
      */
     public Fase1() {
         initComponents();
@@ -26,31 +26,734 @@ public class Fase1 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        interpretada1 = new javax.swing.JTextField();
+        interpretada2_len3 = new javax.swing.JTextField();
+        interpretada3 = new javax.swing.JTextField();
+        interpretada4_colchete8 = new javax.swing.JTextField();
+        interpretada5 = new javax.swing.JTextField();
+        interpretada6 = new javax.swing.JTextField();
+        interpretada7_return1 = new javax.swing.JTextField();
+        interpretada8 = new javax.swing.JTextField();
+        interpretada9 = new javax.swing.JTextField();
+        interpretada10_variavel5 = new javax.swing.JTextField();
+        interpretada11 = new javax.swing.JTextField();
+        interpretada12 = new javax.swing.JTextField();
+        len1 = new javax.swing.JTextField();
+        len2 = new javax.swing.JTextField();
+        colchete1 = new javax.swing.JTextField();
+        colchete2 = new javax.swing.JTextField();
+        colchete3 = new javax.swing.JTextField();
+        colchete4 = new javax.swing.JTextField();
+        colchete5 = new javax.swing.JTextField();
+        colchete6 = new javax.swing.JTextField();
+        colchete7 = new javax.swing.JTextField();
+        return5 = new javax.swing.JTextField();
+        return3_input4 = new javax.swing.JTextField();
+        return6_print4 = new javax.swing.JTextField();
+        return2 = new javax.swing.JTextField();
+        return3 = new javax.swing.JTextField();
+        variavel1 = new javax.swing.JTextField();
+        variavel2 = new javax.swing.JTextField();
+        variavel3 = new javax.swing.JTextField();
+        variavel4 = new javax.swing.JTextField();
+        variavel6 = new javax.swing.JTextField();
+        variavel7 = new javax.swing.JTextField();
+        variavel8 = new javax.swing.JTextField();
+        input3 = new javax.swing.JTextField();
+        input2 = new javax.swing.JTextField();
+        input5 = new javax.swing.JTextField();
+        print2 = new javax.swing.JTextField();
+        print3 = new javax.swing.JTextField();
+        print5 = new javax.swing.JTextField();
+        import1 = new javax.swing.JTextField();
+        import2 = new javax.swing.JTextField();
+        import3_print1 = new javax.swing.JTextField();
+        import4 = new javax.swing.JTextField();
+        import5 = new javax.swing.JTextField();
+        import6_turltle4 = new javax.swing.JTextField();
+        turtle2 = new javax.swing.JTextField();
+        turtle3 = new javax.swing.JTextField();
+        turtle5 = new javax.swing.JTextField();
+        turtle6 = new javax.swing.JTextField();
+        hashtag1 = new javax.swing.JTextField();
+        hashtag2 = new javax.swing.JTextField();
+        hashtag3 = new javax.swing.JTextField();
+        hashtag4 = new javax.swing.JTextField();
+        hashtag5_turtle1 = new javax.swing.JTextField();
+        hashtag6 = new javax.swing.JTextField();
+        hashtag7 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(null);
 
-        jLabel1.setText("jLabel1");
+        interpretada1.setEditable(false);
+        interpretada1.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        interpretada1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        interpretada1.setText("i");
+        interpretada1.setToolTipText("");
+        interpretada1.setPreferredSize(new java.awt.Dimension(24, 24));
+        interpretada1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                interpretada1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(interpretada1);
+        interpretada1.setBounds(210, 40, 24, 24);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(192, 192, 192)
-                .addComponent(jLabel1)
-                .addContainerGap(371, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(57, 57, 57)
-                .addComponent(jLabel1)
-                .addContainerGap(277, Short.MAX_VALUE))
-        );
+        interpretada2_len3.setEditable(false);
+        interpretada2_len3.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        interpretada2_len3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        interpretada2_len3.setText("n");
+        interpretada2_len3.setToolTipText("");
+        interpretada2_len3.setPreferredSize(new java.awt.Dimension(24, 24));
+        interpretada2_len3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                interpretada2_len3ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(interpretada2_len3);
+        interpretada2_len3.setBounds(210, 60, 24, 24);
+
+        interpretada3.setEditable(false);
+        interpretada3.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        interpretada3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        interpretada3.setText("t");
+        interpretada3.setToolTipText("");
+        interpretada3.setPreferredSize(new java.awt.Dimension(24, 24));
+        interpretada3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                interpretada3ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(interpretada3);
+        interpretada3.setBounds(210, 80, 24, 24);
+
+        interpretada4_colchete8.setEditable(false);
+        interpretada4_colchete8.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        interpretada4_colchete8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        interpretada4_colchete8.setText("e");
+        interpretada4_colchete8.setToolTipText("");
+        interpretada4_colchete8.setPreferredSize(new java.awt.Dimension(24, 24));
+        interpretada4_colchete8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                interpretada4_colchete8ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(interpretada4_colchete8);
+        interpretada4_colchete8.setBounds(210, 100, 24, 24);
+
+        interpretada5.setEditable(false);
+        interpretada5.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        interpretada5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        interpretada5.setText("r");
+        interpretada5.setToolTipText("");
+        interpretada5.setPreferredSize(new java.awt.Dimension(24, 24));
+        interpretada5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                interpretada5ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(interpretada5);
+        interpretada5.setBounds(210, 120, 24, 24);
+
+        interpretada6.setEditable(false);
+        interpretada6.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        interpretada6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        interpretada6.setText("p");
+        interpretada6.setToolTipText("");
+        interpretada6.setPreferredSize(new java.awt.Dimension(24, 24));
+        interpretada6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                interpretada6ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(interpretada6);
+        interpretada6.setBounds(210, 140, 24, 24);
+
+        interpretada7_return1.setEditable(false);
+        interpretada7_return1.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        interpretada7_return1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        interpretada7_return1.setText("r");
+        interpretada7_return1.setToolTipText("");
+        interpretada7_return1.setPreferredSize(new java.awt.Dimension(24, 24));
+        interpretada7_return1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                interpretada7_return1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(interpretada7_return1);
+        interpretada7_return1.setBounds(210, 160, 24, 24);
+
+        interpretada8.setEditable(false);
+        interpretada8.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        interpretada8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        interpretada8.setText("e");
+        interpretada8.setToolTipText("");
+        interpretada8.setPreferredSize(new java.awt.Dimension(24, 24));
+        interpretada8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                interpretada8ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(interpretada8);
+        interpretada8.setBounds(210, 180, 24, 24);
+
+        interpretada9.setEditable(false);
+        interpretada9.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        interpretada9.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        interpretada9.setText("t");
+        interpretada9.setToolTipText("");
+        interpretada9.setPreferredSize(new java.awt.Dimension(24, 24));
+        interpretada9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                interpretada9ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(interpretada9);
+        interpretada9.setBounds(210, 200, 24, 24);
+
+        interpretada10_variavel5.setEditable(false);
+        interpretada10_variavel5.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        interpretada10_variavel5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        interpretada10_variavel5.setText("a");
+        interpretada10_variavel5.setToolTipText("");
+        interpretada10_variavel5.setPreferredSize(new java.awt.Dimension(24, 24));
+        interpretada10_variavel5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                interpretada10_variavel5ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(interpretada10_variavel5);
+        interpretada10_variavel5.setBounds(210, 220, 24, 24);
+
+        interpretada11.setEditable(false);
+        interpretada11.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        interpretada11.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        interpretada11.setText("d");
+        interpretada11.setToolTipText("");
+        interpretada11.setPreferredSize(new java.awt.Dimension(24, 24));
+        interpretada11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                interpretada11ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(interpretada11);
+        interpretada11.setBounds(210, 240, 24, 24);
+
+        interpretada12.setEditable(false);
+        interpretada12.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        interpretada12.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        interpretada12.setText("a");
+        interpretada12.setToolTipText("");
+        interpretada12.setPreferredSize(new java.awt.Dimension(24, 24));
+        interpretada12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                interpretada12ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(interpretada12);
+        interpretada12.setBounds(210, 260, 24, 24);
+
+        len1.setEditable(false);
+        len1.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        len1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        len1.setText("l");
+        len1.setToolTipText("");
+        len1.setPreferredSize(new java.awt.Dimension(24, 24));
+        len1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                len1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(len1);
+        len1.setBounds(166, 63, 24, 21);
+
+        len2.setEditable(false);
+        len2.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        len2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        len2.setText("e");
+        len2.setToolTipText("");
+        len2.setPreferredSize(new java.awt.Dimension(24, 24));
+        len2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                len2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(len2);
+        len2.setBounds(190, 63, 24, 21);
+
+        colchete1.setEditable(false);
+        colchete1.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        colchete1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        colchete1.setText("c");
+        colchete1.setToolTipText("");
+        colchete1.setPreferredSize(new java.awt.Dimension(24, 24));
+        getContentPane().add(colchete1);
+        colchete1.setBounds(44, 103, 24, 21);
+
+        colchete2.setEditable(false);
+        colchete2.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        colchete2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        colchete2.setText("o");
+        colchete2.setToolTipText("");
+        colchete2.setPreferredSize(new java.awt.Dimension(24, 24));
+        colchete2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                colchete2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(colchete2);
+        colchete2.setBounds(68, 103, 24, 21);
+
+        colchete3.setEditable(false);
+        colchete3.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        colchete3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        colchete3.setText("l");
+        colchete3.setToolTipText("");
+        colchete3.setPreferredSize(new java.awt.Dimension(24, 24));
+        getContentPane().add(colchete3);
+        colchete3.setBounds(92, 103, 24, 21);
+
+        colchete4.setEditable(false);
+        colchete4.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        colchete4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        colchete4.setText("c");
+        colchete4.setToolTipText("");
+        colchete4.setPreferredSize(new java.awt.Dimension(24, 24));
+        getContentPane().add(colchete4);
+        colchete4.setBounds(116, 103, 24, 21);
+
+        colchete5.setEditable(false);
+        colchete5.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        colchete5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        colchete5.setText("h");
+        colchete5.setToolTipText("");
+        colchete5.setPreferredSize(new java.awt.Dimension(24, 24));
+        getContentPane().add(colchete5);
+        colchete5.setBounds(140, 103, 24, 21);
+
+        colchete6.setEditable(false);
+        colchete6.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        colchete6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        colchete6.setText("e");
+        colchete6.setToolTipText("");
+        colchete6.setPreferredSize(new java.awt.Dimension(24, 24));
+        colchete6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                colchete6ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(colchete6);
+        colchete6.setBounds(162, 103, 24, 21);
+
+        colchete7.setEditable(false);
+        colchete7.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        colchete7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        colchete7.setText("t");
+        colchete7.setToolTipText("");
+        colchete7.setPreferredSize(new java.awt.Dimension(24, 24));
+        getContentPane().add(colchete7);
+        colchete7.setBounds(186, 103, 24, 21);
+
+        return5.setEditable(false);
+        return5.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        return5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        return5.setText("r");
+        return5.setToolTipText("");
+        return5.setPreferredSize(new java.awt.Dimension(24, 24));
+        getContentPane().add(return5);
+        return5.setBounds(306, 163, 24, 21);
+
+        return3_input4.setEditable(false);
+        return3_input4.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        return3_input4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        return3_input4.setText("u");
+        return3_input4.setToolTipText("");
+        return3_input4.setPreferredSize(new java.awt.Dimension(24, 24));
+        getContentPane().add(return3_input4);
+        return3_input4.setBounds(282, 163, 24, 21);
+
+        return6_print4.setEditable(false);
+        return6_print4.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        return6_print4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        return6_print4.setText("n");
+        return6_print4.setToolTipText("");
+        return6_print4.setPreferredSize(new java.awt.Dimension(24, 24));
+        getContentPane().add(return6_print4);
+        return6_print4.setBounds(330, 163, 24, 21);
+
+        return2.setEditable(false);
+        return2.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        return2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        return2.setText("e");
+        return2.setToolTipText("");
+        return2.setPreferredSize(new java.awt.Dimension(24, 24));
+        getContentPane().add(return2);
+        return2.setBounds(234, 163, 24, 21);
+
+        return3.setEditable(false);
+        return3.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        return3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        return3.setText("t");
+        return3.setToolTipText("");
+        return3.setPreferredSize(new java.awt.Dimension(24, 24));
+        getContentPane().add(return3);
+        return3.setBounds(258, 163, 24, 21);
+
+        variavel1.setEditable(false);
+        variavel1.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        variavel1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        variavel1.setText("v");
+        variavel1.setToolTipText("");
+        variavel1.setPreferredSize(new java.awt.Dimension(24, 24));
+        getContentPane().add(variavel1);
+        variavel1.setBounds(114, 223, 24, 21);
+
+        variavel2.setEditable(false);
+        variavel2.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        variavel2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        variavel2.setText("a");
+        variavel2.setToolTipText("");
+        variavel2.setPreferredSize(new java.awt.Dimension(24, 24));
+        getContentPane().add(variavel2);
+        variavel2.setBounds(138, 223, 24, 21);
+
+        variavel3.setEditable(false);
+        variavel3.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        variavel3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        variavel3.setText("r");
+        variavel3.setToolTipText("");
+        variavel3.setPreferredSize(new java.awt.Dimension(24, 24));
+        getContentPane().add(variavel3);
+        variavel3.setBounds(162, 223, 24, 21);
+
+        variavel4.setEditable(false);
+        variavel4.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        variavel4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        variavel4.setText("i");
+        variavel4.setToolTipText("");
+        variavel4.setPreferredSize(new java.awt.Dimension(24, 24));
+        getContentPane().add(variavel4);
+        variavel4.setBounds(186, 223, 24, 21);
+
+        variavel6.setEditable(false);
+        variavel6.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        variavel6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        variavel6.setText("v");
+        variavel6.setToolTipText("");
+        variavel6.setPreferredSize(new java.awt.Dimension(24, 24));
+        getContentPane().add(variavel6);
+        variavel6.setBounds(234, 223, 24, 21);
+
+        variavel7.setEditable(false);
+        variavel7.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        variavel7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        variavel7.setText("e");
+        variavel7.setToolTipText("");
+        variavel7.setPreferredSize(new java.awt.Dimension(24, 24));
+        getContentPane().add(variavel7);
+        variavel7.setBounds(258, 223, 24, 21);
+
+        variavel8.setEditable(false);
+        variavel8.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        variavel8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        variavel8.setText("l");
+        variavel8.setToolTipText("");
+        variavel8.setPreferredSize(new java.awt.Dimension(24, 24));
+        getContentPane().add(variavel8);
+        variavel8.setBounds(282, 223, 24, 21);
+
+        input3.setEditable(false);
+        input3.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        input3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        input3.setText("p");
+        input3.setToolTipText("");
+        input3.setPreferredSize(new java.awt.Dimension(24, 24));
+        getContentPane().add(input3);
+        input3.setBounds(282, 142, 24, 21);
+
+        input2.setEditable(false);
+        input2.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        input2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        input2.setText("n");
+        input2.setToolTipText("");
+        input2.setPreferredSize(new java.awt.Dimension(24, 24));
+        getContentPane().add(input2);
+        input2.setBounds(282, 122, 24, 21);
+
+        input5.setEditable(false);
+        input5.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        input5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        input5.setText("t");
+        input5.setToolTipText("");
+        input5.setPreferredSize(new java.awt.Dimension(24, 24));
+        getContentPane().add(input5);
+        input5.setBounds(282, 184, 24, 21);
+
+        print2.setEditable(false);
+        print2.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        print2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        print2.setText("r");
+        print2.setToolTipText("");
+        print2.setPreferredSize(new java.awt.Dimension(24, 24));
+        getContentPane().add(print2);
+        print2.setBounds(330, 122, 24, 21);
+
+        print3.setEditable(false);
+        print3.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        print3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        print3.setText("i");
+        print3.setToolTipText("");
+        print3.setPreferredSize(new java.awt.Dimension(24, 24));
+        getContentPane().add(print3);
+        print3.setBounds(330, 142, 24, 21);
+
+        print5.setEditable(false);
+        print5.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        print5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        print5.setText("t");
+        print5.setToolTipText("");
+        print5.setPreferredSize(new java.awt.Dimension(24, 24));
+        getContentPane().add(print5);
+        print5.setBounds(330, 184, 24, 21);
+
+        import1.setEditable(false);
+        import1.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        import1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        import1.setText("i");
+        import1.setToolTipText("");
+        import1.setPreferredSize(new java.awt.Dimension(24, 24));
+        getContentPane().add(import1);
+        import1.setBounds(282, 102, 24, 21);
+
+        import2.setEditable(false);
+        import2.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        import2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        import2.setText("m");
+        import2.setToolTipText("");
+        import2.setPreferredSize(new java.awt.Dimension(24, 24));
+        getContentPane().add(import2);
+        import2.setBounds(306, 102, 24, 21);
+
+        import3_print1.setEditable(false);
+        import3_print1.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        import3_print1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        import3_print1.setText("p");
+        import3_print1.setToolTipText("");
+        import3_print1.setPreferredSize(new java.awt.Dimension(24, 24));
+        getContentPane().add(import3_print1);
+        import3_print1.setBounds(330, 102, 24, 21);
+
+        import4.setEditable(false);
+        import4.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        import4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        import4.setText("o");
+        import4.setToolTipText("");
+        import4.setPreferredSize(new java.awt.Dimension(24, 24));
+        getContentPane().add(import4);
+        import4.setBounds(354, 102, 24, 21);
+
+        import5.setEditable(false);
+        import5.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        import5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        import5.setText("r");
+        import5.setToolTipText("");
+        import5.setPreferredSize(new java.awt.Dimension(24, 24));
+        getContentPane().add(import5);
+        import5.setBounds(378, 102, 24, 21);
+
+        import6_turltle4.setEditable(false);
+        import6_turltle4.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        import6_turltle4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        import6_turltle4.setText("t");
+        import6_turltle4.setToolTipText("");
+        import6_turltle4.setPreferredSize(new java.awt.Dimension(24, 24));
+        getContentPane().add(import6_turltle4);
+        import6_turltle4.setBounds(402, 102, 24, 21);
+
+        turtle2.setEditable(false);
+        turtle2.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        turtle2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        turtle2.setText("u");
+        turtle2.setToolTipText("");
+        turtle2.setPreferredSize(new java.awt.Dimension(24, 24));
+        getContentPane().add(turtle2);
+        turtle2.setBounds(402, 62, 24, 21);
+
+        turtle3.setEditable(false);
+        turtle3.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        turtle3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        turtle3.setText("r");
+        turtle3.setToolTipText("");
+        turtle3.setPreferredSize(new java.awt.Dimension(24, 24));
+        getContentPane().add(turtle3);
+        turtle3.setBounds(402, 82, 24, 21);
+
+        turtle5.setEditable(false);
+        turtle5.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        turtle5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        turtle5.setText("l");
+        turtle5.setToolTipText("");
+        turtle5.setPreferredSize(new java.awt.Dimension(24, 24));
+        getContentPane().add(turtle5);
+        turtle5.setBounds(402, 122, 24, 21);
+
+        turtle6.setEditable(false);
+        turtle6.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        turtle6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        turtle6.setText("e");
+        turtle6.setToolTipText("");
+        turtle6.setPreferredSize(new java.awt.Dimension(24, 24));
+        getContentPane().add(turtle6);
+        turtle6.setBounds(402, 142, 24, 21);
+
+        hashtag1.setEditable(false);
+        hashtag1.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        hashtag1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        hashtag1.setText("h");
+        hashtag1.setToolTipText("");
+        hashtag1.setPreferredSize(new java.awt.Dimension(24, 24));
+        getContentPane().add(hashtag1);
+        hashtag1.setBounds(308, 42, 24, 21);
+
+        hashtag2.setEditable(false);
+        hashtag2.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        hashtag2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        hashtag2.setText("a");
+        hashtag2.setToolTipText("");
+        hashtag2.setPreferredSize(new java.awt.Dimension(24, 24));
+        getContentPane().add(hashtag2);
+        hashtag2.setBounds(332, 42, 24, 21);
+
+        hashtag3.setEditable(false);
+        hashtag3.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        hashtag3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        hashtag3.setText("s");
+        hashtag3.setToolTipText("");
+        hashtag3.setPreferredSize(new java.awt.Dimension(24, 24));
+        hashtag3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                hashtag3ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(hashtag3);
+        hashtag3.setBounds(356, 42, 24, 21);
+
+        hashtag4.setEditable(false);
+        hashtag4.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        hashtag4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        hashtag4.setText("h");
+        hashtag4.setToolTipText("");
+        hashtag4.setPreferredSize(new java.awt.Dimension(24, 24));
+        getContentPane().add(hashtag4);
+        hashtag4.setBounds(380, 42, 24, 21);
+
+        hashtag5_turtle1.setEditable(false);
+        hashtag5_turtle1.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        hashtag5_turtle1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        hashtag5_turtle1.setText("t");
+        hashtag5_turtle1.setToolTipText("");
+        hashtag5_turtle1.setPreferredSize(new java.awt.Dimension(24, 24));
+        getContentPane().add(hashtag5_turtle1);
+        hashtag5_turtle1.setBounds(402, 42, 24, 21);
+
+        hashtag6.setEditable(false);
+        hashtag6.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        hashtag6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        hashtag6.setText("a");
+        hashtag6.setToolTipText("");
+        hashtag6.setPreferredSize(new java.awt.Dimension(24, 24));
+        getContentPane().add(hashtag6);
+        hashtag6.setBounds(426, 42, 24, 21);
+
+        hashtag7.setEditable(false);
+        hashtag7.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        hashtag7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        hashtag7.setText("g");
+        hashtag7.setToolTipText("");
+        hashtag7.setPreferredSize(new java.awt.Dimension(24, 24));
+        hashtag7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                hashtag7ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(hashtag7);
+        hashtag7.setBounds(450, 42, 24, 21);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void interpretada1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_interpretada1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_interpretada1ActionPerformed
+
+    private void interpretada2_len3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_interpretada2_len3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_interpretada2_len3ActionPerformed
+
+    private void interpretada3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_interpretada3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_interpretada3ActionPerformed
+
+    private void interpretada4_colchete8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_interpretada4_colchete8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_interpretada4_colchete8ActionPerformed
+
+    private void interpretada5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_interpretada5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_interpretada5ActionPerformed
+
+    private void interpretada6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_interpretada6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_interpretada6ActionPerformed
+
+    private void interpretada7_return1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_interpretada7_return1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_interpretada7_return1ActionPerformed
+
+    private void interpretada8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_interpretada8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_interpretada8ActionPerformed
+
+    private void interpretada9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_interpretada9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_interpretada9ActionPerformed
+
+    private void interpretada10_variavel5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_interpretada10_variavel5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_interpretada10_variavel5ActionPerformed
+
+    private void interpretada11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_interpretada11ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_interpretada11ActionPerformed
+
+    private void interpretada12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_interpretada12ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_interpretada12ActionPerformed
+
+    private void len2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_len2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_len2ActionPerformed
+
+    private void len1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_len1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_len1ActionPerformed
+
+    private void colchete6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_colchete6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_colchete6ActionPerformed
+
+    private void colchete2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_colchete2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_colchete2ActionPerformed
+
+    private void hashtag3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hashtag3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_hashtag3ActionPerformed
+
+    private void hashtag7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hashtag7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_hashtag7ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,6 +781,9 @@ public class Fase1 extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(Fase1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -88,6 +794,61 @@ public class Fase1 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JTextField colchete1;
+    private javax.swing.JTextField colchete2;
+    private javax.swing.JTextField colchete3;
+    private javax.swing.JTextField colchete4;
+    private javax.swing.JTextField colchete5;
+    private javax.swing.JTextField colchete6;
+    private javax.swing.JTextField colchete7;
+    private javax.swing.JTextField hashtag1;
+    private javax.swing.JTextField hashtag2;
+    private javax.swing.JTextField hashtag3;
+    private javax.swing.JTextField hashtag4;
+    private javax.swing.JTextField hashtag5_turtle1;
+    private javax.swing.JTextField hashtag6;
+    private javax.swing.JTextField hashtag7;
+    private javax.swing.JTextField import1;
+    private javax.swing.JTextField import2;
+    private javax.swing.JTextField import3_print1;
+    private javax.swing.JTextField import4;
+    private javax.swing.JTextField import5;
+    private javax.swing.JTextField import6_turltle4;
+    private javax.swing.JTextField input2;
+    private javax.swing.JTextField input3;
+    private javax.swing.JTextField input5;
+    private javax.swing.JTextField interpretada1;
+    private javax.swing.JTextField interpretada10_variavel5;
+    private javax.swing.JTextField interpretada11;
+    private javax.swing.JTextField interpretada12;
+    private javax.swing.JTextField interpretada2_len3;
+    private javax.swing.JTextField interpretada3;
+    private javax.swing.JTextField interpretada4_colchete8;
+    private javax.swing.JTextField interpretada5;
+    private javax.swing.JTextField interpretada6;
+    private javax.swing.JTextField interpretada7_return1;
+    private javax.swing.JTextField interpretada8;
+    private javax.swing.JTextField interpretada9;
+    private javax.swing.JTextField len1;
+    private javax.swing.JTextField len2;
+    private javax.swing.JTextField print2;
+    private javax.swing.JTextField print3;
+    private javax.swing.JTextField print5;
+    private javax.swing.JTextField return2;
+    private javax.swing.JTextField return3;
+    private javax.swing.JTextField return3_input4;
+    private javax.swing.JTextField return5;
+    private javax.swing.JTextField return6_print4;
+    private javax.swing.JTextField turtle2;
+    private javax.swing.JTextField turtle3;
+    private javax.swing.JTextField turtle5;
+    private javax.swing.JTextField turtle6;
+    private javax.swing.JTextField variavel1;
+    private javax.swing.JTextField variavel2;
+    private javax.swing.JTextField variavel3;
+    private javax.swing.JTextField variavel4;
+    private javax.swing.JTextField variavel6;
+    private javax.swing.JTextField variavel7;
+    private javax.swing.JTextField variavel8;
     // End of variables declaration//GEN-END:variables
 }
