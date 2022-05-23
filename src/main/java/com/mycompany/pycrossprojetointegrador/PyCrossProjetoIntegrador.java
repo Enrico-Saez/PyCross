@@ -5,6 +5,8 @@
 
 package com.mycompany.pycrossprojetointegrador;
 
+import view.TelaLogin;
+
 /**
  *
  * @author Enrico
@@ -12,6 +14,7 @@ package com.mycompany.pycrossprojetointegrador;
 public class PyCrossProjetoIntegrador {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        TelaLogin tl = new TelaLogin();
+        tl.setVisible(true);
     }
 }
