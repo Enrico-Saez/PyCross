@@ -92,7 +92,7 @@
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="cadastrarButtonTelaAdmin" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="atualizarButtonTelaAdmin" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="deletarButtonTelaAdmin" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
+                  <Component id="deletarButtonTelaAdmin" alignment="1" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
               <Component id="jScrollPane2" pref="180" max="32767" attributes="0"/>
