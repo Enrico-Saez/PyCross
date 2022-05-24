@@ -14,7 +14,9 @@ public class Fase1 extends javax.swing.JFrame {
      * Creates new form Fase2
      */
     public Fase1() {
+        super("PyCross Fase 1");
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -94,6 +96,8 @@ public class Fase1 extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(800, 350));
+        setSize(new java.awt.Dimension(800, 350));
         getContentPane().setLayout(null);
 
         interpretada1.setEditable(false);

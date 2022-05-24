@@ -14,7 +14,9 @@ public class Fase2 extends javax.swing.JFrame {
      * Creates new form Fase1
      */
     public Fase2() {
+        super("PyCross Fase 2");
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -26,28 +28,75 @@ public class Fase2 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextArea2 = new javax.swing.JTextArea();
+        jTextField1 = new javax.swing.JTextField();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTextArea3 = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(800, 350));
+        setSize(new java.awt.Dimension(800, 350));
+        getContentPane().setLayout(null);
 
-        jLabel1.setText("jLabel1");
+        jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
+        jScrollPane1.setEnabled(false);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(192, 192, 192)
-                .addComponent(jLabel1)
-                .addContainerGap(371, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(57, 57, 57)
-                .addComponent(jLabel1)
-                .addContainerGap(277, Short.MAX_VALUE))
-        );
+        jTextArea1.setEditable(false);
+        jTextArea1.setColumns(1);
+        jTextArea1.setRows(1);
+        jTextArea1.setTabSize(0);
+        jTextArea1.setText("M");
+        jTextArea1.setWrapStyleWord(true);
+        jTextArea1.setMinimumSize(new java.awt.Dimension(25, 25));
+        jTextArea1.setPreferredSize(new java.awt.Dimension(25, 25));
+        jScrollPane1.setViewportView(jTextArea1);
+
+        getContentPane().add(jScrollPane1);
+        jScrollPane1.setBounds(280, 100, 25, 22);
+
+        jScrollPane2.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        jScrollPane2.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
+        jScrollPane2.setEnabled(false);
+
+        jTextArea2.setEditable(false);
+        jTextArea2.setColumns(1);
+        jTextArea2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jTextArea2.setRows(1);
+        jTextArea2.setText(" A");
+        jTextArea2.setWrapStyleWord(true);
+        jTextArea2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jTextArea2.setMargin(new java.awt.Insets(2, 6, 6, 2));
+        jScrollPane2.setViewportView(jTextArea2);
+
+        getContentPane().add(jScrollPane2);
+        jScrollPane2.setBounds(150, 30, 30, 30);
+
+        jTextField1.setColumns(1);
+        jTextField1.setText("M");
+        jTextField1.setPreferredSize(new java.awt.Dimension(25, 25));
+        getContentPane().add(jTextField1);
+        jTextField1.setBounds(380, 50, 24, 25);
+
+        jScrollPane3.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        jScrollPane3.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
+        jScrollPane3.setEnabled(false);
+
+        jTextArea3.setEditable(false);
+        jTextArea3.setColumns(1);
+        jTextArea3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jTextArea3.setRows(1);
+        jTextArea3.setText(" A");
+        jTextArea3.setWrapStyleWord(true);
+        jTextArea3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jTextArea3.setMargin(new java.awt.Insets(2, 6, 6, 2));
+        jScrollPane3.setViewportView(jTextArea3);
+
+        getContentPane().add(jScrollPane3);
+        jScrollPane3.setBounds(150, 60, 30, 30);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -89,6 +138,12 @@ public class Fase2 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextArea jTextArea2;
+    private javax.swing.JTextArea jTextArea3;
+    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }
