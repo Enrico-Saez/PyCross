@@ -90,6 +90,18 @@ public class Fase2 extends javax.swing.JFrame {
         upper4 = new javax.swing.JTextField();
         set1 = new javax.swing.JTextField();
         set2 = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(800, 350));
@@ -864,6 +876,54 @@ public class Fase2 extends javax.swing.JFrame {
         getContentPane().add(set2);
         set2.setBounds(376, 300, 24, 21);
 
+        jLabel1.setText("19");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(240, 180, 20, 16);
+
+        jLabel2.setText("13");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(220, 20, 20, 16);
+
+        jLabel3.setText("11");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(120, 220, 20, 16);
+
+        jLabel4.setText("12");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(170, 200, 20, 16);
+
+        jLabel5.setText("14");
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(270, 60, 20, 16);
+
+        jLabel6.setText("15");
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(410, 160, 30, 16);
+
+        jLabel7.setText("16");
+        getContentPane().add(jLabel7);
+        jLabel7.setBounds(170, 80, 20, 16);
+
+        jLabel8.setText("17");
+        getContentPane().add(jLabel8);
+        jLabel8.setBounds(90, 120, 20, 16);
+
+        jLabel9.setText("18");
+        getContentPane().add(jLabel9);
+        jLabel9.setBounds(90, 180, 20, 16);
+
+        jLabel10.setText("20");
+        getContentPane().add(jLabel10);
+        jLabel10.setBounds(89, 240, 20, 16);
+
+        jLabel11.setText("21");
+        getContentPane().add(jLabel11);
+        jLabel11.setBounds(280, 260, 20, 16);
+
+        jLabel12.setText("22");
+        getContentPane().add(jLabel12);
+        jLabel12.setBounds(330, 300, 20, 16);
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -1113,6 +1173,18 @@ public class Fase2 extends javax.swing.JFrame {
     private javax.swing.JTextField dinamica8;
     private javax.swing.JTextField int1;
     private javax.swing.JTextField int3;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JTextField lista1;
     private javax.swing.JTextField lista2;
     private javax.swing.JTextField lista3;
