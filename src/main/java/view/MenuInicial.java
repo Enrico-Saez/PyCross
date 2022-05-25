@@ -19,11 +19,13 @@ public class MenuInicial extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }
 
-    public MenuInicial(String nome, int pontuacao) {
+    public MenuInicial(String nome, int pntc) {
         super("PyCross Menu Inicial");
         initComponents();
         setLocationRelativeTo(null);
-        welcomeLabel.setText("Bem vindo, " + nome + ", sua pontuação é: " + pontuacao);
+        String nomeUsuario = nome;
+        int pontuacao = pntc;
+        welcomeLabel.setText("Bem vindo, " + nomeUsuario + ", sua pontuação é: " + pontuacao);
     }
 
     /**

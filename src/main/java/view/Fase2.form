@@ -21,7 +21,7 @@
     <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
     <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
-    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,1,114,0,0,3,32"/>
+    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,1,-112,0,0,3,32"/>
   </AuxValues>
 
   <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
@@ -35,7 +35,6 @@
           <Font name="Segoe UI" size="10" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="p"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[24, 24]"/>
@@ -54,7 +53,6 @@
           <Font name="Segoe UI" size="10" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="o"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[24, 24]"/>
@@ -73,7 +71,6 @@
           <Font name="Segoe UI" size="10" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="r"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[24, 24]"/>
@@ -92,7 +89,6 @@
           <Font name="Segoe UI" size="10" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="c"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[24, 24]"/>
@@ -111,7 +107,6 @@
           <Font name="Segoe UI" size="10" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="e"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[24, 24]"/>
@@ -130,7 +125,6 @@
           <Font name="Segoe UI" size="10" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="n"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[24, 24]"/>
@@ -152,7 +146,6 @@
           <Font name="Segoe UI" size="10" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="t"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[24, 24]"/>
@@ -171,7 +164,6 @@
           <Font name="Segoe UI" size="10" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="a"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[24, 24]"/>
@@ -190,7 +182,6 @@
           <Font name="Segoe UI" size="10" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="g"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[24, 24]"/>
@@ -209,7 +200,6 @@
           <Font name="Segoe UI" size="10" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="e"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[24, 24]"/>
@@ -228,7 +218,6 @@
           <Font name="Segoe UI" size="10" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="m"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[24, 24]"/>
@@ -247,7 +236,6 @@
           <Font name="Segoe UI" size="10" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="b"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[24, 24]"/>
@@ -266,7 +254,6 @@
           <Font name="Segoe UI" size="10" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="e"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[24, 24]"/>
@@ -285,7 +272,6 @@
           <Font name="Segoe UI" size="10" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="k"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[24, 24]"/>
@@ -300,21 +286,20 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="javax.swing.JTextField" name="break6_append1">
+    <Component class="javax.swing.JTextField" name="break4_append1">
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="10" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="a"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[24, 24]"/>
         </Property>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="break6_append1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="break4_append1ActionPerformed"/>
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -329,7 +314,6 @@
           <Font name="Segoe UI" size="10" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="p"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[24, 24]"/>
@@ -351,7 +335,6 @@
           <Font name="Segoe UI" size="10" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="p"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[24, 24]"/>
@@ -373,7 +356,6 @@
           <Font name="Segoe UI" size="10" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="e"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[24, 24]"/>
@@ -395,7 +377,6 @@
           <Font name="Segoe UI" size="10" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="n"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[24, 24]"/>
@@ -417,7 +398,6 @@
           <Font name="Segoe UI" size="10" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="d"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[24, 24]"/>
@@ -439,7 +419,6 @@
           <Font name="Segoe UI" size="10" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="i"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[24, 24]"/>
@@ -461,7 +440,6 @@
           <Font name="Segoe UI" size="10" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="i"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[24, 24]"/>
@@ -483,7 +461,6 @@
           <Font name="Segoe UI" size="10" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="c"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[24, 24]"/>
@@ -505,7 +482,6 @@
           <Font name="Segoe UI" size="10" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="o"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[24, 24]"/>
@@ -527,7 +503,6 @@
           <Font name="Segoe UI" size="10" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="n"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[24, 24]"/>
@@ -549,7 +524,6 @@
           <Font name="Segoe UI" size="10" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="a"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[24, 24]"/>
@@ -571,7 +545,6 @@
           <Font name="Segoe UI" size="10" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="r"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[24, 24]"/>
@@ -593,7 +566,6 @@
           <Font name="Segoe UI" size="10" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="i"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[24, 24]"/>
@@ -615,7 +587,6 @@
           <Font name="Segoe UI" size="10" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="o"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[24, 24]"/>
@@ -637,7 +608,6 @@
           <Font name="Segoe UI" size="10" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="c"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[24, 24]"/>
@@ -656,7 +626,6 @@
           <Font name="Segoe UI" size="10" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="h"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[24, 24]"/>
@@ -675,7 +644,6 @@
           <Font name="Segoe UI" size="10" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="a"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[24, 24]"/>
@@ -694,7 +662,6 @@
           <Font name="Segoe UI" size="10" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="v"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[24, 24]"/>
@@ -713,7 +680,6 @@
           <Font name="Segoe UI" size="10" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="l"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[24, 24]"/>
@@ -732,7 +698,6 @@
           <Font name="Segoe UI" size="10" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="i"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[24, 24]"/>
@@ -751,7 +716,6 @@
           <Font name="Segoe UI" size="10" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="s"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[24, 24]"/>
@@ -770,7 +734,6 @@
           <Font name="Segoe UI" size="10" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="t"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[24, 24]"/>
@@ -789,7 +752,6 @@
           <Font name="Segoe UI" size="10" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="d"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[24, 24]"/>
@@ -811,7 +773,6 @@
           <Font name="Segoe UI" size="10" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="i"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[24, 24]"/>
@@ -833,7 +794,6 @@
           <Font name="Segoe UI" size="10" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="n"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[24, 24]"/>
@@ -855,7 +815,6 @@
           <Font name="Segoe UI" size="10" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="a"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[24, 24]"/>
@@ -877,7 +836,6 @@
           <Font name="Segoe UI" size="10" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="i"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[24, 21]"/>
@@ -899,7 +857,6 @@
           <Font name="Segoe UI" size="10" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="c"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[24, 24]"/>
@@ -921,7 +878,6 @@
           <Font name="Segoe UI" size="10" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="a"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[24, 24]"/>
@@ -943,7 +899,6 @@
           <Font name="Segoe UI" size="10" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="i"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[24, 24]"/>
@@ -965,7 +920,6 @@
           <Font name="Segoe UI" size="10" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="t"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[24, 24]"/>
@@ -987,7 +941,6 @@
           <Font name="Segoe UI" size="10" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="e"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[24, 24]"/>
@@ -1009,7 +962,6 @@
           <Font name="Segoe UI" size="10" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="f"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[24, 24]"/>
@@ -1031,7 +983,6 @@
           <Font name="Segoe UI" size="10" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="l"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[24, 24]"/>
@@ -1053,7 +1004,6 @@
           <Font name="Segoe UI" size="10" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="g"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[24, 24]"/>
@@ -1075,7 +1025,6 @@
           <Font name="Segoe UI" size="10" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="o"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[24, 24]"/>
@@ -1097,7 +1046,6 @@
           <Font name="Segoe UI" size="10" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="r"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[24, 24]"/>
@@ -1119,7 +1067,6 @@
           <Font name="Segoe UI" size="10" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="i"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[24, 24]"/>
@@ -1141,7 +1088,6 @@
           <Font name="Segoe UI" size="10" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="t"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[24, 24]"/>
@@ -1163,7 +1109,6 @@
           <Font name="Segoe UI" size="10" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="m"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[24, 24]"/>
@@ -1185,7 +1130,6 @@
           <Font name="Segoe UI" size="10" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="o"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[24, 24]"/>
@@ -1207,7 +1151,6 @@
           <Font name="Segoe UI" size="10" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="u"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[24, 24]"/>
@@ -1229,7 +1172,6 @@
           <Font name="Segoe UI" size="10" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="p"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[24, 24]"/>
@@ -1251,7 +1193,6 @@
           <Font name="Segoe UI" size="10" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="p"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[24, 24]"/>
@@ -1273,7 +1214,6 @@
           <Font name="Segoe UI" size="10" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="e"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[24, 24]"/>
@@ -1295,7 +1235,6 @@
           <Font name="Segoe UI" size="10" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="s"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[24, 24]"/>
@@ -1317,7 +1256,6 @@
           <Font name="Segoe UI" size="10" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="e"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[24, 24]"/>
@@ -1449,6 +1387,41 @@
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="338" y="300" width="20" height="-1"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="javax.swing.JTextField" name="respostaTextField">
+      <Properties>
+        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[64, 26]"/>
+        </Property>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="500" y="340" width="200" height="30"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="javax.swing.JButton" name="enviarButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Enviar"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="enviarButtonActionPerformed"/>
+      </Events>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="710" y="340" width="-1" height="30"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="javax.swing.JButton" name="sairButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Sair"/>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="10" y="10" width="60" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>

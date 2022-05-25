@@ -4,6 +4,9 @@
  */
 package view;
 
+import javax.swing.JOptionPane;
+import model.dao.PalavraDAO;
+
 /**
  *
  * @author pivis
@@ -73,6 +76,22 @@ public class Fase3 extends javax.swing.JFrame {
         continue6 = new javax.swing.JTextField();
         continue7 = new javax.swing.JTextField();
         continue8 = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        respostaTextField = new javax.swing.JTextField();
+        enviarButton = new javax.swing.JButton();
+        sairButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -80,7 +99,6 @@ public class Fase3 extends javax.swing.JFrame {
         samuel1.setEditable(false);
         samuel1.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         samuel1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        samuel1.setText("s");
         samuel1.setToolTipText("");
         samuel1.setPreferredSize(new java.awt.Dimension(24, 24));
         getContentPane().add(samuel1);
@@ -89,7 +107,6 @@ public class Fase3 extends javax.swing.JFrame {
         samuel2_max2.setEditable(false);
         samuel2_max2.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         samuel2_max2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        samuel2_max2.setText("a");
         samuel2_max2.setToolTipText("");
         samuel2_max2.setPreferredSize(new java.awt.Dimension(24, 24));
         samuel2_max2.addActionListener(new java.awt.event.ActionListener() {
@@ -103,7 +120,6 @@ public class Fase3 extends javax.swing.JFrame {
         samuel3.setEditable(false);
         samuel3.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         samuel3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        samuel3.setText("m");
         samuel3.setToolTipText("");
         samuel3.setPreferredSize(new java.awt.Dimension(24, 24));
         samuel3.addActionListener(new java.awt.event.ActionListener() {
@@ -117,7 +133,6 @@ public class Fase3 extends javax.swing.JFrame {
         samuel4_cpu3.setEditable(false);
         samuel4_cpu3.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         samuel4_cpu3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        samuel4_cpu3.setText("u");
         samuel4_cpu3.setToolTipText("");
         samuel4_cpu3.setPreferredSize(new java.awt.Dimension(24, 24));
         samuel4_cpu3.addActionListener(new java.awt.event.ActionListener() {
@@ -131,7 +146,6 @@ public class Fase3 extends javax.swing.JFrame {
         samuel5.setEditable(false);
         samuel5.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         samuel5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        samuel5.setText("e");
         samuel5.setToolTipText("");
         samuel5.setPreferredSize(new java.awt.Dimension(24, 24));
         samuel5.addActionListener(new java.awt.event.ActionListener() {
@@ -145,7 +159,6 @@ public class Fase3 extends javax.swing.JFrame {
         samuel6_float2.setEditable(false);
         samuel6_float2.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         samuel6_float2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        samuel6_float2.setText("l");
         samuel6_float2.setToolTipText("");
         samuel6_float2.setPreferredSize(new java.awt.Dimension(24, 24));
         samuel6_float2.addActionListener(new java.awt.event.ActionListener() {
@@ -159,7 +172,6 @@ public class Fase3 extends javax.swing.JFrame {
         max1.setEditable(false);
         max1.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         max1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        max1.setText("m");
         max1.setToolTipText("");
         max1.setPreferredSize(new java.awt.Dimension(24, 24));
         max1.addActionListener(new java.awt.event.ActionListener() {
@@ -173,7 +185,6 @@ public class Fase3 extends javax.swing.JFrame {
         max3.setEditable(false);
         max3.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         max3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        max3.setText("x");
         max3.setToolTipText("");
         max3.setPreferredSize(new java.awt.Dimension(24, 24));
         max3.addActionListener(new java.awt.event.ActionListener() {
@@ -187,7 +198,6 @@ public class Fase3 extends javax.swing.JFrame {
         cpu1.setEditable(false);
         cpu1.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         cpu1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        cpu1.setText("p");
         cpu1.setToolTipText("");
         cpu1.setPreferredSize(new java.awt.Dimension(24, 24));
         cpu1.addActionListener(new java.awt.event.ActionListener() {
@@ -201,7 +211,6 @@ public class Fase3 extends javax.swing.JFrame {
         cpu2.setEditable(false);
         cpu2.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         cpu2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        cpu2.setText("c");
         cpu2.setToolTipText("");
         cpu2.setPreferredSize(new java.awt.Dimension(24, 24));
         cpu2.addActionListener(new java.awt.event.ActionListener() {
@@ -215,7 +224,6 @@ public class Fase3 extends javax.swing.JFrame {
         float1_false1.setEditable(false);
         float1_false1.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         float1_false1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        float1_false1.setText("f");
         float1_false1.setToolTipText("");
         float1_false1.setPreferredSize(new java.awt.Dimension(24, 24));
         float1_false1.addActionListener(new java.awt.event.ActionListener() {
@@ -229,7 +237,6 @@ public class Fase3 extends javax.swing.JFrame {
         float3.setEditable(false);
         float3.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         float3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        float3.setText("o");
         float3.setToolTipText("");
         float3.setPreferredSize(new java.awt.Dimension(24, 24));
         float3.addActionListener(new java.awt.event.ActionListener() {
@@ -243,7 +250,6 @@ public class Fase3 extends javax.swing.JFrame {
         float4_snake3.setEditable(false);
         float4_snake3.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         float4_snake3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        float4_snake3.setText("a");
         float4_snake3.setToolTipText("");
         float4_snake3.setPreferredSize(new java.awt.Dimension(24, 24));
         float4_snake3.addActionListener(new java.awt.event.ActionListener() {
@@ -257,7 +263,6 @@ public class Fase3 extends javax.swing.JFrame {
         float5.setEditable(false);
         float5.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         float5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        float5.setText("t");
         float5.setToolTipText("");
         float5.setPreferredSize(new java.awt.Dimension(24, 24));
         float5.addActionListener(new java.awt.event.ActionListener() {
@@ -271,7 +276,6 @@ public class Fase3 extends javax.swing.JFrame {
         snake1.setEditable(false);
         snake1.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         snake1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        snake1.setText("s");
         snake1.setToolTipText("");
         snake1.setPreferredSize(new java.awt.Dimension(24, 24));
         snake1.addActionListener(new java.awt.event.ActionListener() {
@@ -285,7 +289,6 @@ public class Fase3 extends javax.swing.JFrame {
         snake2.setEditable(false);
         snake2.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         snake2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        snake2.setText("n");
         snake2.setToolTipText("");
         snake2.setPreferredSize(new java.awt.Dimension(24, 24));
         snake2.addActionListener(new java.awt.event.ActionListener() {
@@ -299,7 +302,6 @@ public class Fase3 extends javax.swing.JFrame {
         snake4.setEditable(false);
         snake4.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         snake4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        snake4.setText("k");
         snake4.setToolTipText("");
         snake4.setPreferredSize(new java.awt.Dimension(24, 24));
         snake4.addActionListener(new java.awt.event.ActionListener() {
@@ -313,7 +315,6 @@ public class Fase3 extends javax.swing.JFrame {
         snake5_lower4.setEditable(false);
         snake5_lower4.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         snake5_lower4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        snake5_lower4.setText("e");
         snake5_lower4.setToolTipText("");
         snake5_lower4.setPreferredSize(new java.awt.Dimension(24, 24));
         snake5_lower4.addActionListener(new java.awt.event.ActionListener() {
@@ -327,7 +328,6 @@ public class Fase3 extends javax.swing.JFrame {
         lower1_false3.setEditable(false);
         lower1_false3.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         lower1_false3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        lower1_false3.setText("l");
         lower1_false3.setToolTipText("");
         lower1_false3.setPreferredSize(new java.awt.Dimension(24, 24));
         lower1_false3.addActionListener(new java.awt.event.ActionListener() {
@@ -341,7 +341,6 @@ public class Fase3 extends javax.swing.JFrame {
         lower2.setEditable(false);
         lower2.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         lower2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        lower2.setText("o");
         lower2.setToolTipText("");
         lower2.setPreferredSize(new java.awt.Dimension(24, 24));
         lower2.addActionListener(new java.awt.event.ActionListener() {
@@ -355,7 +354,6 @@ public class Fase3 extends javax.swing.JFrame {
         lower5.setEditable(false);
         lower5.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         lower5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        lower5.setText("r");
         lower5.setToolTipText("");
         lower5.setPreferredSize(new java.awt.Dimension(24, 24));
         lower5.addActionListener(new java.awt.event.ActionListener() {
@@ -369,7 +367,6 @@ public class Fase3 extends javax.swing.JFrame {
         lower3.setEditable(false);
         lower3.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         lower3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        lower3.setText("w");
         lower3.setToolTipText("");
         lower3.setPreferredSize(new java.awt.Dimension(24, 24));
         lower3.addActionListener(new java.awt.event.ActionListener() {
@@ -383,7 +380,6 @@ public class Fase3 extends javax.swing.JFrame {
         false2.setEditable(false);
         false2.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         false2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        false2.setText("a");
         false2.setToolTipText("");
         false2.setPreferredSize(new java.awt.Dimension(24, 24));
         false2.addActionListener(new java.awt.event.ActionListener() {
@@ -397,7 +393,6 @@ public class Fase3 extends javax.swing.JFrame {
         false4.setEditable(false);
         false4.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         false4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        false4.setText("s");
         false4.setToolTipText("");
         false4.setPreferredSize(new java.awt.Dimension(24, 24));
         false4.addActionListener(new java.awt.event.ActionListener() {
@@ -411,7 +406,6 @@ public class Fase3 extends javax.swing.JFrame {
         false5_nove4.setEditable(false);
         false5_nove4.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         false5_nove4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        false5_nove4.setText("e");
         false5_nove4.setToolTipText("");
         false5_nove4.setPreferredSize(new java.awt.Dimension(24, 24));
         false5_nove4.addActionListener(new java.awt.event.ActionListener() {
@@ -425,7 +419,6 @@ public class Fase3 extends javax.swing.JFrame {
         nove1_not1.setEditable(false);
         nove1_not1.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         nove1_not1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        nove1_not1.setText("n");
         nove1_not1.setToolTipText("");
         nove1_not1.setPreferredSize(new java.awt.Dimension(24, 24));
         nove1_not1.addActionListener(new java.awt.event.ActionListener() {
@@ -439,7 +432,6 @@ public class Fase3 extends javax.swing.JFrame {
         nove2_oito4.setEditable(false);
         nove2_oito4.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         nove2_oito4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        nove2_oito4.setText("o");
         nove2_oito4.setToolTipText("");
         nove2_oito4.setPreferredSize(new java.awt.Dimension(24, 24));
         nove2_oito4.addActionListener(new java.awt.event.ActionListener() {
@@ -453,7 +445,6 @@ public class Fase3 extends javax.swing.JFrame {
         nove3.setEditable(false);
         nove3.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         nove3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        nove3.setText("v");
         nove3.setToolTipText("");
         nove3.setPreferredSize(new java.awt.Dimension(24, 24));
         nove3.addActionListener(new java.awt.event.ActionListener() {
@@ -467,7 +458,6 @@ public class Fase3 extends javax.swing.JFrame {
         oito1_guido5.setEditable(false);
         oito1_guido5.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         oito1_guido5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        oito1_guido5.setText("o");
         oito1_guido5.setToolTipText("");
         oito1_guido5.setPreferredSize(new java.awt.Dimension(24, 24));
         oito1_guido5.addActionListener(new java.awt.event.ActionListener() {
@@ -481,7 +471,6 @@ public class Fase3 extends javax.swing.JFrame {
         oito2.setEditable(false);
         oito2.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         oito2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        oito2.setText("i");
         oito2.setToolTipText("");
         oito2.setPreferredSize(new java.awt.Dimension(24, 24));
         oito2.addActionListener(new java.awt.event.ActionListener() {
@@ -495,7 +484,6 @@ public class Fase3 extends javax.swing.JFrame {
         oito3.setEditable(false);
         oito3.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         oito3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        oito3.setText("t");
         oito3.setToolTipText("");
         oito3.setPreferredSize(new java.awt.Dimension(24, 24));
         oito3.addActionListener(new java.awt.event.ActionListener() {
@@ -509,7 +497,6 @@ public class Fase3 extends javax.swing.JFrame {
         guido1.setEditable(false);
         guido1.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         guido1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        guido1.setText("g");
         guido1.setToolTipText("");
         guido1.setPreferredSize(new java.awt.Dimension(24, 24));
         guido1.addActionListener(new java.awt.event.ActionListener() {
@@ -523,7 +510,6 @@ public class Fase3 extends javax.swing.JFrame {
         guido2.setEditable(false);
         guido2.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         guido2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        guido2.setText("u");
         guido2.setToolTipText("");
         guido2.setPreferredSize(new java.awt.Dimension(24, 24));
         guido2.addActionListener(new java.awt.event.ActionListener() {
@@ -537,7 +523,6 @@ public class Fase3 extends javax.swing.JFrame {
         guido3.setEditable(false);
         guido3.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         guido3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        guido3.setText("i");
         guido3.setToolTipText("");
         guido3.setPreferredSize(new java.awt.Dimension(24, 24));
         guido3.addActionListener(new java.awt.event.ActionListener() {
@@ -551,7 +536,6 @@ public class Fase3 extends javax.swing.JFrame {
         guido4.setEditable(false);
         guido4.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         guido4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        guido4.setText("d");
         guido4.setToolTipText("");
         guido4.setPreferredSize(new java.awt.Dimension(24, 24));
         guido4.addActionListener(new java.awt.event.ActionListener() {
@@ -565,7 +549,6 @@ public class Fase3 extends javax.swing.JFrame {
         true1.setEditable(false);
         true1.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         true1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        true1.setText("t");
         true1.setToolTipText("");
         true1.setPreferredSize(new java.awt.Dimension(24, 24));
         true1.addActionListener(new java.awt.event.ActionListener() {
@@ -579,7 +562,6 @@ public class Fase3 extends javax.swing.JFrame {
         true2.setEditable(false);
         true2.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         true2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        true2.setText("r");
         true2.setToolTipText("");
         true2.setPreferredSize(new java.awt.Dimension(24, 24));
         true2.addActionListener(new java.awt.event.ActionListener() {
@@ -593,7 +575,6 @@ public class Fase3 extends javax.swing.JFrame {
         true3.setEditable(false);
         true3.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         true3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        true3.setText("e");
         true3.setToolTipText("");
         true3.setPreferredSize(new java.awt.Dimension(24, 24));
         true3.addActionListener(new java.awt.event.ActionListener() {
@@ -607,7 +588,6 @@ public class Fase3 extends javax.swing.JFrame {
         not2.setEditable(false);
         not2.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         not2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        not2.setText("o");
         not2.setToolTipText("");
         not2.setPreferredSize(new java.awt.Dimension(24, 24));
         not2.addActionListener(new java.awt.event.ActionListener() {
@@ -621,7 +601,6 @@ public class Fase3 extends javax.swing.JFrame {
         not3_continue4.setEditable(false);
         not3_continue4.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         not3_continue4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        not3_continue4.setText("t");
         not3_continue4.setToolTipText("");
         not3_continue4.setPreferredSize(new java.awt.Dimension(24, 24));
         not3_continue4.addActionListener(new java.awt.event.ActionListener() {
@@ -635,7 +614,6 @@ public class Fase3 extends javax.swing.JFrame {
         continue1.setEditable(false);
         continue1.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         continue1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        continue1.setText("c");
         continue1.setToolTipText("");
         continue1.setPreferredSize(new java.awt.Dimension(24, 24));
         continue1.addActionListener(new java.awt.event.ActionListener() {
@@ -649,7 +627,6 @@ public class Fase3 extends javax.swing.JFrame {
         continue2.setEditable(false);
         continue2.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         continue2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        continue2.setText("o");
         continue2.setToolTipText("");
         continue2.setPreferredSize(new java.awt.Dimension(24, 24));
         continue2.addActionListener(new java.awt.event.ActionListener() {
@@ -663,7 +640,6 @@ public class Fase3 extends javax.swing.JFrame {
         continue3.setEditable(false);
         continue3.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         continue3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        continue3.setText("n");
         continue3.setToolTipText("");
         continue3.setPreferredSize(new java.awt.Dimension(24, 24));
         continue3.addActionListener(new java.awt.event.ActionListener() {
@@ -677,7 +653,6 @@ public class Fase3 extends javax.swing.JFrame {
         continue5.setEditable(false);
         continue5.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         continue5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        continue5.setText("i");
         continue5.setToolTipText("");
         continue5.setPreferredSize(new java.awt.Dimension(24, 24));
         continue5.addActionListener(new java.awt.event.ActionListener() {
@@ -691,7 +666,6 @@ public class Fase3 extends javax.swing.JFrame {
         continue6.setEditable(false);
         continue6.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         continue6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        continue6.setText("n");
         continue6.setToolTipText("");
         continue6.setPreferredSize(new java.awt.Dimension(24, 24));
         continue6.addActionListener(new java.awt.event.ActionListener() {
@@ -705,7 +679,6 @@ public class Fase3 extends javax.swing.JFrame {
         continue7.setEditable(false);
         continue7.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         continue7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        continue7.setText("u");
         continue7.setToolTipText("");
         continue7.setPreferredSize(new java.awt.Dimension(24, 24));
         continue7.addActionListener(new java.awt.event.ActionListener() {
@@ -719,7 +692,6 @@ public class Fase3 extends javax.swing.JFrame {
         continue8.setEditable(false);
         continue8.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         continue8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        continue8.setText("e");
         continue8.setToolTipText("");
         continue8.setPreferredSize(new java.awt.Dimension(24, 24));
         continue8.addActionListener(new java.awt.event.ActionListener() {
@@ -729,6 +701,73 @@ public class Fase3 extends javax.swing.JFrame {
         });
         getContentPane().add(continue8);
         continue8.setBounds(230, 270, 24, 21);
+
+        jLabel1.setText("26");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(210, 130, 20, 16);
+
+        jLabel2.setText("23");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(90, 110, 20, 16);
+
+        jLabel3.setText("27");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(230, 30, 20, 16);
+
+        jLabel4.setText("28");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(280, 90, 20, 16);
+
+        jLabel5.setText("29");
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(190, 70, 20, 16);
+
+        jLabel6.setText("30");
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(160, 110, 20, 16);
+
+        jLabel7.setText("31");
+        getContentPane().add(jLabel7);
+        jLabel7.setBounds(190, 150, 20, 16);
+
+        jLabel8.setText("33");
+        getContentPane().add(jLabel8);
+        jLabel8.setBounds(190, 190, 20, 16);
+
+        jLabel9.setText("32");
+        getContentPane().add(jLabel9);
+        jLabel9.setBounds(40, 170, 20, 16);
+
+        jLabel10.setText("34");
+        getContentPane().add(jLabel10);
+        jLabel10.setBounds(120, 230, 20, 16);
+
+        jLabel11.setText("35");
+        getContentPane().add(jLabel11);
+        jLabel11.setBounds(40, 270, 20, 16);
+
+        jLabel12.setText("25");
+        getContentPane().add(jLabel12);
+        jLabel12.setBounds(160, 150, 20, 16);
+
+        jLabel13.setText("24");
+        getContentPane().add(jLabel13);
+        jLabel13.setBounds(140, 210, 20, 16);
+        getContentPane().add(respostaTextField);
+        respostaTextField.setBounds(360, 330, 210, 30);
+
+        enviarButton.setText("Enviar");
+        enviarButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                enviarButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(enviarButton);
+        enviarButton.setBounds(580, 330, 72, 30);
+
+        sairButton.setText("Sair");
+        getContentPane().add(sairButton);
+        sairButton.setBounds(10, 10, 60, 22);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -917,6 +956,56 @@ public class Fase3 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_continue8ActionPerformed
 
+    private void enviarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enviarButtonActionPerformed
+        PalavraDAO dao = new PalavraDAO();
+        if (dao.verificarRespostaFase3(respostaTextField.getText().toLowerCase())) {
+            switch (respostaTextField.getText().toLowerCase()) {
+                case "true":
+                    preencherTrue();
+                    break;
+                case "not":
+                    preencherNot();
+                    break;
+                case "oito":
+                    preencherOito();
+                    break;
+                case "false":
+                    preencherFalse();
+                    break;
+                case "samuel":
+                    preencherSamuel();
+                    break;
+                case "snake":
+                    preencherSnake();
+                    break;
+                case "max":
+                    preencherMax();
+                    break;
+                case "cpu":
+                    preencherCpu();
+                    break;
+                case "float":
+                    preencherFloat();
+                    break;
+                case "guido":
+                    preencherGuido();
+                    break;
+                case "lower":
+                    preencherLower();
+                    break;
+                case "nove":
+                    preencherNove();
+                    break;
+                case "continue":
+                    preencherContinue();
+                    break;
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Resposta errada!");
+        }
+        respostaTextField.setText("");
+    }//GEN-LAST:event_enviarButtonActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -952,6 +1041,107 @@ public class Fase3 extends javax.swing.JFrame {
         });
     }
 
+    public void preencherTrue() {
+        true1.setText("t");
+        true2.setText("r");
+        guido2.setText("u");
+        true3.setText("e");
+    }
+
+    public void preencherNot() {
+        nove1_not1.setText("n");
+        not2.setText("o");
+        not3_continue4.setText("t");
+    }
+
+    public void preencherOito() {
+        oito1_guido5.setText("o");
+        oito2.setText("i");
+        oito3.setText("t");
+        nove2_oito4.setText("o");
+
+    }
+
+    public void preencherFalse() {
+        float1_false1.setText("f");
+        false2.setText("a");
+        lower1_false3.setText("l");
+        false4.setText("s");
+        false5_nove4.setText("e");
+    }
+
+    public void preencherSamuel() {
+        samuel1.setText("s");
+        samuel2_max2.setText("a");
+        samuel3.setText("m");
+        samuel4_cpu3.setText("u");
+        samuel5.setText("e");
+        samuel6_float2.setText("l");
+    }
+
+    public void preencherSnake() {
+        snake1.setText("s");
+        snake2.setText("n");
+        float4_snake3.setText("a");
+        snake4.setText("k");
+        snake5_lower4.setText("e");
+    }
+
+    public void preencherMax() {
+        max1.setText("m");
+        samuel2_max2.setText("a");
+        max3.setText("x");
+    }
+
+    public void preencherCpu() {
+        cpu1.setText("c");
+        cpu2.setText("p");
+        samuel4_cpu3.setText("u");
+    }
+
+    public void preencherFloat() {
+        float1_false1.setText("f");
+        samuel6_float2.setText("l");
+        float3.setText("o");
+        float4_snake3.setText("a");
+        float5.setText("t");
+    }
+
+    public void preencherGuido() {
+        guido1.setText("g");
+        guido2.setText("u");
+        guido3.setText("i");
+        guido4.setText("d");
+        oito1_guido5.setText("o");
+    }
+
+    public void preencherLower() {
+        lower1_false3.setText("l");
+        lower2.setText("o");
+        lower3.setText("w");
+        snake5_lower4.setText("e");
+        lower5.setText("r");
+    }
+
+    public void preencherNove() {
+        nove1_not1.setText("n");
+        nove2_oito4.setText("o");
+        nove3.setText("v");
+        false5_nove4.setText("e");
+    }
+
+    public void preencherContinue() {
+        continue1.setText("c");
+        continue2.setText("o");
+        continue3.setText("n");
+        not3_continue4.setText("t");
+        continue5.setText("i");
+        continue6.setText("n");
+        continue7.setText("u");
+        continue8.setText("e");
+    }
+
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField continue1;
     private javax.swing.JTextField continue2;
@@ -962,6 +1152,7 @@ public class Fase3 extends javax.swing.JFrame {
     private javax.swing.JTextField continue8;
     private javax.swing.JTextField cpu1;
     private javax.swing.JTextField cpu2;
+    private javax.swing.JButton enviarButton;
     private javax.swing.JTextField false2;
     private javax.swing.JTextField false4;
     private javax.swing.JTextField false5_nove4;
@@ -973,6 +1164,19 @@ public class Fase3 extends javax.swing.JFrame {
     private javax.swing.JTextField guido2;
     private javax.swing.JTextField guido3;
     private javax.swing.JTextField guido4;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JTextField lower1_false3;
     private javax.swing.JTextField lower2;
     private javax.swing.JTextField lower3;
@@ -987,6 +1191,8 @@ public class Fase3 extends javax.swing.JFrame {
     private javax.swing.JTextField oito1_guido5;
     private javax.swing.JTextField oito2;
     private javax.swing.JTextField oito3;
+    private javax.swing.JTextField respostaTextField;
+    private javax.swing.JButton sairButton;
     private javax.swing.JTextField samuel1;
     private javax.swing.JTextField samuel2_max2;
     private javax.swing.JTextField samuel3;

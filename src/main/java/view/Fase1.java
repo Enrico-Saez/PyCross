@@ -61,7 +61,7 @@ public class Fase1 extends javax.swing.JFrame {
         colchete6 = new javax.swing.JTextField();
         colchete7 = new javax.swing.JTextField();
         return5 = new javax.swing.JTextField();
-        return3_input4 = new javax.swing.JTextField();
+        return4_input4 = new javax.swing.JTextField();
         return6_print4 = new javax.swing.JTextField();
         return2 = new javax.swing.JTextField();
         return3 = new javax.swing.JTextField();
@@ -83,7 +83,7 @@ public class Fase1 extends javax.swing.JFrame {
         import3_print1 = new javax.swing.JTextField();
         import4 = new javax.swing.JTextField();
         import5 = new javax.swing.JTextField();
-        import6_turltle4 = new javax.swing.JTextField();
+        import6_turtle4 = new javax.swing.JTextField();
         turtle2 = new javax.swing.JTextField();
         turtle3 = new javax.swing.JTextField();
         turtle5 = new javax.swing.JTextField();
@@ -110,6 +110,7 @@ public class Fase1 extends javax.swing.JFrame {
         respostaTextField = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
         enviarButton = new javax.swing.JButton();
+        sairButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setSize(new java.awt.Dimension(800, 350));
@@ -371,13 +372,13 @@ public class Fase1 extends javax.swing.JFrame {
         getContentPane().add(return5);
         return5.setBounds(306, 163, 24, 21);
 
-        return3_input4.setEditable(false);
-        return3_input4.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
-        return3_input4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        return3_input4.setToolTipText("");
-        return3_input4.setPreferredSize(new java.awt.Dimension(24, 24));
-        getContentPane().add(return3_input4);
-        return3_input4.setBounds(282, 163, 24, 21);
+        return4_input4.setEditable(false);
+        return4_input4.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        return4_input4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        return4_input4.setToolTipText("");
+        return4_input4.setPreferredSize(new java.awt.Dimension(24, 24));
+        getContentPane().add(return4_input4);
+        return4_input4.setBounds(282, 163, 24, 21);
 
         return6_print4.setEditable(false);
         return6_print4.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
@@ -547,13 +548,13 @@ public class Fase1 extends javax.swing.JFrame {
         getContentPane().add(import5);
         import5.setBounds(378, 102, 24, 21);
 
-        import6_turltle4.setEditable(false);
-        import6_turltle4.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
-        import6_turltle4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        import6_turltle4.setToolTipText("");
-        import6_turltle4.setPreferredSize(new java.awt.Dimension(24, 24));
-        getContentPane().add(import6_turltle4);
-        import6_turltle4.setBounds(402, 102, 24, 21);
+        import6_turtle4.setEditable(false);
+        import6_turtle4.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        import6_turtle4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        import6_turtle4.setToolTipText("");
+        import6_turtle4.setPreferredSize(new java.awt.Dimension(24, 24));
+        getContentPane().add(import6_turtle4);
+        import6_turtle4.setBounds(402, 102, 24, 21);
 
         turtle2.setEditable(false);
         turtle2.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
@@ -724,7 +725,7 @@ public class Fase1 extends javax.swing.JFrame {
         }
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(480, 10, 310, 350);
+        jScrollPane1.setBounds(480, 10, 310, 380);
 
         respostaTextField.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         respostaTextField.addActionListener(new java.awt.event.ActionListener() {
@@ -733,11 +734,11 @@ public class Fase1 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(respostaTextField);
-        respostaTextField.setBounds(140, 320, 200, 30);
+        respostaTextField.setBounds(140, 340, 200, 30);
 
         jLabel11.setText("Resposta:");
         getContentPane().add(jLabel11);
-        jLabel11.setBounds(80, 320, 60, 30);
+        jLabel11.setBounds(70, 340, 60, 30);
 
         enviarButton.setText("Enviar");
         enviarButton.addActionListener(new java.awt.event.ActionListener() {
@@ -746,7 +747,11 @@ public class Fase1 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(enviarButton);
-        enviarButton.setBounds(350, 320, 72, 30);
+        enviarButton.setBounds(350, 340, 72, 30);
+
+        sairButton.setText("Sair");
+        getContentPane().add(sairButton);
+        sairButton.setBounds(10, 10, 60, 22);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -829,11 +834,43 @@ public class Fase1 extends javax.swing.JFrame {
 
     private void enviarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enviarButtonActionPerformed
         PalavraDAO dao = new PalavraDAO();
-        if (dao.verificarRespostaFase1(respostaTextField.getText())) {
-            JOptionPane.showMessageDialog(null, "Você acertou");
+        if (dao.verificarRespostaFase1(respostaTextField.getText().toLowerCase())) {
+            switch (respostaTextField.getText().toLowerCase()) {
+                case "interpretada":
+                    preencherInterpretada();
+                    break;
+                case "input":
+                    preencherInput();
+                    break;
+                case "print":
+                    preencherPrint();
+                    break;
+                case "turtle":
+                    preencherTurtle();
+                    break;
+                case "hashtag":
+                    preencherHashtag();
+                    break;
+                case "len":
+                    preencherLen();
+                    break;
+                case "colchete":
+                    preencherColchete();
+                    break;
+                case "import":
+                    preencherImport();
+                    break;
+                case "return":
+                    preencherReturn();
+                    break;
+                case "variavel":
+                    preencherVariavel();
+                    break;
+            }
         } else {
-            JOptionPane.showMessageDialog(null, "Você NÃO acertou");
+            JOptionPane.showMessageDialog(null, "Resposta errada!");
         }
+        respostaTextField.setText("");
     }//GEN-LAST:event_enviarButtonActionPerformed
 
     /**
@@ -886,6 +923,102 @@ public class Fase1 extends javax.swing.JFrame {
         }
     }
 
+    public void preencherInterpretada() {
+        interpretada1.setText("i");
+        interpretada2_len3.setText("n");
+        interpretada3.setText("t");
+        interpretada4_colchete8.setText("e");
+        interpretada5.setText("r");
+        interpretada6.setText("p");
+        interpretada7_return1.setText("r");
+        interpretada8.setText("e");
+        interpretada9.setText("t");
+        interpretada10_variavel5.setText("a");
+        interpretada11.setText("d");
+        interpretada12.setText("a");
+    }
+
+    public void preencherInput() {
+        import1.setText("i");
+        input2.setText("n");
+        input3.setText("p");
+        return4_input4.setText("u");
+        input5.setText("t");
+    }
+
+    public void preencherPrint() {
+        import3_print1.setText("p");
+        print2.setText("r");
+        print3.setText("i");
+        return6_print4.setText("n");
+        print5.setText("t");
+    }
+
+    public void preencherTurtle() {
+        hashtag5_turtle1.setText("t");
+        turtle2.setText("u");
+        turtle3.setText("r");
+        import6_turtle4.setText("t");
+        turtle5.setText("l");
+        turtle6.setText("e");
+    }
+
+    public void preencherHashtag() {
+        hashtag1.setText("h");
+        hashtag2.setText("a");
+        hashtag3.setText("s");
+        hashtag4.setText("h");
+        hashtag5_turtle1.setText("t");
+        hashtag6.setText("a");
+        hashtag7.setText("g");
+    }
+
+    public void preencherLen() {
+        len1.setText("l");
+        len2.setText("e");
+        interpretada2_len3.setText("n");
+    }
+
+    public void preencherColchete() {
+        colchete1.setText("c");
+        colchete2.setText("o");
+        colchete3.setText("l");
+        colchete4.setText("c");
+        colchete5.setText("h");
+        colchete6.setText("e");
+        colchete7.setText("t");
+        interpretada4_colchete8.setText("e");
+    }
+
+    public void preencherImport() {
+        import1.setText("i");
+        import2.setText("m");
+        import3_print1.setText("p");
+        import4.setText("o");
+        import5.setText("r");
+        import6_turtle4.setText("t");
+    }
+
+    public void preencherReturn() {
+        interpretada7_return1.setText("r");
+        return2.setText("e");
+        return3.setText("t");
+        return4_input4.setText("u");
+        return5.setText("r");
+        return6_print4.setText("n");
+    }
+
+    public void preencherVariavel() {
+        variavel1.setText("v");
+        variavel2.setText("a");
+        variavel3.setText("r");
+        variavel4.setText("i");
+        interpretada10_variavel5.setText("a");
+        variavel6.setText("v");
+        variavel7.setText("e");
+        variavel8.setText("l");
+    }
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField colchete1;
     private javax.swing.JTextField colchete2;
@@ -908,7 +1041,7 @@ public class Fase1 extends javax.swing.JFrame {
     private javax.swing.JTextField import3_print1;
     private javax.swing.JTextField import4;
     private javax.swing.JTextField import5;
-    private javax.swing.JTextField import6_turltle4;
+    private javax.swing.JTextField import6_turtle4;
     private javax.swing.JTextField input2;
     private javax.swing.JTextField input3;
     private javax.swing.JTextField input5;
@@ -944,9 +1077,10 @@ public class Fase1 extends javax.swing.JFrame {
     private javax.swing.JTextField respostaTextField;
     private javax.swing.JTextField return2;
     private javax.swing.JTextField return3;
-    private javax.swing.JTextField return3_input4;
+    private javax.swing.JTextField return4_input4;
     private javax.swing.JTextField return5;
     private javax.swing.JTextField return6_print4;
+    private javax.swing.JButton sairButton;
     private javax.swing.JTextField turtle2;
     private javax.swing.JTextField turtle3;
     private javax.swing.JTextField turtle5;

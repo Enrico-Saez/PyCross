@@ -1,5 +1,6 @@
 package view;
 
+import javax.swing.JOptionPane;
 import model.dao.UsuarioDAO;
 
 /*
@@ -105,9 +106,12 @@ public class TelaLogin extends javax.swing.JFrame {
             this.dispose();
         }
         else if (dao.loginCheck(campoUsuario.getText(), new String(this.campoSenha.getPassword()))) {
-            MenuInicial mi = new MenuInicial();
+            MenuInicial mi = new MenuInicial(campoUsuario.getText(),Integer.parseInt(new String(this.campoSenha.getPassword())));
             mi.setVisible(true);
             this.dispose();
+        } else {
+            JOptionPane.showMessageDialog(null, "Falha no login");
+            campoSenha.setText("");
         }
     }//GEN-LAST:event_botaoLoginActionPerformed
 

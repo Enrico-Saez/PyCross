@@ -76,7 +76,7 @@ public class UsuarioDAO {
 
         return usuarios;
     }
-    
+
     public List<Usuario> readWithoutAdmin() {
 
         Connection con = ConnectionFactory.getConnection();
@@ -183,6 +183,7 @@ public class UsuarioDAO {
         }
         return check;
     }
+
     public boolean adminLoginCheck(String nome, String senha) {
 
         Connection con = ConnectionFactory.getConnection();
@@ -199,8 +200,8 @@ public class UsuarioDAO {
             rs = stmt.executeQuery();
 
             if (rs.next()) {
-                if (rs.getBoolean("statusAdmin")){
-                check = true;
+                if (rs.getBoolean("statusAdmin")) {
+                    check = true;
                 }
             }
 
@@ -210,5 +211,54 @@ public class UsuarioDAO {
             ConnectionFactory.closeConnection(con);
         }
         return check;
+    }
+
+    public int readPontuacao(String nome) {
+
+        Connection con = ConnectionFactory.getConnection();
+
+        PreparedStatement stmt = null;
+        ResultSet rs = null;
+
+        int pontuacao = 0;
+
+        try {
+            stmt = con.prepareStatement("SELECT pontuacao FROM usuario WHERE nome = ?");
+            stmt.setString(1, nome);
+            rs = stmt.executeQuery();
+
+            if (rs.next()) {
+
+                pontuacao = rs.getInt("pontuacao");
+            }
+
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Erro: " + ex);
+        } finally {
+            ConnectionFactory.closeConnection(con);
+        }
+        return pontuacao;
+    }
+
+    public void updatePontuacao(String nome, int pontuacao) {
+
+        Connection con = ConnectionFactory.getConnection();
+
+        PreparedStatement stmt = null;
+
+        try {
+            stmt = con.prepareStatement("UPDATE usuario SET pontuacao = ? WHERE nome = ?");
+            stmt.setInt(1, pontuacao);
+            stmt.setString(2, nome);
+
+            stmt.executeUpdate();
+
+            JOptionPane.showMessageDialog(null, "Atualizado com sucesso!");
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Erro ao atualizar: " + ex);
+        } finally {
+            ConnectionFactory.closeConnection(con);
+        }
+
     }
 }

@@ -4,6 +4,9 @@
  */
 package view;
 
+import javax.swing.JOptionPane;
+import model.dao.PalavraDAO;
+
 /**
  *
  * @author Enrico
@@ -42,7 +45,7 @@ public class Fase2 extends javax.swing.JFrame {
         break1 = new javax.swing.JTextField();
         break3 = new javax.swing.JTextField();
         break5 = new javax.swing.JTextField();
-        break6_append1 = new javax.swing.JTextField();
+        break4_append1 = new javax.swing.JTextField();
         append2 = new javax.swing.JTextField();
         append3 = new javax.swing.JTextField();
         append4 = new javax.swing.JTextField();
@@ -102,6 +105,9 @@ public class Fase2 extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
+        respostaTextField = new javax.swing.JTextField();
+        enviarButton = new javax.swing.JButton();
+        sairButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setSize(new java.awt.Dimension(800, 350));
@@ -110,7 +116,6 @@ public class Fase2 extends javax.swing.JFrame {
         porcentagem1.setEditable(false);
         porcentagem1.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         porcentagem1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        porcentagem1.setText("p");
         porcentagem1.setToolTipText("");
         porcentagem1.setPreferredSize(new java.awt.Dimension(24, 24));
         getContentPane().add(porcentagem1);
@@ -119,7 +124,6 @@ public class Fase2 extends javax.swing.JFrame {
         porcentagem2.setEditable(false);
         porcentagem2.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         porcentagem2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        porcentagem2.setText("o");
         porcentagem2.setToolTipText("");
         porcentagem2.setPreferredSize(new java.awt.Dimension(24, 24));
         getContentPane().add(porcentagem2);
@@ -128,7 +132,6 @@ public class Fase2 extends javax.swing.JFrame {
         porcentagem3_break2.setEditable(false);
         porcentagem3_break2.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         porcentagem3_break2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        porcentagem3_break2.setText("r");
         porcentagem3_break2.setToolTipText("");
         porcentagem3_break2.setPreferredSize(new java.awt.Dimension(24, 24));
         getContentPane().add(porcentagem3_break2);
@@ -137,7 +140,6 @@ public class Fase2 extends javax.swing.JFrame {
         porcentagem4.setEditable(false);
         porcentagem4.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         porcentagem4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        porcentagem4.setText("c");
         porcentagem4.setToolTipText("");
         porcentagem4.setPreferredSize(new java.awt.Dimension(24, 24));
         getContentPane().add(porcentagem4);
@@ -146,7 +148,6 @@ public class Fase2 extends javax.swing.JFrame {
         porcentagem5_chave5.setEditable(false);
         porcentagem5_chave5.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         porcentagem5_chave5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        porcentagem5_chave5.setText("e");
         porcentagem5_chave5.setToolTipText("");
         porcentagem5_chave5.setPreferredSize(new java.awt.Dimension(24, 24));
         getContentPane().add(porcentagem5_chave5);
@@ -155,7 +156,6 @@ public class Fase2 extends javax.swing.JFrame {
         porcentagem6.setEditable(false);
         porcentagem6.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         porcentagem6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        porcentagem6.setText("n");
         porcentagem6.setToolTipText("");
         porcentagem6.setPreferredSize(new java.awt.Dimension(24, 24));
         porcentagem6.addActionListener(new java.awt.event.ActionListener() {
@@ -169,7 +169,6 @@ public class Fase2 extends javax.swing.JFrame {
         porcentagem7.setEditable(false);
         porcentagem7.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         porcentagem7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        porcentagem7.setText("t");
         porcentagem7.setToolTipText("");
         porcentagem7.setPreferredSize(new java.awt.Dimension(24, 24));
         getContentPane().add(porcentagem7);
@@ -178,7 +177,6 @@ public class Fase2 extends javax.swing.JFrame {
         porcentagem8_lista5.setEditable(false);
         porcentagem8_lista5.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         porcentagem8_lista5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        porcentagem8_lista5.setText("a");
         porcentagem8_lista5.setToolTipText("");
         porcentagem8_lista5.setPreferredSize(new java.awt.Dimension(24, 24));
         getContentPane().add(porcentagem8_lista5);
@@ -187,7 +185,6 @@ public class Fase2 extends javax.swing.JFrame {
         porcentagem9.setEditable(false);
         porcentagem9.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         porcentagem9.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        porcentagem9.setText("g");
         porcentagem9.setToolTipText("");
         porcentagem9.setPreferredSize(new java.awt.Dimension(24, 24));
         getContentPane().add(porcentagem9);
@@ -196,7 +193,6 @@ public class Fase2 extends javax.swing.JFrame {
         porcentagem10.setEditable(false);
         porcentagem10.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         porcentagem10.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        porcentagem10.setText("e");
         porcentagem10.setToolTipText("");
         porcentagem10.setPreferredSize(new java.awt.Dimension(24, 24));
         getContentPane().add(porcentagem10);
@@ -205,7 +201,6 @@ public class Fase2 extends javax.swing.JFrame {
         porcentagem11_dinamica5.setEditable(false);
         porcentagem11_dinamica5.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         porcentagem11_dinamica5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        porcentagem11_dinamica5.setText("m");
         porcentagem11_dinamica5.setToolTipText("");
         porcentagem11_dinamica5.setPreferredSize(new java.awt.Dimension(24, 24));
         getContentPane().add(porcentagem11_dinamica5);
@@ -214,7 +209,6 @@ public class Fase2 extends javax.swing.JFrame {
         break1.setEditable(false);
         break1.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         break1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        break1.setText("b");
         break1.setToolTipText("");
         break1.setPreferredSize(new java.awt.Dimension(24, 24));
         getContentPane().add(break1);
@@ -223,7 +217,6 @@ public class Fase2 extends javax.swing.JFrame {
         break3.setEditable(false);
         break3.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         break3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        break3.setText("e");
         break3.setToolTipText("");
         break3.setPreferredSize(new java.awt.Dimension(24, 24));
         getContentPane().add(break3);
@@ -232,7 +225,6 @@ public class Fase2 extends javax.swing.JFrame {
         break5.setEditable(false);
         break5.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         break5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        break5.setText("k");
         break5.setToolTipText("");
         break5.setPreferredSize(new java.awt.Dimension(24, 24));
         break5.addActionListener(new java.awt.event.ActionListener() {
@@ -243,24 +235,22 @@ public class Fase2 extends javax.swing.JFrame {
         getContentPane().add(break5);
         break5.setBounds(280, 80, 24, 21);
 
-        break6_append1.setEditable(false);
-        break6_append1.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
-        break6_append1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        break6_append1.setText("a");
-        break6_append1.setToolTipText("");
-        break6_append1.setPreferredSize(new java.awt.Dimension(24, 24));
-        break6_append1.addActionListener(new java.awt.event.ActionListener() {
+        break4_append1.setEditable(false);
+        break4_append1.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        break4_append1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        break4_append1.setToolTipText("");
+        break4_append1.setPreferredSize(new java.awt.Dimension(24, 24));
+        break4_append1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                break6_append1ActionPerformed(evt);
+                break4_append1ActionPerformed(evt);
             }
         });
-        getContentPane().add(break6_append1);
-        break6_append1.setBounds(258, 80, 24, 21);
+        getContentPane().add(break4_append1);
+        break4_append1.setBounds(258, 80, 24, 21);
 
         append2.setEditable(false);
         append2.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         append2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        append2.setText("p");
         append2.setToolTipText("");
         append2.setPreferredSize(new java.awt.Dimension(24, 24));
         append2.addActionListener(new java.awt.event.ActionListener() {
@@ -274,7 +264,6 @@ public class Fase2 extends javax.swing.JFrame {
         append3.setEditable(false);
         append3.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         append3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        append3.setText("p");
         append3.setToolTipText("");
         append3.setPreferredSize(new java.awt.Dimension(24, 24));
         append3.addActionListener(new java.awt.event.ActionListener() {
@@ -288,7 +277,6 @@ public class Fase2 extends javax.swing.JFrame {
         append4.setEditable(false);
         append4.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         append4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        append4.setText("e");
         append4.setToolTipText("");
         append4.setPreferredSize(new java.awt.Dimension(24, 24));
         append4.addActionListener(new java.awt.event.ActionListener() {
@@ -302,7 +290,6 @@ public class Fase2 extends javax.swing.JFrame {
         append5.setEditable(false);
         append5.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         append5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        append5.setText("n");
         append5.setToolTipText("");
         append5.setPreferredSize(new java.awt.Dimension(24, 24));
         append5.addActionListener(new java.awt.event.ActionListener() {
@@ -316,7 +303,6 @@ public class Fase2 extends javax.swing.JFrame {
         append6_dicionario1.setEditable(false);
         append6_dicionario1.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         append6_dicionario1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        append6_dicionario1.setText("d");
         append6_dicionario1.setToolTipText("");
         append6_dicionario1.setPreferredSize(new java.awt.Dimension(24, 24));
         append6_dicionario1.addActionListener(new java.awt.event.ActionListener() {
@@ -330,7 +316,6 @@ public class Fase2 extends javax.swing.JFrame {
         dicionario2.setEditable(false);
         dicionario2.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         dicionario2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        dicionario2.setText("i");
         dicionario2.setToolTipText("");
         dicionario2.setPreferredSize(new java.awt.Dimension(24, 24));
         dicionario2.addActionListener(new java.awt.event.ActionListener() {
@@ -344,7 +329,6 @@ public class Fase2 extends javax.swing.JFrame {
         dicionario3.setEditable(false);
         dicionario3.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         dicionario3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        dicionario3.setText("i");
         dicionario3.setToolTipText("");
         dicionario3.setPreferredSize(new java.awt.Dimension(24, 24));
         dicionario3.addActionListener(new java.awt.event.ActionListener() {
@@ -358,7 +342,6 @@ public class Fase2 extends javax.swing.JFrame {
         dicionario4.setEditable(false);
         dicionario4.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         dicionario4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        dicionario4.setText("c");
         dicionario4.setToolTipText("");
         dicionario4.setPreferredSize(new java.awt.Dimension(24, 24));
         dicionario4.addActionListener(new java.awt.event.ActionListener() {
@@ -372,7 +355,6 @@ public class Fase2 extends javax.swing.JFrame {
         dicionario5.setEditable(false);
         dicionario5.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         dicionario5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        dicionario5.setText("o");
         dicionario5.setToolTipText("");
         dicionario5.setPreferredSize(new java.awt.Dimension(24, 24));
         dicionario5.addActionListener(new java.awt.event.ActionListener() {
@@ -386,7 +368,6 @@ public class Fase2 extends javax.swing.JFrame {
         dicionario6.setEditable(false);
         dicionario6.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         dicionario6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        dicionario6.setText("n");
         dicionario6.setToolTipText("");
         dicionario6.setPreferredSize(new java.awt.Dimension(24, 24));
         dicionario6.addActionListener(new java.awt.event.ActionListener() {
@@ -400,7 +381,6 @@ public class Fase2 extends javax.swing.JFrame {
         dicionario7_algoritmo1.setEditable(false);
         dicionario7_algoritmo1.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         dicionario7_algoritmo1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        dicionario7_algoritmo1.setText("a");
         dicionario7_algoritmo1.setToolTipText("");
         dicionario7_algoritmo1.setPreferredSize(new java.awt.Dimension(24, 24));
         dicionario7_algoritmo1.addActionListener(new java.awt.event.ActionListener() {
@@ -414,7 +394,6 @@ public class Fase2 extends javax.swing.JFrame {
         dicionario8.setEditable(false);
         dicionario8.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         dicionario8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        dicionario8.setText("r");
         dicionario8.setToolTipText("");
         dicionario8.setPreferredSize(new java.awt.Dimension(24, 24));
         dicionario8.addActionListener(new java.awt.event.ActionListener() {
@@ -428,7 +407,6 @@ public class Fase2 extends javax.swing.JFrame {
         dicionario9.setEditable(false);
         dicionario9.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         dicionario9.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        dicionario9.setText("i");
         dicionario9.setToolTipText("");
         dicionario9.setPreferredSize(new java.awt.Dimension(24, 24));
         dicionario9.addActionListener(new java.awt.event.ActionListener() {
@@ -442,7 +420,6 @@ public class Fase2 extends javax.swing.JFrame {
         dicionario10.setEditable(false);
         dicionario10.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         dicionario10.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        dicionario10.setText("o");
         dicionario10.setToolTipText("");
         dicionario10.setPreferredSize(new java.awt.Dimension(24, 24));
         dicionario10.addActionListener(new java.awt.event.ActionListener() {
@@ -456,7 +433,6 @@ public class Fase2 extends javax.swing.JFrame {
         chave1.setEditable(false);
         chave1.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         chave1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        chave1.setText("c");
         chave1.setToolTipText("");
         chave1.setPreferredSize(new java.awt.Dimension(24, 24));
         getContentPane().add(chave1);
@@ -465,7 +441,6 @@ public class Fase2 extends javax.swing.JFrame {
         chave2.setEditable(false);
         chave2.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         chave2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        chave2.setText("h");
         chave2.setToolTipText("");
         chave2.setPreferredSize(new java.awt.Dimension(24, 24));
         getContentPane().add(chave2);
@@ -474,7 +449,6 @@ public class Fase2 extends javax.swing.JFrame {
         chave3.setEditable(false);
         chave3.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         chave3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        chave3.setText("a");
         chave3.setToolTipText("");
         chave3.setPreferredSize(new java.awt.Dimension(24, 24));
         getContentPane().add(chave3);
@@ -483,7 +457,6 @@ public class Fase2 extends javax.swing.JFrame {
         chave4.setEditable(false);
         chave4.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         chave4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        chave4.setText("v");
         chave4.setToolTipText("");
         chave4.setPreferredSize(new java.awt.Dimension(24, 24));
         getContentPane().add(chave4);
@@ -492,7 +465,6 @@ public class Fase2 extends javax.swing.JFrame {
         lista1.setEditable(false);
         lista1.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         lista1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        lista1.setText("l");
         lista1.setToolTipText("");
         lista1.setPreferredSize(new java.awt.Dimension(24, 24));
         getContentPane().add(lista1);
@@ -501,7 +473,6 @@ public class Fase2 extends javax.swing.JFrame {
         lista2.setEditable(false);
         lista2.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         lista2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        lista2.setText("i");
         lista2.setToolTipText("");
         lista2.setPreferredSize(new java.awt.Dimension(24, 24));
         getContentPane().add(lista2);
@@ -510,7 +481,6 @@ public class Fase2 extends javax.swing.JFrame {
         lista3.setEditable(false);
         lista3.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         lista3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        lista3.setText("s");
         lista3.setToolTipText("");
         lista3.setPreferredSize(new java.awt.Dimension(24, 24));
         getContentPane().add(lista3);
@@ -519,7 +489,6 @@ public class Fase2 extends javax.swing.JFrame {
         lista4.setEditable(false);
         lista4.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         lista4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        lista4.setText("t");
         lista4.setToolTipText("");
         lista4.setPreferredSize(new java.awt.Dimension(24, 24));
         getContentPane().add(lista4);
@@ -528,7 +497,6 @@ public class Fase2 extends javax.swing.JFrame {
         dinamica1_def1.setEditable(false);
         dinamica1_def1.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         dinamica1_def1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        dinamica1_def1.setText("d");
         dinamica1_def1.setToolTipText("");
         dinamica1_def1.setPreferredSize(new java.awt.Dimension(24, 24));
         dinamica1_def1.addActionListener(new java.awt.event.ActionListener() {
@@ -542,7 +510,6 @@ public class Fase2 extends javax.swing.JFrame {
         dinamica2.setEditable(false);
         dinamica2.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         dinamica2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        dinamica2.setText("i");
         dinamica2.setToolTipText("");
         dinamica2.setPreferredSize(new java.awt.Dimension(24, 24));
         dinamica2.addActionListener(new java.awt.event.ActionListener() {
@@ -556,7 +523,6 @@ public class Fase2 extends javax.swing.JFrame {
         dinamica3_int2.setEditable(false);
         dinamica3_int2.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         dinamica3_int2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        dinamica3_int2.setText("n");
         dinamica3_int2.setToolTipText("");
         dinamica3_int2.setPreferredSize(new java.awt.Dimension(24, 24));
         dinamica3_int2.addActionListener(new java.awt.event.ActionListener() {
@@ -570,7 +536,6 @@ public class Fase2 extends javax.swing.JFrame {
         dinamica4.setEditable(false);
         dinamica4.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         dinamica4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        dinamica4.setText("a");
         dinamica4.setToolTipText("");
         dinamica4.setPreferredSize(new java.awt.Dimension(24, 24));
         dinamica4.addActionListener(new java.awt.event.ActionListener() {
@@ -584,7 +549,6 @@ public class Fase2 extends javax.swing.JFrame {
         dinamica6.setEditable(false);
         dinamica6.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         dinamica6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        dinamica6.setText("i");
         dinamica6.setToolTipText("");
         dinamica6.setPreferredSize(new java.awt.Dimension(24, 21));
         dinamica6.addActionListener(new java.awt.event.ActionListener() {
@@ -598,7 +562,6 @@ public class Fase2 extends javax.swing.JFrame {
         dinamica7.setEditable(false);
         dinamica7.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         dinamica7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        dinamica7.setText("c");
         dinamica7.setToolTipText("");
         dinamica7.setPreferredSize(new java.awt.Dimension(24, 24));
         dinamica7.addActionListener(new java.awt.event.ActionListener() {
@@ -612,7 +575,6 @@ public class Fase2 extends javax.swing.JFrame {
         dinamica8.setEditable(false);
         dinamica8.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         dinamica8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        dinamica8.setText("a");
         dinamica8.setToolTipText("");
         dinamica8.setPreferredSize(new java.awt.Dimension(24, 24));
         dinamica8.addActionListener(new java.awt.event.ActionListener() {
@@ -626,7 +588,6 @@ public class Fase2 extends javax.swing.JFrame {
         int1.setEditable(false);
         int1.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         int1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        int1.setText("i");
         int1.setToolTipText("");
         int1.setPreferredSize(new java.awt.Dimension(24, 24));
         int1.addActionListener(new java.awt.event.ActionListener() {
@@ -640,7 +601,6 @@ public class Fase2 extends javax.swing.JFrame {
         int3.setEditable(false);
         int3.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         int3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        int3.setText("t");
         int3.setToolTipText("");
         int3.setPreferredSize(new java.awt.Dimension(24, 24));
         int3.addActionListener(new java.awt.event.ActionListener() {
@@ -654,7 +614,6 @@ public class Fase2 extends javax.swing.JFrame {
         def2.setEditable(false);
         def2.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         def2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        def2.setText("e");
         def2.setToolTipText("");
         def2.setPreferredSize(new java.awt.Dimension(24, 24));
         def2.addActionListener(new java.awt.event.ActionListener() {
@@ -668,7 +627,6 @@ public class Fase2 extends javax.swing.JFrame {
         def3.setEditable(false);
         def3.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         def3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        def3.setText("f");
         def3.setToolTipText("");
         def3.setPreferredSize(new java.awt.Dimension(24, 24));
         def3.addActionListener(new java.awt.event.ActionListener() {
@@ -682,7 +640,6 @@ public class Fase2 extends javax.swing.JFrame {
         algoritmo2.setEditable(false);
         algoritmo2.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         algoritmo2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        algoritmo2.setText("l");
         algoritmo2.setToolTipText("");
         algoritmo2.setPreferredSize(new java.awt.Dimension(24, 24));
         algoritmo2.addActionListener(new java.awt.event.ActionListener() {
@@ -696,7 +653,6 @@ public class Fase2 extends javax.swing.JFrame {
         algoritmo3.setEditable(false);
         algoritmo3.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         algoritmo3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        algoritmo3.setText("g");
         algoritmo3.setToolTipText("");
         algoritmo3.setPreferredSize(new java.awt.Dimension(24, 24));
         algoritmo3.addActionListener(new java.awt.event.ActionListener() {
@@ -710,7 +666,6 @@ public class Fase2 extends javax.swing.JFrame {
         algoritmo4.setEditable(false);
         algoritmo4.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         algoritmo4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        algoritmo4.setText("o");
         algoritmo4.setToolTipText("");
         algoritmo4.setPreferredSize(new java.awt.Dimension(24, 24));
         algoritmo4.addActionListener(new java.awt.event.ActionListener() {
@@ -724,7 +679,6 @@ public class Fase2 extends javax.swing.JFrame {
         algoritmo5_upper5.setEditable(false);
         algoritmo5_upper5.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         algoritmo5_upper5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        algoritmo5_upper5.setText("r");
         algoritmo5_upper5.setToolTipText("");
         algoritmo5_upper5.setPreferredSize(new java.awt.Dimension(24, 24));
         algoritmo5_upper5.addActionListener(new java.awt.event.ActionListener() {
@@ -738,7 +692,6 @@ public class Fase2 extends javax.swing.JFrame {
         algoritmo6.setEditable(false);
         algoritmo6.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         algoritmo6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        algoritmo6.setText("i");
         algoritmo6.setToolTipText("");
         algoritmo6.setPreferredSize(new java.awt.Dimension(24, 24));
         algoritmo6.addActionListener(new java.awt.event.ActionListener() {
@@ -752,7 +705,6 @@ public class Fase2 extends javax.swing.JFrame {
         algoritmo7_set3.setEditable(false);
         algoritmo7_set3.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         algoritmo7_set3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        algoritmo7_set3.setText("t");
         algoritmo7_set3.setToolTipText("");
         algoritmo7_set3.setPreferredSize(new java.awt.Dimension(24, 24));
         algoritmo7_set3.addActionListener(new java.awt.event.ActionListener() {
@@ -766,7 +718,6 @@ public class Fase2 extends javax.swing.JFrame {
         algoritmo8.setEditable(false);
         algoritmo8.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         algoritmo8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        algoritmo8.setText("m");
         algoritmo8.setToolTipText("");
         algoritmo8.setPreferredSize(new java.awt.Dimension(24, 24));
         algoritmo8.addActionListener(new java.awt.event.ActionListener() {
@@ -780,7 +731,6 @@ public class Fase2 extends javax.swing.JFrame {
         algoritmo9.setEditable(false);
         algoritmo9.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         algoritmo9.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        algoritmo9.setText("o");
         algoritmo9.setToolTipText("");
         algoritmo9.setPreferredSize(new java.awt.Dimension(24, 24));
         algoritmo9.addActionListener(new java.awt.event.ActionListener() {
@@ -794,7 +744,6 @@ public class Fase2 extends javax.swing.JFrame {
         upper1.setEditable(false);
         upper1.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         upper1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        upper1.setText("u");
         upper1.setToolTipText("");
         upper1.setPreferredSize(new java.awt.Dimension(24, 24));
         upper1.addActionListener(new java.awt.event.ActionListener() {
@@ -808,7 +757,6 @@ public class Fase2 extends javax.swing.JFrame {
         upper2.setEditable(false);
         upper2.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         upper2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        upper2.setText("p");
         upper2.setToolTipText("");
         upper2.setPreferredSize(new java.awt.Dimension(24, 24));
         upper2.addActionListener(new java.awt.event.ActionListener() {
@@ -822,7 +770,6 @@ public class Fase2 extends javax.swing.JFrame {
         upper3.setEditable(false);
         upper3.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         upper3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        upper3.setText("p");
         upper3.setToolTipText("");
         upper3.setPreferredSize(new java.awt.Dimension(24, 24));
         upper3.addActionListener(new java.awt.event.ActionListener() {
@@ -836,7 +783,6 @@ public class Fase2 extends javax.swing.JFrame {
         upper4.setEditable(false);
         upper4.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         upper4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        upper4.setText("e");
         upper4.setToolTipText("");
         upper4.setPreferredSize(new java.awt.Dimension(24, 24));
         upper4.addActionListener(new java.awt.event.ActionListener() {
@@ -850,7 +796,6 @@ public class Fase2 extends javax.swing.JFrame {
         set1.setEditable(false);
         set1.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         set1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        set1.setText("s");
         set1.setToolTipText("");
         set1.setPreferredSize(new java.awt.Dimension(24, 24));
         set1.addActionListener(new java.awt.event.ActionListener() {
@@ -864,7 +809,6 @@ public class Fase2 extends javax.swing.JFrame {
         set2.setEditable(false);
         set2.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         set2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        set2.setText("e");
         set2.setToolTipText("");
         set2.setPreferredSize(new java.awt.Dimension(24, 24));
         set2.addActionListener(new java.awt.event.ActionListener() {
@@ -923,6 +867,23 @@ public class Fase2 extends javax.swing.JFrame {
         getContentPane().add(jLabel12);
         jLabel12.setBounds(338, 300, 20, 16);
 
+        respostaTextField.setPreferredSize(new java.awt.Dimension(64, 26));
+        getContentPane().add(respostaTextField);
+        respostaTextField.setBounds(500, 340, 200, 30);
+
+        enviarButton.setText("Enviar");
+        enviarButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                enviarButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(enviarButton);
+        enviarButton.setBounds(710, 340, 72, 30);
+
+        sairButton.setText("Sair");
+        getContentPane().add(sairButton);
+        sairButton.setBounds(10, 10, 60, 22);
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -938,9 +899,9 @@ public class Fase2 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_append5ActionPerformed
 
-    private void break6_append1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_break6_append1ActionPerformed
+    private void break4_append1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_break4_append1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_break6_append1ActionPerformed
+    }//GEN-LAST:event_break4_append1ActionPerformed
 
     private void append2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_append2ActionPerformed
         // TODO add your handling code here:
@@ -1094,6 +1055,53 @@ public class Fase2 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_set2ActionPerformed
 
+    private void enviarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enviarButtonActionPerformed
+        PalavraDAO dao = new PalavraDAO();
+        if (dao.verificarRespostaFase2(respostaTextField.getText().toLowerCase())) {
+            switch (respostaTextField.getText().toLowerCase()) {
+                case "def":
+                    preencherDef();
+                    break;
+                case "int":
+                    preencherInt();
+                    break;
+                case "porcentagem":
+                    preencherPorcentagem();
+                    break;
+                case "append":
+                    preencherAppend();
+                    break;
+                case "algoritmo":
+                    preencherAlgoritmo();
+                    break;
+                case "break":
+                    preencherBreak();
+                    break;
+                case "chave":
+                    preencherChave();
+                    break;
+                case "lista":
+                    preencherLista();
+                    break;
+                case "dicionario":
+                    preencherDicionario();
+                    break;
+                case "dinamica":
+                    preencherDinamica();
+                    break;
+                case "upper":
+                    preencherUpper();
+                    break;
+                case "set":
+                    preencherSet();
+                    break;
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Resposta errada!");
+        }
+        respostaTextField.setText("");
+    }//GEN-LAST:event_enviarButtonActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1130,6 +1138,115 @@ public class Fase2 extends javax.swing.JFrame {
         });
     }
 
+    public void preencherDef() {
+        dinamica1_def1.setText("d");
+        def2.setText("e");
+        def3.setText("f");
+    }
+
+    public void preencherInt() {
+        int1.setText("i");
+        dinamica3_int2.setText("n");
+        int3.setText("t");
+    }
+
+    public void preencherPorcentagem() {
+        porcentagem1.setText("p");
+        porcentagem2.setText("o");
+        porcentagem3_break2.setText("r");
+        porcentagem4.setText("c");
+        porcentagem5_chave5.setText("e");
+        porcentagem6.setText("n");
+        porcentagem7.setText("t");
+        porcentagem8_lista5.setText("a");
+        porcentagem9.setText("g");
+        porcentagem10.setText("e");
+        porcentagem11_dinamica5.setText("m");
+    }
+
+    public void preencherAppend() {
+        break4_append1.setText("a");
+        append2.setText("p");
+        append3.setText("p");
+        append4.setText("e");
+        append5.setText("n");
+        append6_dicionario1.setText("d");
+    }
+
+    public void preencherAlgoritmo() {
+        dicionario7_algoritmo1.setText("a");
+        algoritmo2.setText("l");
+        algoritmo3.setText("g");
+        algoritmo4.setText("o");
+        algoritmo5_upper5.setText("r");
+        algoritmo6.setText("i");
+        algoritmo7_set3.setText("t");
+        algoritmo8.setText("m");
+        algoritmo9.setText("o");
+    }
+
+    public void preencherBreak() {
+        break1.setText("b");
+        porcentagem3_break2.setText("r");
+        break3.setText("e");
+        break4_append1.setText("a");
+        break5.setText("k");
+    }
+
+    public void preencherChave() {
+        chave1.setText("c");
+        chave2.setText("h");
+        chave3.setText("a");
+        chave4.setText("v");
+        porcentagem5_chave5.setText("e");
+    }
+
+    public void preencherLista() {
+        lista1.setText("l");
+        lista2.setText("i");
+        lista3.setText("s");
+        lista4.setText("t");
+        porcentagem8_lista5.setText("a");
+    }
+
+    public void preencherDicionario() {
+        append6_dicionario1.setText("d");
+        dicionario2.setText("i");
+        dicionario3.setText("c");
+        dicionario4.setText("i");
+        dicionario5.setText("o");
+        dicionario6.setText("n");
+        dicionario7_algoritmo1.setText("a");
+        dicionario8.setText("r");
+        dicionario9.setText("i");
+        dicionario10.setText("o");
+    }
+
+    public void preencherDinamica() {
+        dinamica1_def1.setText("d");
+        dinamica2.setText("i");
+        dinamica3_int2.setText("n");
+        dinamica4.setText("a");
+        porcentagem11_dinamica5.setText("m");
+        dinamica6.setText("i");
+        dinamica7.setText("c");
+        dinamica8.setText("a");
+    }
+
+    public void preencherUpper() {
+        upper1.setText("u");
+        upper2.setText("p");
+        upper3.setText("p");
+        upper4.setText("e");
+        algoritmo5_upper5.setText("r");
+    }
+
+    public void preencherSet() {
+        set1.setText("s");
+        set2.setText("e");
+        algoritmo7_set3.setText("t");
+    }
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField algoritmo2;
     private javax.swing.JTextField algoritmo3;
@@ -1146,8 +1263,8 @@ public class Fase2 extends javax.swing.JFrame {
     private javax.swing.JTextField append6_dicionario1;
     private javax.swing.JTextField break1;
     private javax.swing.JTextField break3;
+    private javax.swing.JTextField break4_append1;
     private javax.swing.JTextField break5;
-    private javax.swing.JTextField break6_append1;
     private javax.swing.JTextField chave1;
     private javax.swing.JTextField chave2;
     private javax.swing.JTextField chave3;
@@ -1170,6 +1287,7 @@ public class Fase2 extends javax.swing.JFrame {
     private javax.swing.JTextField dinamica6;
     private javax.swing.JTextField dinamica7;
     private javax.swing.JTextField dinamica8;
+    private javax.swing.JButton enviarButton;
     private javax.swing.JTextField int1;
     private javax.swing.JTextField int3;
     private javax.swing.JLabel jLabel1;
@@ -1199,6 +1317,8 @@ public class Fase2 extends javax.swing.JFrame {
     private javax.swing.JTextField porcentagem7;
     private javax.swing.JTextField porcentagem8_lista5;
     private javax.swing.JTextField porcentagem9;
+    private javax.swing.JTextField respostaTextField;
+    private javax.swing.JButton sairButton;
     private javax.swing.JTextField set1;
     private javax.swing.JTextField set2;
     private javax.swing.JTextField upper1;
