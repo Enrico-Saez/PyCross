@@ -104,7 +104,6 @@ public class Fase2 extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(800, 350));
         setSize(new java.awt.Dimension(800, 350));
         getContentPane().setLayout(null);
 
@@ -882,23 +881,23 @@ public class Fase2 extends javax.swing.JFrame {
 
         jLabel2.setText("13");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(220, 20, 20, 16);
+        jLabel2.setBounds(214, 22, 20, 16);
 
         jLabel3.setText("11");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(120, 220, 20, 16);
+        jLabel3.setBounds(114, 222, 20, 16);
 
         jLabel4.setText("12");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(170, 200, 20, 16);
+        jLabel4.setBounds(172, 204, 20, 16);
 
         jLabel5.setText("14");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(270, 60, 20, 16);
+        jLabel5.setBounds(262, 62, 20, 16);
 
         jLabel6.setText("15");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(410, 160, 30, 16);
+        jLabel6.setBounds(406, 162, 30, 16);
 
         jLabel7.setText("16");
         getContentPane().add(jLabel7);
@@ -914,15 +913,15 @@ public class Fase2 extends javax.swing.JFrame {
 
         jLabel10.setText("20");
         getContentPane().add(jLabel10);
-        jLabel10.setBounds(89, 240, 20, 16);
+        jLabel10.setBounds(97, 240, 20, 16);
 
         jLabel11.setText("21");
         getContentPane().add(jLabel11);
-        jLabel11.setBounds(280, 260, 20, 16);
+        jLabel11.setBounds(290, 260, 20, 16);
 
         jLabel12.setText("22");
         getContentPane().add(jLabel12);
-        jLabel12.setBounds(330, 300, 20, 16);
+        jLabel12.setBounds(338, 300, 20, 16);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
