@@ -100,13 +100,16 @@ public class TelaLogin extends javax.swing.JFrame {
 
     private void botaoLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoLoginActionPerformed
         UsuarioDAO dao = new UsuarioDAO();        
-        if(dao.adminLoginCheck(campoUsuario.getText(), new String(this.campoSenha.getPassword()))) {
+        String nome = campoUsuario.getText();
+        String senha = new String(campoSenha.getPassword());
+        JOptionPane.showMessageDialog(null, nome + " " + senha);
+        if(dao.adminLoginCheck(nome, senha)) {
             TelaAdmin tl = new TelaAdmin();
             tl.setVisible(true);
             this.dispose();
         }
-        else if (dao.loginCheck(campoUsuario.getText(), new String(this.campoSenha.getPassword()))) {
-            MenuInicial mi = new MenuInicial(campoUsuario.getText(),Integer.parseInt(new String(this.campoSenha.getPassword())));
+        else if (dao.jogadorLoginCheck(nome, senha)) {
+            MenuInicial mi = new MenuInicial();
             mi.setVisible(true);
             this.dispose();
         } else {

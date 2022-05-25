@@ -157,7 +157,7 @@ public class UsuarioDAO {
 
     }
 
-    public boolean loginCheck(String nome, String senha) {
+    public boolean jogadorLoginCheck(String nome, String senha) {
 
         Connection con = ConnectionFactory.getConnection();
         PreparedStatement stmt = null;
@@ -166,14 +166,16 @@ public class UsuarioDAO {
         boolean check = false;
 
         try {
-            stmt = con.prepareStatement("SELECT * FROM usuario WHERE nome = ? and senha = ?");
+            stmt = con.prepareStatement("SELECT statusAdmin FROM usuario WHERE nome = ? and senha = ?");
             stmt.setString(1, nome);
             stmt.setString(2, senha);
 
             rs = stmt.executeQuery();
 
             if (rs.next()) {
-                check = true;
+                if (!rs.getBoolean("statusAdmin")) {
+                    check = true;
+                }
             }
 
         } catch (SQLException ex) {

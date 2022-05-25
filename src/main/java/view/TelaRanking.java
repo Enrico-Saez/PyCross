@@ -42,7 +42,7 @@ public class TelaRanking extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         rankingTable = new javax.swing.JTable();
         rankingLabel = new javax.swing.JLabel();
-        voltarButton = new javax.swing.JButton();
+        botaoVoltar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -67,10 +67,10 @@ public class TelaRanking extends javax.swing.JFrame {
         rankingLabel.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         rankingLabel.setText("Ranking dos Jogadores");
 
-        voltarButton.setText("Voltar");
-        voltarButton.addActionListener(new java.awt.event.ActionListener() {
+        botaoVoltar.setText("Voltar");
+        botaoVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                voltarButtonActionPerformed(evt);
+                botaoVoltarActionPerformed(evt);
             }
         });
 
@@ -85,7 +85,7 @@ public class TelaRanking extends javax.swing.JFrame {
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 452, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(voltarButton)
+                        .addComponent(botaoVoltar)
                         .addGap(95, 95, 95)
                         .addComponent(rankingLabel)))
                 .addContainerGap(79, Short.MAX_VALUE))
@@ -96,7 +96,7 @@ public class TelaRanking extends javax.swing.JFrame {
                 .addGap(16, 16, 16)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(rankingLabel)
-                    .addComponent(voltarButton))
+                    .addComponent(botaoVoltar))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 278, Short.MAX_VALUE)
                 .addContainerGap())
@@ -105,11 +105,11 @@ public class TelaRanking extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void voltarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarButtonActionPerformed
+    private void botaoVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoVoltarActionPerformed
         MenuInicial mi = new MenuInicial();
         mi.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_voltarButtonActionPerformed
+    }//GEN-LAST:event_botaoVoltarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -166,9 +166,9 @@ public class TelaRanking extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton botaoVoltar;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel rankingLabel;
     private javax.swing.JTable rankingTable;
-    private javax.swing.JButton voltarButton;
     // End of variables declaration//GEN-END:variables
 }
