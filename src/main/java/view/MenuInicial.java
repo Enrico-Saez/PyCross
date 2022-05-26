@@ -4,6 +4,8 @@
  */
 package view;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Enrico
@@ -57,10 +59,25 @@ public class MenuInicial extends javax.swing.JFrame {
         titleLabel.setText("PyCross");
 
         fase1Button.setText("Fase 1");
+        fase1Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fase1ButtonActionPerformed(evt);
+            }
+        });
 
         fase2Button.setText("Fase 2");
+        fase2Button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fase2ButtonActionPerformed(evt);
+            }
+        });
 
         fase3button.setText("Fase 3");
+        fase3button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fase3buttonActionPerformed(evt);
+            }
+        });
 
         welcomeLabel.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         welcomeLabel.setText("Bem vindo, sua pontuação é:");
@@ -72,6 +89,7 @@ public class MenuInicial extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(97, 97, 97)
                 .addComponent(titleLabel)
+                .addGap(62, 62, 62)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(274, 274, 274)
@@ -84,7 +102,7 @@ public class MenuInicial extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(46, 46, 46)
                         .addComponent(welcomeLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 354, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(19, Short.MAX_VALUE))))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -112,6 +130,24 @@ public class MenuInicial extends javax.swing.JFrame {
         tr.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_rankingButtonActionPerformed
+
+    private void fase1ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fase1ButtonActionPerformed
+        Fase1 f1 = new Fase1();
+        f1.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_fase1ButtonActionPerformed
+
+    private void fase2ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fase2ButtonActionPerformed
+        Fase2 f2 = new Fase2();
+        f2.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_fase2ButtonActionPerformed
+
+    private void fase3buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fase3buttonActionPerformed
+        Fase3 f3 = new Fase3();
+        f3.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_fase3buttonActionPerformed
 
     /**
      * @param args the command line arguments

@@ -13,6 +13,7 @@ import javax.swing.table.TableModel;
 import javax.swing.table.TableRowSorter;
 import model.bean.Palavra;
 import model.dao.PalavraDAO;
+import model.dao.UsuarioDAO;
 
 /**
  *
@@ -29,6 +30,19 @@ public class Fase1 extends javax.swing.JFrame {
         setLocationRelativeTo(null);
         readTableFase1();
     }
+
+    int numeroTentativas;
+
+    boolean interpretadaPreenchido = false;
+    boolean inputPreenchido = false;
+    boolean printPreenchido = false;
+    boolean turtlePreenchido = false;
+    boolean hashtagPreenchido = false;
+    boolean lenPreenchido = false;
+    boolean colchetePreenchido = false;
+    boolean importPreenchido = false;
+    boolean returnPreenchido = false;
+    boolean variavelPreenchido = false;
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -113,7 +127,8 @@ public class Fase1 extends javax.swing.JFrame {
         sairButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setSize(new java.awt.Dimension(800, 350));
+        setPreferredSize(new java.awt.Dimension(800, 400));
+        setSize(new java.awt.Dimension(800, 400));
         getContentPane().setLayout(null);
 
         interpretada1.setEditable(false);
@@ -750,6 +765,11 @@ public class Fase1 extends javax.swing.JFrame {
         enviarButton.setBounds(350, 340, 72, 30);
 
         sairButton.setText("Sair");
+        sairButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sairButtonActionPerformed(evt);
+            }
+        });
         getContentPane().add(sairButton);
         sairButton.setBounds(10, 10, 60, 22);
 
@@ -833,45 +853,92 @@ public class Fase1 extends javax.swing.JFrame {
     }//GEN-LAST:event_respostaTextFieldActionPerformed
 
     private void enviarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enviarButtonActionPerformed
-        PalavraDAO dao = new PalavraDAO();
-        if (dao.verificarRespostaFase1(respostaTextField.getText().toLowerCase())) {
+        PalavraDAO pdao = new PalavraDAO();
+        numeroTentativas += 1;
+        if (pdao.verificarRespostaFase1(respostaTextField.getText().toLowerCase())) {
             switch (respostaTextField.getText().toLowerCase()) {
                 case "interpretada":
-                    preencherInterpretada();
+                    if (!interpretadaPreenchido) {
+                        preencherInterpretada();
+                        interpretadaPreenchido = true;
+                    }
                     break;
                 case "input":
-                    preencherInput();
+                    if (!inputPreenchido) {
+                        preencherInput();
+                        inputPreenchido = true;
+                    }
                     break;
                 case "print":
-                    preencherPrint();
+                    if (!printPreenchido) {
+                        preencherPrint();
+                        printPreenchido = true;
+                    }
                     break;
                 case "turtle":
-                    preencherTurtle();
+                    if (!turtlePreenchido) {
+                        preencherTurtle();
+                        turtlePreenchido = true;
+                    }
                     break;
                 case "hashtag":
-                    preencherHashtag();
+                    if (!hashtagPreenchido) {
+                        preencherHashtag();
+                        hashtagPreenchido = true;
+                    }
                     break;
                 case "len":
-                    preencherLen();
+                    if (!lenPreenchido) {
+                        preencherLen();
+                        lenPreenchido = true;
+                    }
                     break;
                 case "colchete":
-                    preencherColchete();
+                    if (!colchetePreenchido) {
+                        preencherColchete();
+                        colchetePreenchido = true;
+                    }
                     break;
                 case "import":
-                    preencherImport();
+                    if (!importPreenchido) {
+                        preencherImport();
+                        importPreenchido = true;
+                    }
                     break;
                 case "return":
-                    preencherReturn();
+                    if (!returnPreenchido) {
+                        preencherReturn();
+                        returnPreenchido = true;
+                    }
                     break;
                 case "variavel":
-                    preencherVariavel();
+                    if (!variavelPreenchido) {
+                        preencherVariavel();
+                        variavelPreenchido = true;
+                    }
                     break;
             }
+
+            if (interpretadaPreenchido && inputPreenchido && printPreenchido && turtlePreenchido && hashtagPreenchido && lenPreenchido && colchetePreenchido && importPreenchido && returnPreenchido && variavelPreenchido) {
+                UsuarioDAO udao = new UsuarioDAO();
+                udao.updatePontuacao(TelaLogin.getJogadorAtual(), calcularPontuacao());
+                JOptionPane.showMessageDialog(null, "Parabéns! Você acertou todas as palavras!");
+                MenuInicial mi = new MenuInicial();
+                mi.setVisible(true);
+                this.dispose();
+            }
+
         } else {
-            JOptionPane.showMessageDialog(null, "Resposta errada!");
+            JOptionPane.showMessageDialog(null, "Resposta incorreta!");
         }
         respostaTextField.setText("");
     }//GEN-LAST:event_enviarButtonActionPerformed
+
+    private void sairButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairButtonActionPerformed
+        MenuInicial mi = new MenuInicial();
+        mi.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_sairButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -911,7 +978,7 @@ public class Fase1 extends javax.swing.JFrame {
         });
     }
 
-    public void readTableFase1() {
+    private void readTableFase1() {
         DefaultTableModel model = (DefaultTableModel) fase1Table.getModel();
         model.setNumRows(0);
 
@@ -923,7 +990,13 @@ public class Fase1 extends javax.swing.JFrame {
         }
     }
 
-    public void preencherInterpretada() {
+    private int calcularPontuacao() {
+        double a = 13.0 / numeroTentativas * 100;
+        int b = (int) Math.round(a);
+        return b;
+    }
+
+    private void preencherInterpretada() {
         interpretada1.setText("i");
         interpretada2_len3.setText("n");
         interpretada3.setText("t");
@@ -938,7 +1011,7 @@ public class Fase1 extends javax.swing.JFrame {
         interpretada12.setText("a");
     }
 
-    public void preencherInput() {
+    private void preencherInput() {
         import1.setText("i");
         input2.setText("n");
         input3.setText("p");
@@ -946,7 +1019,7 @@ public class Fase1 extends javax.swing.JFrame {
         input5.setText("t");
     }
 
-    public void preencherPrint() {
+    private void preencherPrint() {
         import3_print1.setText("p");
         print2.setText("r");
         print3.setText("i");
@@ -954,7 +1027,7 @@ public class Fase1 extends javax.swing.JFrame {
         print5.setText("t");
     }
 
-    public void preencherTurtle() {
+    private void preencherTurtle() {
         hashtag5_turtle1.setText("t");
         turtle2.setText("u");
         turtle3.setText("r");
@@ -963,7 +1036,7 @@ public class Fase1 extends javax.swing.JFrame {
         turtle6.setText("e");
     }
 
-    public void preencherHashtag() {
+    private void preencherHashtag() {
         hashtag1.setText("h");
         hashtag2.setText("a");
         hashtag3.setText("s");
@@ -973,13 +1046,13 @@ public class Fase1 extends javax.swing.JFrame {
         hashtag7.setText("g");
     }
 
-    public void preencherLen() {
+    private void preencherLen() {
         len1.setText("l");
         len2.setText("e");
         interpretada2_len3.setText("n");
     }
 
-    public void preencherColchete() {
+    private void preencherColchete() {
         colchete1.setText("c");
         colchete2.setText("o");
         colchete3.setText("l");
@@ -990,7 +1063,7 @@ public class Fase1 extends javax.swing.JFrame {
         interpretada4_colchete8.setText("e");
     }
 
-    public void preencherImport() {
+    private void preencherImport() {
         import1.setText("i");
         import2.setText("m");
         import3_print1.setText("p");
@@ -999,7 +1072,7 @@ public class Fase1 extends javax.swing.JFrame {
         import6_turtle4.setText("t");
     }
 
-    public void preencherReturn() {
+    private void preencherReturn() {
         interpretada7_return1.setText("r");
         return2.setText("e");
         return3.setText("t");
@@ -1008,7 +1081,7 @@ public class Fase1 extends javax.swing.JFrame {
         return6_print4.setText("n");
     }
 
-    public void preencherVariavel() {
+    private void preencherVariavel() {
         variavel1.setText("v");
         variavel2.setText("a");
         variavel3.setText("r");

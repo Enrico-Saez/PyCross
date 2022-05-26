@@ -5,7 +5,10 @@
 package view;
 
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+import model.bean.Palavra;
 import model.dao.PalavraDAO;
+import model.dao.UsuarioDAO;
 
 /**
  *
@@ -17,8 +20,27 @@ public class Fase3 extends javax.swing.JFrame {
      * Creates new form Fase3
      */
     public Fase3() {
+        super("PyCross Fase 2");
         initComponents();
+        setLocationRelativeTo(null);
+        readTableFase3();
     }
+
+    int numeroTentativas;
+
+    boolean truePreenchido = false;
+    boolean notPreenchido = false;
+    boolean oitoPreenchido = false;
+    boolean falsePreenchido = false;
+    boolean samuelPreenchido = false;
+    boolean snakePreenchido = false;
+    boolean maxPreenchido = false;
+    boolean cpuPreenchido = false;
+    boolean floatPreenchido = false;
+    boolean guidoPreenchido = false;
+    boolean lowerPreenchido = false;
+    boolean novePreenchido = false;
+    boolean continuePreenchido = false;
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -92,8 +114,12 @@ public class Fase3 extends javax.swing.JFrame {
         respostaTextField = new javax.swing.JTextField();
         enviarButton = new javax.swing.JButton();
         sairButton = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        fase1Table = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(800, 400));
+        setSize(new java.awt.Dimension(800, 400));
         getContentPane().setLayout(null);
 
         samuel1.setEditable(false);
@@ -753,8 +779,14 @@ public class Fase3 extends javax.swing.JFrame {
         jLabel13.setText("24");
         getContentPane().add(jLabel13);
         jLabel13.setBounds(140, 210, 20, 16);
+
+        respostaTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                respostaTextFieldActionPerformed(evt);
+            }
+        });
         getContentPane().add(respostaTextField);
-        respostaTextField.setBounds(360, 330, 210, 30);
+        respostaTextField.setBounds(40, 340, 210, 30);
 
         enviarButton.setText("Enviar");
         enviarButton.addActionListener(new java.awt.event.ActionListener() {
@@ -763,11 +795,45 @@ public class Fase3 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(enviarButton);
-        enviarButton.setBounds(580, 330, 72, 30);
+        enviarButton.setBounds(270, 340, 72, 30);
 
         sairButton.setText("Sair");
+        sairButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sairButtonActionPerformed(evt);
+            }
+        });
         getContentPane().add(sairButton);
         sairButton.setBounds(10, 10, 60, 22);
+
+        fase1Table.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Nº", "Dica"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        fase1Table.setRowHeight(40);
+        jScrollPane1.setViewportView(fase1Table);
+
+        getContentPane().add(jScrollPane1);
+        jScrollPane1.setBounds(480, 10, 310, 380);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -961,50 +1027,107 @@ public class Fase3 extends javax.swing.JFrame {
         if (dao.verificarRespostaFase3(respostaTextField.getText().toLowerCase())) {
             switch (respostaTextField.getText().toLowerCase()) {
                 case "true":
-                    preencherTrue();
+                    if (!truePreenchido) {
+                        preencherTrue();
+                        truePreenchido = true;
+                    }
                     break;
                 case "not":
-                    preencherNot();
+                    if (!notPreenchido) {
+                        preencherNot();
+                        notPreenchido = true;
+                    }
                     break;
                 case "oito":
-                    preencherOito();
+                    if (!oitoPreenchido) {
+                        preencherOito();
+                        oitoPreenchido = true;
+                    }
                     break;
                 case "false":
-                    preencherFalse();
+                    if (!falsePreenchido) {
+                        preencherFalse();
+                        falsePreenchido = true;
+                    }
                     break;
                 case "samuel":
-                    preencherSamuel();
+                    if (!samuelPreenchido) {
+                        preencherSamuel();
+                        samuelPreenchido = true;
+                    }
                     break;
                 case "snake":
-                    preencherSnake();
+                    if (!snakePreenchido) {
+                        preencherSnake();
+                        snakePreenchido = true;
+                    }
                     break;
                 case "max":
-                    preencherMax();
+                    if (!maxPreenchido) {
+                        preencherMax();
+                        maxPreenchido = true;
+                    }
                     break;
                 case "cpu":
-                    preencherCpu();
+                    if (!cpuPreenchido) {
+                        preencherCpu();
+                        cpuPreenchido = true;
+                    }
                     break;
                 case "float":
-                    preencherFloat();
+                    if (!floatPreenchido) {
+                        preencherFloat();
+                        floatPreenchido = true;
+                    }
                     break;
                 case "guido":
-                    preencherGuido();
+                    if (!guidoPreenchido) {
+                        preencherGuido();
+                        guidoPreenchido = true;
+                    }
                     break;
                 case "lower":
-                    preencherLower();
+                    if (!lowerPreenchido) {
+                        preencherLower();
+                        lowerPreenchido = true;
+                    }
                     break;
                 case "nove":
-                    preencherNove();
+                    if (!novePreenchido) {
+                        preencherNove();
+                        novePreenchido = true;
+                    }
                     break;
                 case "continue":
-                    preencherContinue();
+                    if (!continuePreenchido) {
+                        preencherContinue();
+                        continuePreenchido = true;
+                    }
                     break;
+            }
+            if (truePreenchido && notPreenchido && oitoPreenchido && falsePreenchido && samuelPreenchido && snakePreenchido && maxPreenchido && cpuPreenchido && floatPreenchido && guidoPreenchido && lowerPreenchido && novePreenchido && continuePreenchido) {
+                UsuarioDAO udao = new UsuarioDAO();
+                udao.updatePontuacao(TelaLogin.getJogadorAtual(), calcularPontuacao());
+                JOptionPane.showMessageDialog(null, "Parabéns! Você acertou todas as palavras!");
+                MenuInicial mi = new MenuInicial();
+                mi.setVisible(true);
+                this.dispose();
             }
         } else {
             JOptionPane.showMessageDialog(null, "Resposta errada!");
         }
         respostaTextField.setText("");
     }//GEN-LAST:event_enviarButtonActionPerformed
+
+    private void respostaTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_respostaTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_respostaTextFieldActionPerformed
+
+    private void sairButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairButtonActionPerformed
+        MenuInicial mi = new MenuInicial();
+        mi.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_sairButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1039,6 +1162,24 @@ public class Fase3 extends javax.swing.JFrame {
                 new Fase3().setVisible(true);
             }
         });
+    }
+
+    private void readTableFase3() {
+        DefaultTableModel model = (DefaultTableModel) fase1Table.getModel();
+        model.setNumRows(0);
+
+        PalavraDAO dao = new PalavraDAO();
+
+        for (Palavra p : dao.readPalavrasFase3()) {
+            Object[] dados = {p.getId(), p.getDica()};
+            model.addRow(dados);
+        }
+    }
+
+    private int calcularPontuacao() {
+        double a = 13.0 / numeroTentativas * 100;
+        int b = (int) Math.round(a);
+        return b;
     }
 
     public void preencherTrue() {
@@ -1156,6 +1297,7 @@ public class Fase3 extends javax.swing.JFrame {
     private javax.swing.JTextField false2;
     private javax.swing.JTextField false4;
     private javax.swing.JTextField false5_nove4;
+    private javax.swing.JTable fase1Table;
     private javax.swing.JTextField float1_false1;
     private javax.swing.JTextField float3;
     private javax.swing.JTextField float4_snake3;
@@ -1177,6 +1319,7 @@ public class Fase3 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField lower1_false3;
     private javax.swing.JTextField lower2;
     private javax.swing.JTextField lower3;

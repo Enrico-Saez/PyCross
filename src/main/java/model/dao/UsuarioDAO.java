@@ -250,12 +250,11 @@ public class UsuarioDAO {
 
         try {
             stmt = con.prepareStatement("UPDATE usuario SET pontuacao = ? WHERE nome = ?");
-            stmt.setInt(1, pontuacao);
+            stmt.setInt(1, readPontuacao(nome) + pontuacao);
             stmt.setString(2, nome);
 
             stmt.executeUpdate();
 
-            JOptionPane.showMessageDialog(null, "Atualizado com sucesso!");
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Erro ao atualizar: " + ex);
         } finally {

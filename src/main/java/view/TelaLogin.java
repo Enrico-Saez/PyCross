@@ -1,6 +1,7 @@
 package view;
 
 import javax.swing.JOptionPane;
+import model.bean.Usuario;
 import model.dao.UsuarioDAO;
 
 /*
@@ -99,18 +100,19 @@ public class TelaLogin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botaoLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoLoginActionPerformed
-        UsuarioDAO dao = new UsuarioDAO();        
-        String nome = campoUsuario.getText();
-        String senha = new String(campoSenha.getPassword());
-        JOptionPane.showMessageDialog(null, nome + " " + senha);
-        if(dao.adminLoginCheck(nome, senha)) {
+        UsuarioDAO dao = new UsuarioDAO();
+        Usuario u = new Usuario();
+        u.setNome(campoUsuario.getText());
+        u.setSenha(new String(campoSenha.getPassword()));
+        if(dao.adminLoginCheck(u.getNome(), u.getSenha())) {
             TelaAdmin tl = new TelaAdmin();
             tl.setVisible(true);
             this.dispose();
         }
-        else if (dao.jogadorLoginCheck(nome, senha)) {
+        else if (dao.jogadorLoginCheck(u.getNome(), u.getSenha())) {
             MenuInicial mi = new MenuInicial();
             mi.setVisible(true);
+            jogadorAtual = u.getNome();
             this.dispose();
         } else {
             JOptionPane.showMessageDialog(null, "Falha no login");
@@ -157,6 +159,12 @@ public class TelaLogin extends javax.swing.JFrame {
                 new TelaLogin().setVisible(true);
             }
         });
+    }
+    
+    private static String jogadorAtual;
+    
+    public static String getJogadorAtual() {
+        return jogadorAtual;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

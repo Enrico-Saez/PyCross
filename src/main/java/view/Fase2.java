@@ -5,7 +5,10 @@
 package view;
 
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+import model.bean.Palavra;
 import model.dao.PalavraDAO;
+import model.dao.UsuarioDAO;
 
 /**
  *
@@ -20,7 +23,23 @@ public class Fase2 extends javax.swing.JFrame {
         super("PyCross Fase 2");
         initComponents();
         setLocationRelativeTo(null);
+        readTableFase2();
     }
+
+    int numeroTentativas;
+
+    boolean defPreenchido = false;
+    boolean intPreenchido = false;
+    boolean porcentagemPreenchido = false;
+    boolean appendPreenchido = false;
+    boolean algoritmoPreenchido = false;
+    boolean breakPreenchido = false;
+    boolean chavePreenchido = false;
+    boolean listaPreenchido = false;
+    boolean dicionarioPreenchido = false;
+    boolean dinamicaPreenchido = false;
+    boolean upperPreenchido = false;
+    boolean setPreenchido = false;
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -52,8 +71,8 @@ public class Fase2 extends javax.swing.JFrame {
         append5 = new javax.swing.JTextField();
         append6_dicionario1 = new javax.swing.JTextField();
         dicionario2 = new javax.swing.JTextField();
-        dicionario3 = new javax.swing.JTextField();
         dicionario4 = new javax.swing.JTextField();
+        dicionario3 = new javax.swing.JTextField();
         dicionario5 = new javax.swing.JTextField();
         dicionario6 = new javax.swing.JTextField();
         dicionario7_algoritmo1 = new javax.swing.JTextField();
@@ -108,9 +127,12 @@ public class Fase2 extends javax.swing.JFrame {
         respostaTextField = new javax.swing.JTextField();
         enviarButton = new javax.swing.JButton();
         sairButton = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        fase1Table = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setSize(new java.awt.Dimension(800, 350));
+        setPreferredSize(new java.awt.Dimension(800, 400));
+        setSize(new java.awt.Dimension(800, 400));
         getContentPane().setLayout(null);
 
         porcentagem1.setEditable(false);
@@ -326,19 +348,6 @@ public class Fase2 extends javax.swing.JFrame {
         getContentPane().add(dicionario2);
         dicionario2.setBounds(280, 180, 24, 21);
 
-        dicionario3.setEditable(false);
-        dicionario3.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
-        dicionario3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        dicionario3.setToolTipText("");
-        dicionario3.setPreferredSize(new java.awt.Dimension(24, 24));
-        dicionario3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dicionario3ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(dicionario3);
-        dicionario3.setBounds(328, 180, 24, 21);
-
         dicionario4.setEditable(false);
         dicionario4.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         dicionario4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -350,7 +359,20 @@ public class Fase2 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(dicionario4);
-        dicionario4.setBounds(304, 180, 24, 21);
+        dicionario4.setBounds(328, 180, 24, 21);
+
+        dicionario3.setEditable(false);
+        dicionario3.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        dicionario3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        dicionario3.setToolTipText("");
+        dicionario3.setPreferredSize(new java.awt.Dimension(24, 24));
+        dicionario3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dicionario3ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(dicionario3);
+        dicionario3.setBounds(304, 180, 24, 21);
 
         dicionario5.setEditable(false);
         dicionario5.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
@@ -881,8 +903,42 @@ public class Fase2 extends javax.swing.JFrame {
         enviarButton.setBounds(710, 340, 72, 30);
 
         sairButton.setText("Sair");
+        sairButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sairButtonActionPerformed(evt);
+            }
+        });
         getContentPane().add(sairButton);
         sairButton.setBounds(10, 10, 60, 22);
+
+        fase1Table.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Nº", "Dica"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        fase1Table.setRowHeight(40);
+        jScrollPane1.setViewportView(fase1Table);
+
+        getContentPane().add(jScrollPane1);
+        jScrollPane1.setBounds(500, 10, 290, 320);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -923,13 +979,13 @@ public class Fase2 extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_append6_dicionario1ActionPerformed
 
-    private void dicionario3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dicionario3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_dicionario3ActionPerformed
-
     private void dicionario4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dicionario4ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_dicionario4ActionPerformed
+
+    private void dicionario3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dicionario3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_dicionario3ActionPerformed
 
     private void dicionario5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dicionario5ActionPerformed
         // TODO add your handling code here:
@@ -1060,47 +1116,98 @@ public class Fase2 extends javax.swing.JFrame {
         if (dao.verificarRespostaFase2(respostaTextField.getText().toLowerCase())) {
             switch (respostaTextField.getText().toLowerCase()) {
                 case "def":
-                    preencherDef();
+                    if (!defPreenchido) {
+                        preencherDef();
+                        defPreenchido = true;
+                    }
                     break;
                 case "int":
-                    preencherInt();
+                    if (!intPreenchido) {
+                        preencherInt();
+                        intPreenchido = true;
+                    }
                     break;
                 case "porcentagem":
-                    preencherPorcentagem();
+                    if (!porcentagemPreenchido) {
+                        preencherPorcentagem();
+                        porcentagemPreenchido = true;
+                    }
                     break;
                 case "append":
-                    preencherAppend();
+                    if (!appendPreenchido) {
+                        preencherAppend();
+                        appendPreenchido = true;
+                    }
                     break;
                 case "algoritmo":
-                    preencherAlgoritmo();
+                    if (!algoritmoPreenchido) {
+                        preencherAlgoritmo();
+                        algoritmoPreenchido = true;
+                    }
                     break;
                 case "break":
-                    preencherBreak();
+                    if (!breakPreenchido) {
+                        preencherBreak();
+                        breakPreenchido = true;
+                    }
                     break;
                 case "chave":
-                    preencherChave();
+                    if (!chavePreenchido) {
+                        preencherChave();
+                        chavePreenchido = true;
+                    }
                     break;
                 case "lista":
-                    preencherLista();
+                    if (!listaPreenchido) {
+                        preencherLista();
+                        listaPreenchido = true;
+                    }
                     break;
                 case "dicionario":
-                    preencherDicionario();
+                    if (!dicionarioPreenchido) {
+                        preencherDicionario();
+                        dicionarioPreenchido = true;
+                    }
                     break;
                 case "dinamica":
-                    preencherDinamica();
+                    if (!dinamicaPreenchido) {
+                        preencherDinamica();
+                        dinamicaPreenchido = true;
+                    }
                     break;
                 case "upper":
-                    preencherUpper();
+                    if (!upperPreenchido) {
+                        preencherUpper();
+                        upperPreenchido = true;
+                    }
                     break;
                 case "set":
-                    preencherSet();
+                    if (!setPreenchido) {
+                        preencherSet();
+                        setPreenchido = true;
+                    }
                     break;
+            }
+
+            if (defPreenchido && intPreenchido && porcentagemPreenchido && appendPreenchido && algoritmoPreenchido && breakPreenchido && chavePreenchido && listaPreenchido && dicionarioPreenchido && dinamicaPreenchido && upperPreenchido && setPreenchido) {
+                UsuarioDAO udao = new UsuarioDAO();
+                udao.updatePontuacao(TelaLogin.getJogadorAtual(), calcularPontuacao());
+                JOptionPane.showMessageDialog(null, "Parabéns! Você acertou todas as palavras!");
+                MenuInicial mi = new MenuInicial();
+                mi.setVisible(true);
+                this.dispose();
             }
         } else {
             JOptionPane.showMessageDialog(null, "Resposta errada!");
         }
         respostaTextField.setText("");
     }//GEN-LAST:event_enviarButtonActionPerformed
+
+    private void sairButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairButtonActionPerformed
+        MenuInicial mi = new MenuInicial();
+        mi.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_sairButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1138,19 +1245,37 @@ public class Fase2 extends javax.swing.JFrame {
         });
     }
 
-    public void preencherDef() {
+    private void readTableFase2() {
+        DefaultTableModel model = (DefaultTableModel) fase1Table.getModel();
+        model.setNumRows(0);
+
+        PalavraDAO dao = new PalavraDAO();
+
+        for (Palavra p : dao.readPalavrasFase2()) {
+            Object[] dados = {p.getId(), p.getDica()};
+            model.addRow(dados);
+        }
+    }
+
+    private int calcularPontuacao() {
+        double a = 13.0 / numeroTentativas * 100;
+        int b = (int) Math.round(a);
+        return b;
+    }
+
+    private void preencherDef() {
         dinamica1_def1.setText("d");
         def2.setText("e");
         def3.setText("f");
     }
 
-    public void preencherInt() {
+    private void preencherInt() {
         int1.setText("i");
         dinamica3_int2.setText("n");
         int3.setText("t");
     }
 
-    public void preencherPorcentagem() {
+    private void preencherPorcentagem() {
         porcentagem1.setText("p");
         porcentagem2.setText("o");
         porcentagem3_break2.setText("r");
@@ -1164,7 +1289,7 @@ public class Fase2 extends javax.swing.JFrame {
         porcentagem11_dinamica5.setText("m");
     }
 
-    public void preencherAppend() {
+    private void preencherAppend() {
         break4_append1.setText("a");
         append2.setText("p");
         append3.setText("p");
@@ -1173,7 +1298,7 @@ public class Fase2 extends javax.swing.JFrame {
         append6_dicionario1.setText("d");
     }
 
-    public void preencherAlgoritmo() {
+    private void preencherAlgoritmo() {
         dicionario7_algoritmo1.setText("a");
         algoritmo2.setText("l");
         algoritmo3.setText("g");
@@ -1185,7 +1310,7 @@ public class Fase2 extends javax.swing.JFrame {
         algoritmo9.setText("o");
     }
 
-    public void preencherBreak() {
+    private void preencherBreak() {
         break1.setText("b");
         porcentagem3_break2.setText("r");
         break3.setText("e");
@@ -1193,7 +1318,7 @@ public class Fase2 extends javax.swing.JFrame {
         break5.setText("k");
     }
 
-    public void preencherChave() {
+    private void preencherChave() {
         chave1.setText("c");
         chave2.setText("h");
         chave3.setText("a");
@@ -1201,7 +1326,7 @@ public class Fase2 extends javax.swing.JFrame {
         porcentagem5_chave5.setText("e");
     }
 
-    public void preencherLista() {
+    private void preencherLista() {
         lista1.setText("l");
         lista2.setText("i");
         lista3.setText("s");
@@ -1209,11 +1334,11 @@ public class Fase2 extends javax.swing.JFrame {
         porcentagem8_lista5.setText("a");
     }
 
-    public void preencherDicionario() {
+    private void preencherDicionario() {
         append6_dicionario1.setText("d");
         dicionario2.setText("i");
-        dicionario3.setText("c");
-        dicionario4.setText("i");
+        dicionario4.setText("c");
+        dicionario3.setText("i");
         dicionario5.setText("o");
         dicionario6.setText("n");
         dicionario7_algoritmo1.setText("a");
@@ -1222,7 +1347,7 @@ public class Fase2 extends javax.swing.JFrame {
         dicionario10.setText("o");
     }
 
-    public void preencherDinamica() {
+    private void preencherDinamica() {
         dinamica1_def1.setText("d");
         dinamica2.setText("i");
         dinamica3_int2.setText("n");
@@ -1233,7 +1358,7 @@ public class Fase2 extends javax.swing.JFrame {
         dinamica8.setText("a");
     }
 
-    public void preencherUpper() {
+    private void preencherUpper() {
         upper1.setText("u");
         upper2.setText("p");
         upper3.setText("p");
@@ -1241,7 +1366,7 @@ public class Fase2 extends javax.swing.JFrame {
         algoritmo5_upper5.setText("r");
     }
 
-    public void preencherSet() {
+    private void preencherSet() {
         set1.setText("s");
         set2.setText("e");
         algoritmo7_set3.setText("t");
@@ -1288,6 +1413,7 @@ public class Fase2 extends javax.swing.JFrame {
     private javax.swing.JTextField dinamica7;
     private javax.swing.JTextField dinamica8;
     private javax.swing.JButton enviarButton;
+    private javax.swing.JTable fase1Table;
     private javax.swing.JTextField int1;
     private javax.swing.JTextField int3;
     private javax.swing.JLabel jLabel1;
@@ -1302,6 +1428,7 @@ public class Fase2 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField lista1;
     private javax.swing.JTextField lista2;
     private javax.swing.JTextField lista3;
