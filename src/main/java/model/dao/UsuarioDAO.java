@@ -203,9 +203,7 @@ public class UsuarioDAO {
             rs = stmt.executeQuery();
 
             if (rs.next()) {
-                if (!rs.getBoolean("statusAdmin")) {
-                    check = true;
-                }
+                    check = !rs.getBoolean("statusAdmin");
             }
 
         } catch (SQLException ex) {
@@ -232,9 +230,7 @@ public class UsuarioDAO {
             rs = stmt.executeQuery();
 
             if (rs.next()) {
-                if (rs.getBoolean("statusAdmin")) {
-                    check = true;
-                }
+                    check = rs.getBoolean("statusAdmin");
             }
 
         } catch (SQLException ex) {
