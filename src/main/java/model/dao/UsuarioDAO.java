@@ -32,11 +32,10 @@ public class UsuarioDAO {
             st.setInt(3, u.getPontuacao());
 
             st.executeUpdate();
-
             JOptionPane.showMessageDialog(null, "Usuário criado com sucesso!");
 
         } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null, "Erro ao salvar: " + e);
+            JOptionPane.showMessageDialog(null, "Erro ao criar usuário: " + e);
         } finally {
             ConnectionFactory.closeConnection(c);
         }
@@ -66,6 +65,37 @@ public class UsuarioDAO {
                 u.setStatusAdmin(rs.getInt("statusAdmin") == 1);
 
                 usuarios.add(u);
+            }
+
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Erro: " + ex);
+        } finally {
+            ConnectionFactory.closeConnection(con);
+        }
+
+        return usuarios;
+    }
+
+    public List<String> readNome() {
+
+        Connection con = ConnectionFactory.getConnection();
+
+        PreparedStatement stmt = null;
+        ResultSet rs = null;
+
+        String nome;
+
+        List<String> usuarios = new ArrayList<>();
+
+        try {
+            stmt = con.prepareStatement("SELECT nome FROM usuario");
+            rs = stmt.executeQuery();
+
+            while (rs.next()) {
+
+                nome = rs.getString("nome");
+
+                usuarios.add(nome);
             }
 
         } catch (SQLException ex) {
@@ -230,7 +260,6 @@ public class UsuarioDAO {
             rs = stmt.executeQuery();
 
             if (rs.next()) {
-
                 pontuacao = rs.getInt("pontuacao");
             }
 
