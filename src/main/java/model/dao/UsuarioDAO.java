@@ -203,7 +203,7 @@ public class UsuarioDAO {
             rs = stmt.executeQuery();
 
             if (rs.next()) {
-                    check = !rs.getBoolean("statusAdmin");
+                check = !rs.getBoolean("statusAdmin");
             }
 
         } catch (SQLException ex) {
@@ -230,7 +230,7 @@ public class UsuarioDAO {
             rs = stmt.executeQuery();
 
             if (rs.next()) {
-                    check = rs.getBoolean("statusAdmin");
+                check = rs.getBoolean("statusAdmin");
             }
 
         } catch (SQLException ex) {
@@ -277,6 +277,144 @@ public class UsuarioDAO {
             stmt = con.prepareStatement("UPDATE usuario SET pontuacao = ? WHERE nome = ?");
             stmt.setInt(1, readPontuacao(nome) + pontuacao);
             stmt.setString(2, nome);
+
+            stmt.executeUpdate();
+
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Erro ao atualizar: " + ex);
+        } finally {
+            ConnectionFactory.closeConnection(con);
+        }
+
+    }
+
+    public boolean fase1Completa(String nome) {
+
+        Connection con = ConnectionFactory.getConnection();
+
+        PreparedStatement stmt = null;
+        ResultSet rs = null;
+
+        boolean check = false;
+
+        try {
+            stmt = con.prepareStatement("SELECT fase1completa FROM usuario WHERE nome = ?");
+            stmt.setString(1, nome);
+            rs = stmt.executeQuery();
+
+            if (rs.next()) {
+                check = rs.getBoolean("fase1completa");
+            }
+
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Erro: " + ex);
+        } finally {
+            ConnectionFactory.closeConnection(con);
+        }
+        return check;
+    }
+
+    public boolean fase2Completa(String nome) {
+
+        Connection con = ConnectionFactory.getConnection();
+
+        PreparedStatement stmt = null;
+        ResultSet rs = null;
+
+        boolean check = false;
+
+        try {
+            stmt = con.prepareStatement("SELECT fase2completa FROM usuario WHERE nome = ?");
+            stmt.setString(1, nome);
+            rs = stmt.executeQuery();
+
+            if (rs.next()) {
+                check = rs.getBoolean("fase2completa");
+            }
+
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Erro: " + ex);
+        } finally {
+            ConnectionFactory.closeConnection(con);
+        }
+        return check;
+    }
+
+    public boolean fase3Completa(String nome) {
+
+        Connection con = ConnectionFactory.getConnection();
+
+        PreparedStatement stmt = null;
+        ResultSet rs = null;
+
+        boolean check = false;
+
+        try {
+            stmt = con.prepareStatement("SELECT fase3completa FROM usuario WHERE nome = ?");
+            stmt.setString(1, nome);
+            rs = stmt.executeQuery();
+
+            if (rs.next()) {
+                check = rs.getBoolean("fase3completa");
+            }
+
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Erro: " + ex);
+        } finally {
+            ConnectionFactory.closeConnection(con);
+        }
+        return check;
+    }
+
+    public void updateFase1Completa(String nome) {
+
+        Connection con = ConnectionFactory.getConnection();
+
+        PreparedStatement stmt = null;
+
+        try {
+            stmt = con.prepareStatement("UPDATE usuario SET fase1completa = 1 WHERE nome = ?");
+            stmt.setString(1, nome);
+
+            stmt.executeUpdate();
+
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Erro ao atualizar: " + ex);
+        } finally {
+            ConnectionFactory.closeConnection(con);
+        }
+
+    }
+
+    public void updateFase2Completa(String nome) {
+
+        Connection con = ConnectionFactory.getConnection();
+
+        PreparedStatement stmt = null;
+
+        try {
+            stmt = con.prepareStatement("UPDATE usuario SET fase2completa = 1 WHERE nome = ?");
+            stmt.setString(1, nome);
+
+            stmt.executeUpdate();
+
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Erro ao atualizar: " + ex);
+        } finally {
+            ConnectionFactory.closeConnection(con);
+        }
+
+    }
+
+    public void updateFase3Completa(String nome) {
+
+        Connection con = ConnectionFactory.getConnection();
+
+        PreparedStatement stmt = null;
+
+        try {
+            stmt = con.prepareStatement("UPDATE usuario SET fase3completa = 1 WHERE nome = ?");
+            stmt.setString(1, nome);
 
             stmt.executeUpdate();
 

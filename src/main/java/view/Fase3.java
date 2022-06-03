@@ -1023,100 +1023,110 @@ public class Fase3 extends javax.swing.JFrame {
     }//GEN-LAST:event_continue8ActionPerformed
 
     private void enviarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enviarButtonActionPerformed
-        PalavraDAO dao = new PalavraDAO();
-        if (dao.verificarRespostaFase3(respostaTextField.getText().toLowerCase())) {
-            switch (respostaTextField.getText().toLowerCase()) {
-                case "true":
-                    if (!truePreenchido) {
-                        preencherTrue();
-                        truePreenchido = true;
+        if (!"".equals(respostaTextField.getText().toLowerCase())) {
+            numeroTentativas += 1;
+            PalavraDAO dao = new PalavraDAO();
+            if (dao.verificarRespostaFase3(respostaTextField.getText().toLowerCase())) {
+                switch (respostaTextField.getText().toLowerCase()) {
+                    case "true":
+                        if (!truePreenchido) {
+                            preencherTrue();
+                            truePreenchido = true;
+                        }
+                        break;
+                    case "not":
+                        if (!notPreenchido) {
+                            preencherNot();
+                            notPreenchido = true;
+                        }
+                        break;
+                    case "oito":
+                        if (!oitoPreenchido) {
+                            preencherOito();
+                            oitoPreenchido = true;
+                        }
+                        break;
+                    case "false":
+                        if (!falsePreenchido) {
+                            preencherFalse();
+                            falsePreenchido = true;
+                        }
+                        break;
+                    case "samuel":
+                        if (!samuelPreenchido) {
+                            preencherSamuel();
+                            samuelPreenchido = true;
+                        }
+                        break;
+                    case "snake":
+                        if (!snakePreenchido) {
+                            preencherSnake();
+                            snakePreenchido = true;
+                        }
+                        break;
+                    case "max":
+                        if (!maxPreenchido) {
+                            preencherMax();
+                            maxPreenchido = true;
+                        }
+                        break;
+                    case "cpu":
+                        if (!cpuPreenchido) {
+                            preencherCpu();
+                            cpuPreenchido = true;
+                        }
+                        break;
+                    case "float":
+                        if (!floatPreenchido) {
+                            preencherFloat();
+                            floatPreenchido = true;
+                        }
+                        break;
+                    case "guido":
+                        if (!guidoPreenchido) {
+                            preencherGuido();
+                            guidoPreenchido = true;
+                        }
+                        break;
+                    case "lower":
+                        if (!lowerPreenchido) {
+                            preencherLower();
+                            lowerPreenchido = true;
+                        }
+                        break;
+                    case "nove":
+                        if (!novePreenchido) {
+                            preencherNove();
+                            novePreenchido = true;
+                        }
+                        break;
+                    case "continue":
+                        if (!continuePreenchido) {
+                            preencherContinue();
+                            continuePreenchido = true;
+                        }
+                        break;
+                }
+                if (truePreenchido && notPreenchido && oitoPreenchido && falsePreenchido && samuelPreenchido && snakePreenchido && maxPreenchido && cpuPreenchido && floatPreenchido && guidoPreenchido && lowerPreenchido && novePreenchido && continuePreenchido) {
+                    UsuarioDAO udao = new UsuarioDAO();
+                    String jogadorAtual = TelaLogin.getJogadorAtual();
+                    if (!udao.fase3Completa(jogadorAtual)) {
+                        udao.updatePontuacao(jogadorAtual, calcularPontuacao());
+                        udao.updateFase3Completa(jogadorAtual);
                     }
-                    break;
-                case "not":
-                    if (!notPreenchido) {
-                        preencherNot();
-                        notPreenchido = true;
-                    }
-                    break;
-                case "oito":
-                    if (!oitoPreenchido) {
-                        preencherOito();
-                        oitoPreenchido = true;
-                    }
-                    break;
-                case "false":
-                    if (!falsePreenchido) {
-                        preencherFalse();
-                        falsePreenchido = true;
-                    }
-                    break;
-                case "samuel":
-                    if (!samuelPreenchido) {
-                        preencherSamuel();
-                        samuelPreenchido = true;
-                    }
-                    break;
-                case "snake":
-                    if (!snakePreenchido) {
-                        preencherSnake();
-                        snakePreenchido = true;
-                    }
-                    break;
-                case "max":
-                    if (!maxPreenchido) {
-                        preencherMax();
-                        maxPreenchido = true;
-                    }
-                    break;
-                case "cpu":
-                    if (!cpuPreenchido) {
-                        preencherCpu();
-                        cpuPreenchido = true;
-                    }
-                    break;
-                case "float":
-                    if (!floatPreenchido) {
-                        preencherFloat();
-                        floatPreenchido = true;
-                    }
-                    break;
-                case "guido":
-                    if (!guidoPreenchido) {
-                        preencherGuido();
-                        guidoPreenchido = true;
-                    }
-                    break;
-                case "lower":
-                    if (!lowerPreenchido) {
-                        preencherLower();
-                        lowerPreenchido = true;
-                    }
-                    break;
-                case "nove":
-                    if (!novePreenchido) {
-                        preencherNove();
-                        novePreenchido = true;
-                    }
-                    break;
-                case "continue":
-                    if (!continuePreenchido) {
-                        preencherContinue();
-                        continuePreenchido = true;
-                    }
-                    break;
+                    JOptionPane.showMessageDialog(null, "Parabéns! Você acertou todas as palavras!");
+                    MenuInicial mi = new MenuInicial();
+                    mi.setVisible(true);
+                    this.dispose();
+                }
+            } else {
+                JOptionPane.showMessageDialog(null, "Resposta errada!");
             }
-            if (truePreenchido && notPreenchido && oitoPreenchido && falsePreenchido && samuelPreenchido && snakePreenchido && maxPreenchido && cpuPreenchido && floatPreenchido && guidoPreenchido && lowerPreenchido && novePreenchido && continuePreenchido) {
-                UsuarioDAO udao = new UsuarioDAO();
-                udao.updatePontuacao(TelaLogin.getJogadorAtual(), calcularPontuacao());
-                JOptionPane.showMessageDialog(null, "Parabéns! Você acertou todas as palavras!");
-                MenuInicial mi = new MenuInicial();
-                mi.setVisible(true);
-                this.dispose();
-            }
+            respostaTextField.setText("");
         } else {
-            JOptionPane.showMessageDialog(null, "Resposta errada!");
+            JOptionPane.showMessageDialog(null, "Insira uma palavra no campo de resposta antes de enviar.");
         }
-        respostaTextField.setText("");
+
     }//GEN-LAST:event_enviarButtonActionPerformed
 
     private void respostaTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_respostaTextFieldActionPerformed

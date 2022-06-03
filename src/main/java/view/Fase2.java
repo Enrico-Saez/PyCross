@@ -1112,95 +1112,105 @@ public class Fase2 extends javax.swing.JFrame {
     }//GEN-LAST:event_set2ActionPerformed
 
     private void enviarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enviarButtonActionPerformed
-        PalavraDAO dao = new PalavraDAO();
-        if (dao.verificarRespostaFase2(respostaTextField.getText().toLowerCase())) {
-            switch (respostaTextField.getText().toLowerCase()) {
-                case "def":
-                    if (!defPreenchido) {
-                        preencherDef();
-                        defPreenchido = true;
-                    }
-                    break;
-                case "int":
-                    if (!intPreenchido) {
-                        preencherInt();
-                        intPreenchido = true;
-                    }
-                    break;
-                case "porcentagem":
-                    if (!porcentagemPreenchido) {
-                        preencherPorcentagem();
-                        porcentagemPreenchido = true;
-                    }
-                    break;
-                case "append":
-                    if (!appendPreenchido) {
-                        preencherAppend();
-                        appendPreenchido = true;
-                    }
-                    break;
-                case "algoritmo":
-                    if (!algoritmoPreenchido) {
-                        preencherAlgoritmo();
-                        algoritmoPreenchido = true;
-                    }
-                    break;
-                case "break":
-                    if (!breakPreenchido) {
-                        preencherBreak();
-                        breakPreenchido = true;
-                    }
-                    break;
-                case "chave":
-                    if (!chavePreenchido) {
-                        preencherChave();
-                        chavePreenchido = true;
-                    }
-                    break;
-                case "lista":
-                    if (!listaPreenchido) {
-                        preencherLista();
-                        listaPreenchido = true;
-                    }
-                    break;
-                case "dicionario":
-                    if (!dicionarioPreenchido) {
-                        preencherDicionario();
-                        dicionarioPreenchido = true;
-                    }
-                    break;
-                case "dinamica":
-                    if (!dinamicaPreenchido) {
-                        preencherDinamica();
-                        dinamicaPreenchido = true;
-                    }
-                    break;
-                case "upper":
-                    if (!upperPreenchido) {
-                        preencherUpper();
-                        upperPreenchido = true;
-                    }
-                    break;
-                case "set":
-                    if (!setPreenchido) {
-                        preencherSet();
-                        setPreenchido = true;
-                    }
-                    break;
-            }
+        if (!"".equals(respostaTextField.getText().toLowerCase())) {
+            numeroTentativas += 1;
+            PalavraDAO dao = new PalavraDAO();
+            if (dao.verificarRespostaFase2(respostaTextField.getText().toLowerCase())) {
+                switch (respostaTextField.getText().toLowerCase()) {
+                    case "def":
+                        if (!defPreenchido) {
+                            preencherDef();
+                            defPreenchido = true;
+                        }
+                        break;
+                    case "int":
+                        if (!intPreenchido) {
+                            preencherInt();
+                            intPreenchido = true;
+                        }
+                        break;
+                    case "porcentagem":
+                        if (!porcentagemPreenchido) {
+                            preencherPorcentagem();
+                            porcentagemPreenchido = true;
+                        }
+                        break;
+                    case "append":
+                        if (!appendPreenchido) {
+                            preencherAppend();
+                            appendPreenchido = true;
+                        }
+                        break;
+                    case "algoritmo":
+                        if (!algoritmoPreenchido) {
+                            preencherAlgoritmo();
+                            algoritmoPreenchido = true;
+                        }
+                        break;
+                    case "break":
+                        if (!breakPreenchido) {
+                            preencherBreak();
+                            breakPreenchido = true;
+                        }
+                        break;
+                    case "chave":
+                        if (!chavePreenchido) {
+                            preencherChave();
+                            chavePreenchido = true;
+                        }
+                        break;
+                    case "lista":
+                        if (!listaPreenchido) {
+                            preencherLista();
+                            listaPreenchido = true;
+                        }
+                        break;
+                    case "dicionario":
+                        if (!dicionarioPreenchido) {
+                            preencherDicionario();
+                            dicionarioPreenchido = true;
+                        }
+                        break;
+                    case "dinamica":
+                        if (!dinamicaPreenchido) {
+                            preencherDinamica();
+                            dinamicaPreenchido = true;
+                        }
+                        break;
+                    case "upper":
+                        if (!upperPreenchido) {
+                            preencherUpper();
+                            upperPreenchido = true;
+                        }
+                        break;
+                    case "set":
+                        if (!setPreenchido) {
+                            preencherSet();
+                            setPreenchido = true;
+                        }
+                        break;
+                }
 
-            if (defPreenchido && intPreenchido && porcentagemPreenchido && appendPreenchido && algoritmoPreenchido && breakPreenchido && chavePreenchido && listaPreenchido && dicionarioPreenchido && dinamicaPreenchido && upperPreenchido && setPreenchido) {
-                UsuarioDAO udao = new UsuarioDAO();
-                udao.updatePontuacao(TelaLogin.getJogadorAtual(), calcularPontuacao());
-                JOptionPane.showMessageDialog(null, "Parabéns! Você acertou todas as palavras!");
-                MenuInicial mi = new MenuInicial();
-                mi.setVisible(true);
-                this.dispose();
+                if (defPreenchido && intPreenchido && porcentagemPreenchido && appendPreenchido && algoritmoPreenchido && breakPreenchido && chavePreenchido && listaPreenchido && dicionarioPreenchido && dinamicaPreenchido && upperPreenchido && setPreenchido) {
+                    UsuarioDAO udao = new UsuarioDAO();
+                    String jogadorAtual = TelaLogin.getJogadorAtual();
+                    if (!udao.fase2Completa(jogadorAtual)) {
+                        udao.updatePontuacao(jogadorAtual, calcularPontuacao());
+                        udao.updateFase2Completa(jogadorAtual);
+                    }
+                    JOptionPane.showMessageDialog(null, "Parabéns! Você acertou todas as palavras!");
+                    MenuInicial mi = new MenuInicial();
+                    mi.setVisible(true);
+                    this.dispose();
+                }
+            } else {
+                JOptionPane.showMessageDialog(null, "Resposta errada!");
             }
+            respostaTextField.setText("");
         } else {
-            JOptionPane.showMessageDialog(null, "Resposta errada!");
+            JOptionPane.showMessageDialog(null, "Insira uma palavra no campo de resposta antes de enviar.");
         }
-        respostaTextField.setText("");
+
     }//GEN-LAST:event_enviarButtonActionPerformed
 
     private void sairButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairButtonActionPerformed

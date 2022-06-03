@@ -16,7 +16,7 @@ public class MenuInicial extends javax.swing.JFrame {
      * Creates new form MenuInicial
      */
     public MenuInicial() {
-        super("PyCross Menu Inicial");
+        super("Menu Inicial");
         initComponents();
         setLocationRelativeTo(null);
     }
@@ -45,6 +45,7 @@ public class MenuInicial extends javax.swing.JFrame {
         fase2Button = new javax.swing.JButton();
         fase3button = new javax.swing.JButton();
         welcomeLabel = new javax.swing.JLabel();
+        regrasButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -82,14 +83,26 @@ public class MenuInicial extends javax.swing.JFrame {
         welcomeLabel.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         welcomeLabel.setText("Bem vindo, sua pontuação é:");
 
+        regrasButton.setText("Instruções");
+        regrasButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                regrasButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(97, 97, 97)
-                .addComponent(titleLabel)
-                .addGap(62, 62, 62)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(97, 97, 97)
+                        .addComponent(titleLabel))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(126, 126, 126)
+                        .addComponent(regrasButton)))
+                .addGap(42, 42, 42)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(274, 274, 274)
@@ -116,7 +129,9 @@ public class MenuInicial extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(fase2Button, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(fase3button, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(fase3button, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(regrasButton))
                 .addGap(43, 43, 43)
                 .addComponent(rankingButton, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(47, 47, 47))
@@ -148,6 +163,12 @@ public class MenuInicial extends javax.swing.JFrame {
         f3.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_fase3buttonActionPerformed
+
+    private void regrasButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regrasButtonActionPerformed
+        Instrucoes r = new Instrucoes();
+        r.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_regrasButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -189,6 +210,7 @@ public class MenuInicial extends javax.swing.JFrame {
     private javax.swing.JButton fase2Button;
     private javax.swing.JButton fase3button;
     private javax.swing.JButton rankingButton;
+    private javax.swing.JButton regrasButton;
     private javax.swing.JLabel titleLabel;
     private javax.swing.JLabel welcomeLabel;
     // End of variables declaration//GEN-END:variables

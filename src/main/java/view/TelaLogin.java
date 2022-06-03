@@ -20,7 +20,7 @@ public class TelaLogin extends javax.swing.JFrame {
      * Creates new form TelaLogin
      */
     public TelaLogin() {
-        super ("PyCross Login");
+        super ("Login");
         initComponents();
         setLocationRelativeTo(null);
         this.getContentPane().setBackground(new Color(0x646464));

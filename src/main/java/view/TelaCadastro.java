@@ -18,7 +18,7 @@ public class TelaCadastro extends javax.swing.JFrame {
      * Creates new form TelaCadastro
      */
     public TelaCadastro() {
-        super("PyCross Cadastro de Usuário");
+        super("Cadastro");
         initComponents();
         setLocationRelativeTo(null);
     }

@@ -23,7 +23,7 @@ public class TelaRanking extends javax.swing.JFrame {
      * Creates new form TelaRanking
      */
     public TelaRanking() {
-        super("PyCross Tela Ranking");
+        super("Ranking");
         initComponents();
         setLocationRelativeTo(null);
 

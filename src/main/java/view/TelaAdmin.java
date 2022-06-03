@@ -19,7 +19,7 @@ public class TelaAdmin extends javax.swing.JFrame {
      * Creates new form TelaAdmin
      */
     public TelaAdmin() {
-        super("PyCross Admin CRUD");
+        super("Administração de usuários");
         initComponents();
         setLocationRelativeTo(null);
         
@@ -179,10 +179,11 @@ public class TelaAdmin extends javax.swing.JFrame {
                     .addComponent(senhaTextFieldTelaAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(pontuacaoTextFieldTelaAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cadastrarButtonTelaAdmin)
-                    .addComponent(atualizarButtonTelaAdmin)
-                    .addComponent(deletarButtonTelaAdmin))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(deletarButtonTelaAdmin, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(cadastrarButtonTelaAdmin)
+                        .addComponent(atualizarButtonTelaAdmin)))
                 .addGap(27, 27, 27)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)
                 .addContainerGap())
