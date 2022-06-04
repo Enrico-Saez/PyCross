@@ -4,6 +4,7 @@
  */
 package view;
 
+import java.awt.Color;
 import java.util.HashSet;
 import javax.swing.table.DefaultTableModel;
 import model.bean.Usuario;
@@ -22,7 +23,7 @@ public class TelaAdmin extends javax.swing.JFrame {
         super("Administração de usuários");
         initComponents();
         setLocationRelativeTo(null);
-        
+        this.getContentPane().setBackground(new Color(0x646464));
         readJTable();
     }
 
@@ -62,27 +63,35 @@ public class TelaAdmin extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        nomeTextFieldTelaAdmin.setBorder(javax.swing.BorderFactory.createTitledBorder("nome"));
+        nomeTextFieldTelaAdmin.setBackground(new java.awt.Color(100, 100, 100));
+        nomeTextFieldTelaAdmin.setForeground(new java.awt.Color(255, 255, 255));
+        nomeTextFieldTelaAdmin.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "nome", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 255, 255))); // NOI18N
+        nomeTextFieldTelaAdmin.setCaretColor(new java.awt.Color(255, 255, 255));
         nomeTextFieldTelaAdmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nomeTextFieldTelaAdminActionPerformed(evt);
             }
         });
 
-        senhaTextFieldTelaAdmin.setBorder(javax.swing.BorderFactory.createTitledBorder("senha"));
+        senhaTextFieldTelaAdmin.setBackground(new java.awt.Color(100, 100, 100));
+        senhaTextFieldTelaAdmin.setForeground(new java.awt.Color(255, 255, 255));
+        senhaTextFieldTelaAdmin.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "senha", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 255, 255))); // NOI18N
         senhaTextFieldTelaAdmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 senhaTextFieldTelaAdminActionPerformed(evt);
             }
         });
 
-        pontuacaoTextFieldTelaAdmin.setBorder(javax.swing.BorderFactory.createTitledBorder("pontuacao"));
+        pontuacaoTextFieldTelaAdmin.setBackground(new java.awt.Color(100, 100, 100));
+        pontuacaoTextFieldTelaAdmin.setForeground(new java.awt.Color(255, 255, 255));
+        pontuacaoTextFieldTelaAdmin.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "pontuacao", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(255, 255, 255))); // NOI18N
         pontuacaoTextFieldTelaAdmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 pontuacaoTextFieldTelaAdminActionPerformed(evt);
             }
         });
 
+        cadastrarButtonTelaAdmin.setBackground(new java.awt.Color(75, 139, 190));
         cadastrarButtonTelaAdmin.setText("Cadastrar");
         cadastrarButtonTelaAdmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -90,6 +99,7 @@ public class TelaAdmin extends javax.swing.JFrame {
             }
         });
 
+        atualizarButtonTelaAdmin.setBackground(new java.awt.Color(75, 139, 190));
         atualizarButtonTelaAdmin.setText("Atualizar");
         atualizarButtonTelaAdmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -97,6 +107,7 @@ public class TelaAdmin extends javax.swing.JFrame {
             }
         });
 
+        deletarButtonTelaAdmin.setBackground(new java.awt.Color(75, 139, 190));
         deletarButtonTelaAdmin.setText("Deletar");
         deletarButtonTelaAdmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -104,13 +115,17 @@ public class TelaAdmin extends javax.swing.JFrame {
             }
         });
 
+        sairButtonTelaAdmin.setBackground(new java.awt.Color(255, 212, 59));
         sairButtonTelaAdmin.setText("Sair");
+        sairButtonTelaAdmin.setBorderPainted(false);
         sairButtonTelaAdmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 sairButtonTelaAdminActionPerformed(evt);
             }
         });
 
+        usuariosTableTelaAdmin.setBackground(new java.awt.Color(100, 100, 100));
+        usuariosTableTelaAdmin.setForeground(new java.awt.Color(100, 100, 100));
         usuariosTableTelaAdmin.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -134,6 +149,8 @@ public class TelaAdmin extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        usuariosTableTelaAdmin.setGridColor(new java.awt.Color(100, 100, 100));
+        usuariosTableTelaAdmin.setSelectionBackground(new java.awt.Color(100, 100, 100));
         usuariosTableTelaAdmin.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 usuariosTableTelaAdminKeyReleased(evt);

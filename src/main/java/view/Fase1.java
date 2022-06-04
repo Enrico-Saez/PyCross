@@ -669,46 +669,59 @@ public class Fase1 extends javax.swing.JFrame {
         getContentPane().add(hashtag7);
         hashtag7.setBounds(450, 42, 24, 21);
 
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("10");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(100, 220, 20, 16);
 
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("1");
         getContentPane().add(jLabel2);
         jLabel2.setBounds(220, 20, 10, 16);
 
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("6");
         getContentPane().add(jLabel3);
         jLabel3.setBounds(150, 60, 10, 16);
 
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("7");
         getContentPane().add(jLabel4);
         jLabel4.setBounds(30, 100, 10, 16);
 
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("5");
         getContentPane().add(jLabel5);
         jLabel5.setBounds(300, 30, 10, 16);
 
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("4");
         getContentPane().add(jLabel6);
         jLabel6.setBounds(410, 20, 10, 16);
 
+        jLabel7.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("8");
         getContentPane().add(jLabel7);
         jLabel7.setBounds(270, 100, 10, 16);
 
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("3");
         getContentPane().add(jLabel8);
         jLabel8.setBounds(340, 80, 10, 16);
 
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("2");
         getContentPane().add(jLabel9);
         jLabel9.setBounds(290, 80, 10, 16);
 
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("9");
         getContentPane().add(jLabel10);
         jLabel10.setBounds(200, 160, 10, 16);
 
+        fase1Table.setBackground(new java.awt.Color(100, 100, 100));
+        fase1Table.setForeground(new java.awt.Color(255, 255, 255));
         fase1Table.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -742,7 +755,9 @@ public class Fase1 extends javax.swing.JFrame {
         getContentPane().add(jScrollPane1);
         jScrollPane1.setBounds(480, 10, 310, 380);
 
+        respostaTextField.setBackground(new java.awt.Color(100, 100, 100));
         respostaTextField.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        respostaTextField.setForeground(new java.awt.Color(255, 255, 255));
         respostaTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 respostaTextFieldActionPerformed(evt);
@@ -755,6 +770,8 @@ public class Fase1 extends javax.swing.JFrame {
         getContentPane().add(jLabel11);
         jLabel11.setBounds(70, 340, 60, 30);
 
+        enviarButton.setBackground(new java.awt.Color(100, 100, 100));
+        enviarButton.setForeground(new java.awt.Color(255, 255, 255));
         enviarButton.setText("Enviar");
         enviarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -764,6 +781,8 @@ public class Fase1 extends javax.swing.JFrame {
         getContentPane().add(enviarButton);
         enviarButton.setBounds(350, 340, 72, 30);
 
+        sairButton.setBackground(new java.awt.Color(100, 100, 100));
+        sairButton.setForeground(new java.awt.Color(255, 255, 255));
         sairButton.setText("Sair");
         sairButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

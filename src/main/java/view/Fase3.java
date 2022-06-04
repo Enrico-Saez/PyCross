@@ -4,6 +4,7 @@
  */
 package view;
 
+import java.awt.Color;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import model.bean.Palavra;
@@ -20,9 +21,10 @@ public class Fase3 extends javax.swing.JFrame {
      * Creates new form Fase3
      */
     public Fase3() {
-        super("PyCross Fase 2");
+        super("PyCross Fase 3");
         initComponents();
         setLocationRelativeTo(null);
+        this.getContentPane().setBackground(new Color(0x646464));
         readTableFase3();
     }
 
@@ -118,11 +120,13 @@ public class Fase3 extends javax.swing.JFrame {
         fase1Table = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(100, 100, 100));
         setPreferredSize(new java.awt.Dimension(800, 400));
         setSize(new java.awt.Dimension(800, 400));
         getContentPane().setLayout(null);
 
         samuel1.setEditable(false);
+        samuel1.setBackground(new java.awt.Color(255, 255, 255));
         samuel1.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         samuel1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         samuel1.setToolTipText("");
@@ -131,6 +135,7 @@ public class Fase3 extends javax.swing.JFrame {
         samuel1.setBounds(230, 50, 24, 21);
 
         samuel2_max2.setEditable(false);
+        samuel2_max2.setBackground(new java.awt.Color(255, 255, 255));
         samuel2_max2.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         samuel2_max2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         samuel2_max2.setToolTipText("");
@@ -144,6 +149,7 @@ public class Fase3 extends javax.swing.JFrame {
         samuel2_max2.setBounds(230, 70, 24, 21);
 
         samuel3.setEditable(false);
+        samuel3.setBackground(new java.awt.Color(255, 255, 255));
         samuel3.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         samuel3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         samuel3.setToolTipText("");
@@ -157,6 +163,7 @@ public class Fase3 extends javax.swing.JFrame {
         samuel3.setBounds(230, 90, 24, 21);
 
         samuel4_cpu3.setEditable(false);
+        samuel4_cpu3.setBackground(new java.awt.Color(255, 255, 255));
         samuel4_cpu3.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         samuel4_cpu3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         samuel4_cpu3.setToolTipText("");
@@ -170,6 +177,7 @@ public class Fase3 extends javax.swing.JFrame {
         samuel4_cpu3.setBounds(230, 110, 24, 21);
 
         samuel5.setEditable(false);
+        samuel5.setBackground(new java.awt.Color(255, 255, 255));
         samuel5.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         samuel5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         samuel5.setToolTipText("");
@@ -183,6 +191,7 @@ public class Fase3 extends javax.swing.JFrame {
         samuel5.setBounds(230, 130, 24, 21);
 
         samuel6_float2.setEditable(false);
+        samuel6_float2.setBackground(new java.awt.Color(255, 255, 255));
         samuel6_float2.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         samuel6_float2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         samuel6_float2.setToolTipText("");
@@ -196,6 +205,7 @@ public class Fase3 extends javax.swing.JFrame {
         samuel6_float2.setBounds(230, 150, 24, 21);
 
         max1.setEditable(false);
+        max1.setBackground(new java.awt.Color(255, 255, 255));
         max1.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         max1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         max1.setToolTipText("");
@@ -209,6 +219,7 @@ public class Fase3 extends javax.swing.JFrame {
         max1.setBounds(206, 70, 24, 21);
 
         max3.setEditable(false);
+        max3.setBackground(new java.awt.Color(255, 255, 255));
         max3.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         max3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         max3.setToolTipText("");
@@ -222,6 +233,7 @@ public class Fase3 extends javax.swing.JFrame {
         max3.setBounds(254, 70, 24, 21);
 
         cpu1.setEditable(false);
+        cpu1.setBackground(new java.awt.Color(255, 255, 255));
         cpu1.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         cpu1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cpu1.setToolTipText("");
@@ -235,6 +247,7 @@ public class Fase3 extends javax.swing.JFrame {
         cpu1.setBounds(206, 110, 24, 21);
 
         cpu2.setEditable(false);
+        cpu2.setBackground(new java.awt.Color(255, 255, 255));
         cpu2.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         cpu2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cpu2.setToolTipText("");
@@ -248,6 +261,7 @@ public class Fase3 extends javax.swing.JFrame {
         cpu2.setBounds(182, 110, 24, 21);
 
         float1_false1.setEditable(false);
+        float1_false1.setBackground(new java.awt.Color(255, 255, 255));
         float1_false1.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         float1_false1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         float1_false1.setToolTipText("");
@@ -261,6 +275,7 @@ public class Fase3 extends javax.swing.JFrame {
         float1_false1.setBounds(206, 150, 24, 21);
 
         float3.setEditable(false);
+        float3.setBackground(new java.awt.Color(255, 255, 255));
         float3.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         float3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         float3.setToolTipText("");
@@ -274,6 +289,7 @@ public class Fase3 extends javax.swing.JFrame {
         float3.setBounds(254, 150, 24, 21);
 
         float4_snake3.setEditable(false);
+        float4_snake3.setBackground(new java.awt.Color(255, 255, 255));
         float4_snake3.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         float4_snake3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         float4_snake3.setToolTipText("");
@@ -287,6 +303,7 @@ public class Fase3 extends javax.swing.JFrame {
         float4_snake3.setBounds(278, 150, 24, 21);
 
         float5.setEditable(false);
+        float5.setBackground(new java.awt.Color(255, 255, 255));
         float5.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         float5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         float5.setToolTipText("");
@@ -300,6 +317,7 @@ public class Fase3 extends javax.swing.JFrame {
         float5.setBounds(302, 150, 24, 21);
 
         snake1.setEditable(false);
+        snake1.setBackground(new java.awt.Color(255, 255, 255));
         snake1.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         snake1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         snake1.setToolTipText("");
@@ -313,6 +331,7 @@ public class Fase3 extends javax.swing.JFrame {
         snake1.setBounds(278, 110, 24, 21);
 
         snake2.setEditable(false);
+        snake2.setBackground(new java.awt.Color(255, 255, 255));
         snake2.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         snake2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         snake2.setToolTipText("");
@@ -326,6 +345,7 @@ public class Fase3 extends javax.swing.JFrame {
         snake2.setBounds(278, 130, 24, 21);
 
         snake4.setEditable(false);
+        snake4.setBackground(new java.awt.Color(255, 255, 255));
         snake4.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         snake4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         snake4.setToolTipText("");
@@ -339,6 +359,7 @@ public class Fase3 extends javax.swing.JFrame {
         snake4.setBounds(278, 170, 24, 21);
 
         snake5_lower4.setEditable(false);
+        snake5_lower4.setBackground(new java.awt.Color(255, 255, 255));
         snake5_lower4.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         snake5_lower4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         snake5_lower4.setToolTipText("");
@@ -352,6 +373,7 @@ public class Fase3 extends javax.swing.JFrame {
         snake5_lower4.setBounds(278, 190, 24, 21);
 
         lower1_false3.setEditable(false);
+        lower1_false3.setBackground(new java.awt.Color(255, 255, 255));
         lower1_false3.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         lower1_false3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         lower1_false3.setToolTipText("");
@@ -365,6 +387,7 @@ public class Fase3 extends javax.swing.JFrame {
         lower1_false3.setBounds(206, 190, 24, 21);
 
         lower2.setEditable(false);
+        lower2.setBackground(new java.awt.Color(255, 255, 255));
         lower2.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         lower2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         lower2.setToolTipText("");
@@ -378,6 +401,7 @@ public class Fase3 extends javax.swing.JFrame {
         lower2.setBounds(230, 190, 24, 21);
 
         lower5.setEditable(false);
+        lower5.setBackground(new java.awt.Color(255, 255, 255));
         lower5.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         lower5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         lower5.setToolTipText("");
@@ -391,6 +415,7 @@ public class Fase3 extends javax.swing.JFrame {
         lower5.setBounds(302, 190, 24, 21);
 
         lower3.setEditable(false);
+        lower3.setBackground(new java.awt.Color(255, 255, 255));
         lower3.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         lower3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         lower3.setToolTipText("");
@@ -404,6 +429,7 @@ public class Fase3 extends javax.swing.JFrame {
         lower3.setBounds(254, 190, 24, 21);
 
         false2.setEditable(false);
+        false2.setBackground(new java.awt.Color(255, 255, 255));
         false2.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         false2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         false2.setToolTipText("");
@@ -417,6 +443,7 @@ public class Fase3 extends javax.swing.JFrame {
         false2.setBounds(206, 170, 24, 21);
 
         false4.setEditable(false);
+        false4.setBackground(new java.awt.Color(255, 255, 255));
         false4.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         false4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         false4.setToolTipText("");
@@ -430,6 +457,7 @@ public class Fase3 extends javax.swing.JFrame {
         false4.setBounds(206, 210, 24, 21);
 
         false5_nove4.setEditable(false);
+        false5_nove4.setBackground(new java.awt.Color(255, 255, 255));
         false5_nove4.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         false5_nove4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         false5_nove4.setToolTipText("");
@@ -443,6 +471,7 @@ public class Fase3 extends javax.swing.JFrame {
         false5_nove4.setBounds(206, 230, 24, 21);
 
         nove1_not1.setEditable(false);
+        nove1_not1.setBackground(new java.awt.Color(255, 255, 255));
         nove1_not1.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         nove1_not1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         nove1_not1.setToolTipText("");
@@ -456,6 +485,7 @@ public class Fase3 extends javax.swing.JFrame {
         nove1_not1.setBounds(134, 230, 24, 21);
 
         nove2_oito4.setEditable(false);
+        nove2_oito4.setBackground(new java.awt.Color(255, 255, 255));
         nove2_oito4.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         nove2_oito4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         nove2_oito4.setToolTipText("");
@@ -469,6 +499,7 @@ public class Fase3 extends javax.swing.JFrame {
         nove2_oito4.setBounds(158, 230, 24, 21);
 
         nove3.setEditable(false);
+        nove3.setBackground(new java.awt.Color(255, 255, 255));
         nove3.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         nove3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         nove3.setToolTipText("");
@@ -482,6 +513,7 @@ public class Fase3 extends javax.swing.JFrame {
         nove3.setBounds(182, 230, 24, 21);
 
         oito1_guido5.setEditable(false);
+        oito1_guido5.setBackground(new java.awt.Color(255, 255, 255));
         oito1_guido5.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         oito1_guido5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         oito1_guido5.setToolTipText("");
@@ -495,6 +527,7 @@ public class Fase3 extends javax.swing.JFrame {
         oito1_guido5.setBounds(158, 170, 24, 21);
 
         oito2.setEditable(false);
+        oito2.setBackground(new java.awt.Color(255, 255, 255));
         oito2.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         oito2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         oito2.setToolTipText("");
@@ -508,6 +541,7 @@ public class Fase3 extends javax.swing.JFrame {
         oito2.setBounds(158, 190, 24, 21);
 
         oito3.setEditable(false);
+        oito3.setBackground(new java.awt.Color(255, 255, 255));
         oito3.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         oito3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         oito3.setToolTipText("");
@@ -521,6 +555,7 @@ public class Fase3 extends javax.swing.JFrame {
         oito3.setBounds(158, 210, 24, 21);
 
         guido1.setEditable(false);
+        guido1.setBackground(new java.awt.Color(255, 255, 255));
         guido1.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         guido1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         guido1.setToolTipText("");
@@ -534,6 +569,7 @@ public class Fase3 extends javax.swing.JFrame {
         guido1.setBounds(62, 170, 24, 21);
 
         guido2.setEditable(false);
+        guido2.setBackground(new java.awt.Color(255, 255, 255));
         guido2.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         guido2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         guido2.setToolTipText("");
@@ -547,6 +583,7 @@ public class Fase3 extends javax.swing.JFrame {
         guido2.setBounds(86, 170, 24, 21);
 
         guido3.setEditable(false);
+        guido3.setBackground(new java.awt.Color(255, 255, 255));
         guido3.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         guido3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         guido3.setToolTipText("");
@@ -560,6 +597,7 @@ public class Fase3 extends javax.swing.JFrame {
         guido3.setBounds(110, 170, 24, 21);
 
         guido4.setEditable(false);
+        guido4.setBackground(new java.awt.Color(255, 255, 255));
         guido4.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         guido4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         guido4.setToolTipText("");
@@ -573,6 +611,7 @@ public class Fase3 extends javax.swing.JFrame {
         guido4.setBounds(134, 170, 24, 21);
 
         true1.setEditable(false);
+        true1.setBackground(new java.awt.Color(255, 255, 255));
         true1.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         true1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         true1.setToolTipText("");
@@ -586,6 +625,7 @@ public class Fase3 extends javax.swing.JFrame {
         true1.setBounds(86, 130, 24, 21);
 
         true2.setEditable(false);
+        true2.setBackground(new java.awt.Color(255, 255, 255));
         true2.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         true2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         true2.setToolTipText("");
@@ -599,6 +639,7 @@ public class Fase3 extends javax.swing.JFrame {
         true2.setBounds(86, 150, 24, 21);
 
         true3.setEditable(false);
+        true3.setBackground(new java.awt.Color(255, 255, 255));
         true3.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         true3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         true3.setToolTipText("");
@@ -612,6 +653,7 @@ public class Fase3 extends javax.swing.JFrame {
         true3.setBounds(86, 190, 24, 21);
 
         not2.setEditable(false);
+        not2.setBackground(new java.awt.Color(255, 255, 255));
         not2.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         not2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         not2.setToolTipText("");
@@ -625,6 +667,7 @@ public class Fase3 extends javax.swing.JFrame {
         not2.setBounds(134, 250, 24, 21);
 
         not3_continue4.setEditable(false);
+        not3_continue4.setBackground(new java.awt.Color(255, 255, 255));
         not3_continue4.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         not3_continue4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         not3_continue4.setToolTipText("");
@@ -638,7 +681,9 @@ public class Fase3 extends javax.swing.JFrame {
         not3_continue4.setBounds(134, 270, 24, 21);
 
         continue1.setEditable(false);
+        continue1.setBackground(new java.awt.Color(255, 255, 255));
         continue1.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        continue1.setForeground(new java.awt.Color(255, 255, 255));
         continue1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         continue1.setToolTipText("");
         continue1.setPreferredSize(new java.awt.Dimension(24, 24));
@@ -651,7 +696,9 @@ public class Fase3 extends javax.swing.JFrame {
         continue1.setBounds(62, 270, 24, 21);
 
         continue2.setEditable(false);
+        continue2.setBackground(new java.awt.Color(255, 255, 255));
         continue2.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        continue2.setForeground(new java.awt.Color(255, 255, 255));
         continue2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         continue2.setToolTipText("");
         continue2.setPreferredSize(new java.awt.Dimension(24, 24));
@@ -664,7 +711,9 @@ public class Fase3 extends javax.swing.JFrame {
         continue2.setBounds(86, 270, 24, 21);
 
         continue3.setEditable(false);
+        continue3.setBackground(new java.awt.Color(255, 255, 255));
         continue3.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        continue3.setForeground(new java.awt.Color(255, 255, 255));
         continue3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         continue3.setToolTipText("");
         continue3.setPreferredSize(new java.awt.Dimension(24, 24));
@@ -677,6 +726,7 @@ public class Fase3 extends javax.swing.JFrame {
         continue3.setBounds(110, 270, 24, 21);
 
         continue5.setEditable(false);
+        continue5.setBackground(new java.awt.Color(255, 255, 255));
         continue5.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         continue5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         continue5.setToolTipText("");
@@ -690,6 +740,7 @@ public class Fase3 extends javax.swing.JFrame {
         continue5.setBounds(158, 270, 24, 21);
 
         continue6.setEditable(false);
+        continue6.setBackground(new java.awt.Color(255, 255, 255));
         continue6.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         continue6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         continue6.setToolTipText("");
@@ -703,6 +754,7 @@ public class Fase3 extends javax.swing.JFrame {
         continue6.setBounds(182, 270, 24, 21);
 
         continue7.setEditable(false);
+        continue7.setBackground(new java.awt.Color(255, 255, 255));
         continue7.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         continue7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         continue7.setToolTipText("");
@@ -716,6 +768,7 @@ public class Fase3 extends javax.swing.JFrame {
         continue7.setBounds(206, 270, 24, 21);
 
         continue8.setEditable(false);
+        continue8.setBackground(new java.awt.Color(255, 255, 255));
         continue8.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
         continue8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         continue8.setToolTipText("");
@@ -728,58 +781,73 @@ public class Fase3 extends javax.swing.JFrame {
         getContentPane().add(continue8);
         continue8.setBounds(230, 270, 24, 21);
 
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("26");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(210, 130, 20, 16);
 
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("23");
         getContentPane().add(jLabel2);
         jLabel2.setBounds(90, 110, 20, 16);
 
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("27");
         getContentPane().add(jLabel3);
         jLabel3.setBounds(230, 30, 20, 16);
 
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("28");
         getContentPane().add(jLabel4);
         jLabel4.setBounds(280, 90, 20, 16);
 
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("29");
         getContentPane().add(jLabel5);
         jLabel5.setBounds(190, 70, 20, 16);
 
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("30");
         getContentPane().add(jLabel6);
         jLabel6.setBounds(160, 110, 20, 16);
 
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("31");
         getContentPane().add(jLabel7);
         jLabel7.setBounds(190, 150, 20, 16);
 
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("33");
         getContentPane().add(jLabel8);
         jLabel8.setBounds(190, 190, 20, 16);
 
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("32");
         getContentPane().add(jLabel9);
         jLabel9.setBounds(40, 170, 20, 16);
 
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("34");
         getContentPane().add(jLabel10);
         jLabel10.setBounds(120, 230, 20, 16);
 
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("35");
         getContentPane().add(jLabel11);
         jLabel11.setBounds(40, 270, 20, 16);
 
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setText("25");
         getContentPane().add(jLabel12);
         jLabel12.setBounds(160, 150, 20, 16);
 
+        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
         jLabel13.setText("24");
         getContentPane().add(jLabel13);
         jLabel13.setBounds(140, 210, 20, 16);
 
+        respostaTextField.setBackground(new java.awt.Color(100, 100, 100));
+        respostaTextField.setForeground(new java.awt.Color(255, 255, 255));
         respostaTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 respostaTextFieldActionPerformed(evt);
@@ -788,6 +856,8 @@ public class Fase3 extends javax.swing.JFrame {
         getContentPane().add(respostaTextField);
         respostaTextField.setBounds(40, 340, 210, 30);
 
+        enviarButton.setBackground(new java.awt.Color(100, 100, 100));
+        enviarButton.setForeground(new java.awt.Color(255, 255, 255));
         enviarButton.setText("Enviar");
         enviarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -797,6 +867,8 @@ public class Fase3 extends javax.swing.JFrame {
         getContentPane().add(enviarButton);
         enviarButton.setBounds(270, 340, 72, 30);
 
+        sairButton.setBackground(new java.awt.Color(100, 100, 100));
+        sairButton.setForeground(new java.awt.Color(255, 255, 255));
         sairButton.setText("Sair");
         sairButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -806,6 +878,10 @@ public class Fase3 extends javax.swing.JFrame {
         getContentPane().add(sairButton);
         sairButton.setBounds(10, 10, 60, 22);
 
+        jScrollPane1.setBackground(new java.awt.Color(100, 100, 100));
+        jScrollPane1.setForeground(new java.awt.Color(255, 255, 255));
+
+        fase1Table.setBackground(new java.awt.Color(100, 100, 100));
         fase1Table.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -833,7 +909,7 @@ public class Fase3 extends javax.swing.JFrame {
         jScrollPane1.setViewportView(fase1Table);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(480, 10, 310, 380);
+        jScrollPane1.setBounds(370, 10, 310, 380);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
