@@ -4,7 +4,9 @@
  */
 package view;
 
+import java.awt.Color;
 import javax.swing.JOptionPane;
+import model.dao.UsuarioDAO;
 
 /**
  *
@@ -18,16 +20,9 @@ public class MenuInicial extends javax.swing.JFrame {
     public MenuInicial() {
         super("Menu Inicial");
         initComponents();
+        this.getContentPane().setBackground(new Color(0x646464));
         setLocationRelativeTo(null);
-    }
-
-    public MenuInicial(String nome, int pntc) {
-        super("PyCross Menu Inicial");
-        initComponents();
-        setLocationRelativeTo(null);
-        String nomeUsuario = nome;
-        int pontuacao = pntc;
-        welcomeLabel.setText("Bem vindo, " + nomeUsuario + ", sua pontuação é: " + pontuacao);
+        UsuarioDAO dao = new UsuarioDAO();
     }
 
     /**
@@ -40,15 +35,16 @@ public class MenuInicial extends javax.swing.JFrame {
     private void initComponents() {
 
         rankingButton = new javax.swing.JButton();
-        titleLabel = new javax.swing.JLabel();
+        pycrossLabel = new javax.swing.JLabel();
         fase1Button = new javax.swing.JButton();
         fase2Button = new javax.swing.JButton();
         fase3button = new javax.swing.JButton();
-        welcomeLabel = new javax.swing.JLabel();
         regrasButton = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        rankingButton.setBackground(new java.awt.Color(255, 232, 115));
         rankingButton.setText("Ranking");
         rankingButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -56,9 +52,10 @@ public class MenuInicial extends javax.swing.JFrame {
             }
         });
 
-        titleLabel.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        titleLabel.setText("PyCross");
+        pycrossLabel.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        pycrossLabel.setText("Pycross");
 
+        fase1Button.setBackground(new java.awt.Color(255, 212, 59));
         fase1Button.setText("Fase 1");
         fase1Button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -66,6 +63,7 @@ public class MenuInicial extends javax.swing.JFrame {
             }
         });
 
+        fase2Button.setBackground(new java.awt.Color(255, 212, 59));
         fase2Button.setText("Fase 2");
         fase2Button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -73,15 +71,13 @@ public class MenuInicial extends javax.swing.JFrame {
             }
         });
 
+        fase3button.setBackground(new java.awt.Color(255, 212, 59));
         fase3button.setText("Fase 3");
         fase3button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 fase3buttonActionPerformed(evt);
             }
         });
-
-        welcomeLabel.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        welcomeLabel.setText("Bem vindo, sua pontuação é:");
 
         regrasButton.setText("Instruções");
         regrasButton.addActionListener(new java.awt.event.ActionListener() {
@@ -90,51 +86,60 @@ public class MenuInicial extends javax.swing.JFrame {
             }
         });
 
+        jButton1.setBackground(new java.awt.Color(48, 105, 152));
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("Sair");
+        jButton1.setFocusPainted(false);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            .addGroup(layout.createSequentialGroup()
+                .addGap(39, 39, 39)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(97, 97, 97)
-                        .addComponent(titleLabel))
+                        .addComponent(jButton1)
+                        .addGap(171, 171, 171)
+                        .addComponent(pycrossLabel)
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(126, 126, 126)
-                        .addComponent(regrasButton)))
-                .addGap(42, 42, 42)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(274, 274, 274)
+                        .addGap(515, 515, 515)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(fase3button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(fase2Button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(fase1Button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(rankingButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(50, 50, 50))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(46, 46, 46)
-                        .addComponent(welcomeLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 354, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(regrasButton)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(fase3button, javax.swing.GroupLayout.DEFAULT_SIZE, 82, Short.MAX_VALUE)
+                                    .addComponent(fase2Button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(fase1Button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(rankingButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(21, 21, 21))))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(titleLabel)
-                    .addComponent(welcomeLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
+                    .addComponent(pycrossLabel)
+                    .addComponent(jButton1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
                 .addComponent(fase1Button, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(fase2Button, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(fase3button, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(regrasButton))
-                .addGap(43, 43, 43)
+                .addComponent(fase3button, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(rankingButton, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(47, 47, 47))
+                .addGap(18, 18, 18)
+                .addComponent(regrasButton, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(36, 36, 36))
         );
 
         pack();
@@ -169,6 +174,12 @@ public class MenuInicial extends javax.swing.JFrame {
         r.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_regrasButtonActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        TelaLogin tl = new TelaLogin();
+        tl.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -209,9 +220,9 @@ public class MenuInicial extends javax.swing.JFrame {
     private javax.swing.JButton fase1Button;
     private javax.swing.JButton fase2Button;
     private javax.swing.JButton fase3button;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel pycrossLabel;
     private javax.swing.JButton rankingButton;
     private javax.swing.JButton regrasButton;
-    private javax.swing.JLabel titleLabel;
-    private javax.swing.JLabel welcomeLabel;
     // End of variables declaration//GEN-END:variables
 }

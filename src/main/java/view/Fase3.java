@@ -21,8 +21,9 @@ public class Fase3 extends javax.swing.JFrame {
      * Creates new form Fase3
      */
     public Fase3() {
-        super("PyCross Fase 3");
+        super("Fase 3");
         initComponents();
+        this.setSize(800,440);
         setLocationRelativeTo(null);
         this.getContentPane().setBackground(new Color(0x646464));
         readTableFase3();
@@ -117,7 +118,7 @@ public class Fase3 extends javax.swing.JFrame {
         enviarButton = new javax.swing.JButton();
         sairButton = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        fase1Table = new javax.swing.JTable();
+        fase3Table = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(100, 100, 100));
@@ -846,8 +847,8 @@ public class Fase3 extends javax.swing.JFrame {
         getContentPane().add(jLabel13);
         jLabel13.setBounds(140, 210, 20, 16);
 
-        respostaTextField.setBackground(new java.awt.Color(100, 100, 100));
-        respostaTextField.setForeground(new java.awt.Color(255, 255, 255));
+        respostaTextField.setBackground(new java.awt.Color(255, 232, 115));
+        respostaTextField.setMargin(new java.awt.Insets(6, 6, 2, 6));
         respostaTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 respostaTextFieldActionPerformed(evt);
@@ -856,7 +857,7 @@ public class Fase3 extends javax.swing.JFrame {
         getContentPane().add(respostaTextField);
         respostaTextField.setBounds(40, 340, 210, 30);
 
-        enviarButton.setBackground(new java.awt.Color(100, 100, 100));
+        enviarButton.setBackground(new java.awt.Color(255, 212, 59));
         enviarButton.setForeground(new java.awt.Color(255, 255, 255));
         enviarButton.setText("Enviar");
         enviarButton.addActionListener(new java.awt.event.ActionListener() {
@@ -867,7 +868,7 @@ public class Fase3 extends javax.swing.JFrame {
         getContentPane().add(enviarButton);
         enviarButton.setBounds(270, 340, 72, 30);
 
-        sairButton.setBackground(new java.awt.Color(100, 100, 100));
+        sairButton.setBackground(new java.awt.Color(48, 105, 152));
         sairButton.setForeground(new java.awt.Color(255, 255, 255));
         sairButton.setText("Sair");
         sairButton.addActionListener(new java.awt.event.ActionListener() {
@@ -881,8 +882,9 @@ public class Fase3 extends javax.swing.JFrame {
         jScrollPane1.setBackground(new java.awt.Color(100, 100, 100));
         jScrollPane1.setForeground(new java.awt.Color(255, 255, 255));
 
-        fase1Table.setBackground(new java.awt.Color(100, 100, 100));
-        fase1Table.setModel(new javax.swing.table.DefaultTableModel(
+        fase3Table.setBackground(new java.awt.Color(100, 100, 100));
+        fase3Table.setForeground(new java.awt.Color(255, 255, 255));
+        fase3Table.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -905,11 +907,16 @@ public class Fase3 extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        fase1Table.setRowHeight(40);
-        jScrollPane1.setViewportView(fase1Table);
+        fase3Table.setRowHeight(40);
+        fase3Table.getTableHeader().setReorderingAllowed(false);
+        jScrollPane1.setViewportView(fase3Table);
+        if (fase3Table.getColumnModel().getColumnCount() > 0) {
+            fase3Table.getColumnModel().getColumn(0).setResizable(false);
+            fase3Table.getColumnModel().getColumn(1).setResizable(false);
+        }
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(370, 10, 310, 380);
+        jScrollPane1.setBounds(380, 10, 390, 390);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -1251,7 +1258,10 @@ public class Fase3 extends javax.swing.JFrame {
     }
 
     private void readTableFase3() {
-        DefaultTableModel model = (DefaultTableModel) fase1Table.getModel();
+        fase3Table.getColumnModel().getColumn(0).setPreferredWidth(40);
+        fase3Table.getColumnModel().getColumn(1).setPreferredWidth(300);
+        
+        DefaultTableModel model = (DefaultTableModel) fase3Table.getModel();
         model.setNumRows(0);
 
         PalavraDAO dao = new PalavraDAO();
@@ -1383,7 +1393,7 @@ public class Fase3 extends javax.swing.JFrame {
     private javax.swing.JTextField false2;
     private javax.swing.JTextField false4;
     private javax.swing.JTextField false5_nove4;
-    private javax.swing.JTable fase1Table;
+    private javax.swing.JTable fase3Table;
     private javax.swing.JTextField float1_false1;
     private javax.swing.JTextField float3;
     private javax.swing.JTextField float4_snake3;

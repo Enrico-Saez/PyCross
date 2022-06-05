@@ -4,6 +4,7 @@
  */
 package view;
 
+import java.awt.Color;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import javax.swing.RowSorter;
@@ -25,9 +26,11 @@ public class Fase1 extends javax.swing.JFrame {
      * Creates new form Fase2
      */
     public Fase1() {
-        super("PyCross Fase 1");
+        super("Fase 1");
         initComponents();
+        this.setSize(860,440);
         setLocationRelativeTo(null);
+        this.getContentPane().setBackground(new Color(0x646464));
         readTableFase1();
     }
 
@@ -122,7 +125,6 @@ public class Fase1 extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         fase1Table = new javax.swing.JTable();
         respostaTextField = new javax.swing.JTextField();
-        jLabel11 = new javax.swing.JLabel();
         enviarButton = new javax.swing.JButton();
         sairButton = new javax.swing.JButton();
 
@@ -746,6 +748,7 @@ public class Fase1 extends javax.swing.JFrame {
             }
         });
         fase1Table.setRowHeight(40);
+        fase1Table.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(fase1Table);
         if (fase1Table.getColumnModel().getColumnCount() > 0) {
             fase1Table.getColumnModel().getColumn(0).setResizable(false);
@@ -753,24 +756,23 @@ public class Fase1 extends javax.swing.JFrame {
         }
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(480, 10, 310, 380);
+        jScrollPane1.setBounds(480, 10, 360, 380);
 
-        respostaTextField.setBackground(new java.awt.Color(100, 100, 100));
+        respostaTextField.setBackground(new java.awt.Color(255, 232, 115));
         respostaTextField.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        respostaTextField.setForeground(new java.awt.Color(255, 255, 255));
+        respostaTextField.setBorder(null);
+        respostaTextField.setMargin(new java.awt.Insets(6, 6, 2, 6));
+        respostaTextField.setMinimumSize(new java.awt.Dimension(64, 39));
+        respostaTextField.setPreferredSize(new java.awt.Dimension(64, 39));
         respostaTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 respostaTextFieldActionPerformed(evt);
             }
         });
         getContentPane().add(respostaTextField);
-        respostaTextField.setBounds(140, 340, 200, 30);
+        respostaTextField.setBounds(100, 320, 200, 30);
 
-        jLabel11.setText("Resposta:");
-        getContentPane().add(jLabel11);
-        jLabel11.setBounds(70, 340, 60, 30);
-
-        enviarButton.setBackground(new java.awt.Color(100, 100, 100));
+        enviarButton.setBackground(new java.awt.Color(255, 212, 59));
         enviarButton.setForeground(new java.awt.Color(255, 255, 255));
         enviarButton.setText("Enviar");
         enviarButton.addActionListener(new java.awt.event.ActionListener() {
@@ -779,9 +781,9 @@ public class Fase1 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(enviarButton);
-        enviarButton.setBounds(350, 340, 72, 30);
+        enviarButton.setBounds(320, 320, 72, 30);
 
-        sairButton.setBackground(new java.awt.Color(100, 100, 100));
+        sairButton.setBackground(new java.awt.Color(48, 105, 152));
         sairButton.setForeground(new java.awt.Color(255, 255, 255));
         sairButton.setText("Sair");
         sairButton.addActionListener(new java.awt.event.ActionListener() {
@@ -1007,6 +1009,9 @@ public class Fase1 extends javax.swing.JFrame {
     }
 
     private void readTableFase1() {
+        fase1Table.getColumnModel().getColumn(0).setPreferredWidth(40);
+        fase1Table.getColumnModel().getColumn(1).setPreferredWidth(360);
+        
         DefaultTableModel model = (DefaultTableModel) fase1Table.getModel();
         model.setNumRows(0);
 
@@ -1160,7 +1165,6 @@ public class Fase1 extends javax.swing.JFrame {
     private javax.swing.JTextField interpretada9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

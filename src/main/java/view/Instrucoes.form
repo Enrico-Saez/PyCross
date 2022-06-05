@@ -76,6 +76,7 @@
       <SubComponents>
         <Component class="javax.swing.JTextArea" name="jTextArea1">
           <Properties>
+            <Property name="editable" type="boolean" value="false"/>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="64" green="64" red="64" type="rgb"/>
             </Property>
@@ -87,13 +88,18 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="rows" type="int" value="5"/>
-            <Property name="text" type="java.lang.String" value="1 - Para concluir uma fase voc&#xea; deve inserir as palavras com ajuda das dicas que est&#xe3;o a direita&#xa;da palavra cruzada.&#xa;&#xa;2 - Todas as respostas devem ser escritas por extenso mesmo aquelas que possu&#xed;rem numeros.&#xa;&#xa;3 -  Todos possuem apenas uma chance para cada fase ,  a tentativa de uma fase ja finalizada &#xa;n&#xe3;o gera pontua&#xe7;&#xe3;o&#xa;&#xa;4 - O numero de tentativas &#xe9; infinito.&#xa;&#xa;5 - Quanta maior o numero de tentativas menor a pontua&#xe7;&#xe3;o.&#xa;&#xa;6 - &#xc9; poss&#xed;vel ver sua pontu&#xe7;&#xe3;o e posi&#xe7;&#xe3;o em rela&#xe7;&#xe3;o aos outros jogadores no ranking , &#xa;sendo acessado atrav&#xe9;s do Menu Principal onde as fases tamb&#xe9;m est&#xe3;o localizadas."/>
+            <Property name="text" type="java.lang.String" value="&#xa;&#xa;   1 - Conclua as fases inserindo as palavras de acordo com as dicas.&#xa;&#xa;   2 -  A tentativa de uma fase j&#xe1; finalizada pelo jogador n&#xe3;o gera pontua&#xe7;&#xe3;o.&#xa;&#xa;   3 - O numero de tentativas &#xe9; infinito.&#xa;&#xa;   4 - A pontua&#xe7;&#xe3;o &#xe9; dada pelo n&#xfa;mero de tentativas.&#xa;&#xa;   5 - &#xc9; poss&#xed;vel ver sua pontu&#xe7;&#xe3;o e coloca&#xe7;&#xe3;o no ranking, acess&#xed;vel pelo menu principal."/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
             </Property>
             <Property name="disabledTextColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="64" green="64" red="64" type="rgb"/>
             </Property>
+            <Property name="focusable" type="boolean" value="false"/>
+            <Property name="selectionColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="64" green="64" red="64" type="rgb"/>
+            </Property>
+            <Property name="verifyInputWhenFocusTarget" type="boolean" value="false"/>
           </Properties>
         </Component>
       </SubComponents>

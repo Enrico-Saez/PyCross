@@ -48,14 +48,18 @@ public class Instrucoes extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("INSTRUÇÕES");
 
+        jTextArea1.setEditable(false);
         jTextArea1.setBackground(new java.awt.Color(100, 100, 100));
         jTextArea1.setColumns(20);
         jTextArea1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jTextArea1.setForeground(new java.awt.Color(255, 255, 255));
         jTextArea1.setRows(5);
-        jTextArea1.setText("1 - Para concluir uma fase você deve inserir as palavras com ajuda das dicas que estão a direita\nda palavra cruzada.\n\n2 - Todas as respostas devem ser escritas por extenso mesmo aquelas que possuírem numeros.\n\n3 -  Todos possuem apenas uma chance para cada fase ,  a tentativa de uma fase ja finalizada \nnão gera pontuação\n\n4 - O numero de tentativas é infinito.\n\n5 - Quanta maior o numero de tentativas menor a pontuação.\n\n6 - É possível ver sua pontução e posição em relação aos outros jogadores no ranking , \nsendo acessado através do Menu Principal onde as fases também estão localizadas.");
+        jTextArea1.setText("\n\n   1 - Conclua as fases inserindo as palavras de acordo com as dicas.\n\n   2 -  A tentativa de uma fase já finalizada pelo jogador não gera pontuação.\n\n   3 - O numero de tentativas é infinito.\n\n   4 - A pontuação é dada pelo número de tentativas.\n\n   5 - É possível ver sua pontução e colocação no ranking, acessível pelo menu principal.");
         jTextArea1.setBorder(null);
         jTextArea1.setDisabledTextColor(new java.awt.Color(100, 100, 100));
+        jTextArea1.setFocusable(false);
+        jTextArea1.setSelectionColor(new java.awt.Color(100, 100, 100));
+        jTextArea1.setVerifyInputWhenFocusTarget(false);
         jScrollPane1.setViewportView(jTextArea1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

@@ -91,7 +91,7 @@ public class TelaAdmin extends javax.swing.JFrame {
             }
         });
 
-        cadastrarButtonTelaAdmin.setBackground(new java.awt.Color(75, 139, 190));
+        cadastrarButtonTelaAdmin.setBackground(new java.awt.Color(255, 212, 59));
         cadastrarButtonTelaAdmin.setText("Cadastrar");
         cadastrarButtonTelaAdmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -99,7 +99,7 @@ public class TelaAdmin extends javax.swing.JFrame {
             }
         });
 
-        atualizarButtonTelaAdmin.setBackground(new java.awt.Color(75, 139, 190));
+        atualizarButtonTelaAdmin.setBackground(new java.awt.Color(255, 212, 59));
         atualizarButtonTelaAdmin.setText("Atualizar");
         atualizarButtonTelaAdmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -107,7 +107,7 @@ public class TelaAdmin extends javax.swing.JFrame {
             }
         });
 
-        deletarButtonTelaAdmin.setBackground(new java.awt.Color(75, 139, 190));
+        deletarButtonTelaAdmin.setBackground(new java.awt.Color(255, 212, 59));
         deletarButtonTelaAdmin.setText("Deletar");
         deletarButtonTelaAdmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -115,7 +115,7 @@ public class TelaAdmin extends javax.swing.JFrame {
             }
         });
 
-        sairButtonTelaAdmin.setBackground(new java.awt.Color(255, 212, 59));
+        sairButtonTelaAdmin.setBackground(new java.awt.Color(75, 139, 190));
         sairButtonTelaAdmin.setText("Sair");
         sairButtonTelaAdmin.setBorderPainted(false);
         sairButtonTelaAdmin.addActionListener(new java.awt.event.ActionListener() {
@@ -124,7 +124,6 @@ public class TelaAdmin extends javax.swing.JFrame {
             }
         });
 
-        usuariosTableTelaAdmin.setBackground(new java.awt.Color(100, 100, 100));
         usuariosTableTelaAdmin.setForeground(new java.awt.Color(100, 100, 100));
         usuariosTableTelaAdmin.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -163,27 +162,23 @@ public class TelaAdmin extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(15, 15, 15)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(sairButtonTelaAdmin)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(15, 15, 15)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(sairButtonTelaAdmin)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(nomeTextFieldTelaAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(senhaTextFieldTelaAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(pontuacaoTextFieldTelaAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(cadastrarButtonTelaAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(atualizarButtonTelaAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(deletarButtonTelaAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(nomeTextFieldTelaAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(senhaTextFieldTelaAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(pontuacaoTextFieldTelaAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(71, 71, 71)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(39, Short.MAX_VALUE))
+                        .addComponent(cadastrarButtonTelaAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(atualizarButtonTelaAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(deletarButtonTelaAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane2))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -279,6 +274,12 @@ public class TelaAdmin extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_usuariosTableTelaAdminKeyReleased
     public void readJTable() {
+        usuariosTableTelaAdmin.getColumnModel().getColumn(0).setPreferredWidth(73);
+        usuariosTableTelaAdmin.getColumnModel().getColumn(1).setPreferredWidth(200);
+        usuariosTableTelaAdmin.getColumnModel().getColumn(2).setPreferredWidth(200);
+        usuariosTableTelaAdmin.getColumnModel().getColumn(3).setPreferredWidth(73);
+        
+        
         DefaultTableModel model = (DefaultTableModel) usuariosTableTelaAdmin.getModel();
         model.setNumRows(0);
         
