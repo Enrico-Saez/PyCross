@@ -67,6 +67,7 @@ public class TelaRanking extends javax.swing.JFrame {
         jScrollPane1.setViewportView(rankingTable);
 
         rankingLabel.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        rankingLabel.setForeground(new java.awt.Color(255, 255, 255));
         rankingLabel.setText("Ranking dos Jogadores");
 
         botaoVoltar.setBackground(new java.awt.Color(48, 105, 152));
