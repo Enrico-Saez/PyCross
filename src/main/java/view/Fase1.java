@@ -773,7 +773,6 @@ public class Fase1 extends javax.swing.JFrame {
         respostaTextField.setBounds(100, 320, 200, 30);
 
         enviarButton.setBackground(new java.awt.Color(255, 212, 59));
-        enviarButton.setForeground(new java.awt.Color(255, 255, 255));
         enviarButton.setText("Enviar");
         enviarButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

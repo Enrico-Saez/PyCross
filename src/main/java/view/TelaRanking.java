@@ -4,6 +4,7 @@
  */
 package view;
 
+import java.awt.Color;
 import java.util.ArrayList;
 import javax.swing.RowSorter;
 import javax.swing.SortOrder;
@@ -25,6 +26,7 @@ public class TelaRanking extends javax.swing.JFrame {
     public TelaRanking() {
         super("Ranking");
         initComponents();
+        this.getContentPane().setBackground(new Color(0x646464));
         setLocationRelativeTo(null);
 
         readJTable();
@@ -67,6 +69,7 @@ public class TelaRanking extends javax.swing.JFrame {
         rankingLabel.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         rankingLabel.setText("Ranking dos Jogadores");
 
+        botaoVoltar.setBackground(new java.awt.Color(48, 105, 152));
         botaoVoltar.setText("Voltar");
         botaoVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
