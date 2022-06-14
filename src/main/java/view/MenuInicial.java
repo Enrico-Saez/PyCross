@@ -53,6 +53,7 @@ public class MenuInicial extends javax.swing.JFrame {
         });
 
         pycrossLabel.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        pycrossLabel.setForeground(new java.awt.Color(255, 255, 255));
         pycrossLabel.setText("Pycross");
 
         fase1Button.setBackground(new java.awt.Color(255, 212, 59));
