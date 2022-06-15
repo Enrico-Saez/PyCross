@@ -1,5 +1,6 @@
 package view;
 
+import java.awt.Color;
 import javax.swing.JOptionPane;
 import model.bean.Usuario;
 import model.dao.UsuarioDAO;
@@ -21,6 +22,7 @@ public class TelaCadastro extends javax.swing.JFrame {
         super("Cadastro");
         initComponents();
         setLocationRelativeTo(null);
+        this.getContentPane().setBackground(new Color(0x646464));
     }
 
     /**

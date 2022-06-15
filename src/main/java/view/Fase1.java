@@ -1023,7 +1023,7 @@ public class Fase1 extends javax.swing.JFrame {
     }
 
     private int calcularPontuacao() {
-        double d = 13.0 / numeroTentativas * 100;
+        double d = 10.0 / numeroTentativas * 100;
         int i = (int) Math.round(d);
         return i;
     }

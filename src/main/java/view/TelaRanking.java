@@ -164,7 +164,7 @@ public class TelaRanking extends javax.swing.JFrame {
         rankingTable.setRowSorter(sorter);
         
         ArrayList list = new ArrayList();
-        list.add( new RowSorter.SortKey(1, SortOrder.ASCENDING) );
+        list.add( new RowSorter.SortKey(1, SortOrder.DESCENDING) );
         sorter.setSortKeys(list);
         sorter.sort();
     }

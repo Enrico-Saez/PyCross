@@ -1302,7 +1302,7 @@ public class Fase2 extends javax.swing.JFrame {
     }
 
     private int calcularPontuacao() {
-        double a = 13.0 / numeroTentativas * 100;
+        double a = 12.0 / numeroTentativas * 100;
         int b = (int) Math.round(a);
         return b;
     }
